@@ -1,8 +1,55 @@
 @import "tailwindcss";
 
+@font-face{
+font-family: proxima-nova;
+font-style: normal;
+font-weight: 300;
+font-display: swap;
+src: url("./assets/fonts/ProximaNova-Light.woff2") format("woff2");
+}
+@font-face{
+font-family: proxima-nova;
+font-style: normal;
+font-weight: 400;
+font-display: swap;
+src: url("./assets/fonts/ProximaNova-Regular.woff2") format("woff2");
+}
+@font-face{
+font-family: proxima-nova;
+font-style: normal;
+font-weight: 600;
+font-display: swap;
+src: url("./assets/fonts/ProximaNova-Semibold.woff2") format("woff2");
+}
+@font-face{
+font-family: proxima-nova;
+font-style: normal;
+font-weight: 700;
+font-display: swap;
+src: url("./assets/fonts/ProximaNova-Bold.woff2") format("woff2");
+}
+@font-face{
+font-family: proxima-nova;
+font-style: normal;
+font-weight: 800;
+font-display: swap;
+src: url("./assets/fonts/ProximaNova-ExtraBold.woff2") format("woff2");
+}
+@font-face{
+font-family: proxima-nova;
+font-style: normal;
+font-weight: 900;
+font-display: swap;
+src: url("./assets/fonts/ProximaNova-Black.woff2") format("woff2");
+}
+
+@theme{
+     --font-display: 'proxima-nova', sans-serif;
+}
+
 @layer base {
      body{
-          @apply max-w-[967px] mx-auto;
+          @apply font-display max-w-[967px] mx-auto;
      }
      aside{
           @apply max-w-[186px]
