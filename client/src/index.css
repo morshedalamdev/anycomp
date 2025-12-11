@@ -42,9 +42,17 @@ font-weight: 900;
 font-display: swap;
 src: url("./assets/fonts/ProximaNova-Black.woff2") format("woff2");
 }
+@font-face {
+     font-family: red-hot-display;
+     font-style: normal;
+     font-weight: 600;
+     font-display: swap;
+     src: url("./assets/fonts/RedHatDisplay-SemiBold.ttf") format("truetype");
+}
 
 @theme{
      --font-display: 'proxima-nova', sans-serif;
+     --font-red-hot: 'red-hot-display', sans-serif;
 }
 
 @layer base {
@@ -64,6 +72,9 @@ src: url("./assets/fonts/ProximaNova-Black.woff2") format("woff2");
 }
 @utility x-shadow-2{
      box-shadow: 0px 2px 4px 0px #00000026;
+}
+@utility x-shadow-3{
+     box-shadow: 0px 1px 8px 0px #002F7040;
 }
 
 @utility x-checked {
