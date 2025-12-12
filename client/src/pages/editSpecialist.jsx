@@ -12,6 +12,7 @@ import photoScanIcon from './assets/icons/photo-scan.svg';
 import verifiedIcon from './assets/icons/verified.svg';
 import closeIcon from './assets/icons/x-mark.svg';
 import closeSmIcon from './assets/icons/close.svg';
+import infoIcon from './assets/icons/info.svg';
 import flag from './assets/flag.png';
 import banner1 from './assets/banner-1.png';
 import banner2 from './assets/banner-2.png';
@@ -22,11 +23,12 @@ import company3 from './assets/company-3.png';
 
 function EditSpecialist() {
   const [isEditOpen, setIsEditOpen] = useState(false);
+  const [isPublishOpen, setIsPublishOpen] = useState(false);
 
   return (
     <div className="relative flex h-screen">
       <aside className="flex flex-col">
-        <div className="pt-[31px] pl-[22px]">
+        <div className="pt-7.75 pl-5.5">
           <h4 className="font-bold text-[11px] text-[#222222] pb-2">Profile</h4>
           <div className="flex flex-wrap gap-1">
             <img src={company} alt="company logo" className="w-5 h-5 rounded-full" />
@@ -36,49 +38,49 @@ function EditSpecialist() {
             </div>
           </div>
         </div>
-        <div className="pt-[31px]">
-          <h4 className="font-bold text-[7px] text-[#888888] pl-[22px] pb-[6px]">Dashboard</h4>
-          <ul className="px-[3px]">
-            <li><a href="" className="flex items-center gap-1 h-[25px] rounded-[3px] pl-[19px] text-[9px] text-white bg-[#002F70]">
+        <div className="pt-7.75">
+          <h4 className="font-bold text-[7px] text-[#888888] pl-5.5 pb-1.5">Dashboard</h4>
+          <ul className="px-0.75">
+            <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-white bg-[#002F70]">
               <img src={tagIcon} alt="tag icon" />
               <span>Specialists</span>
             </a></li>
-            <li><a href="" className="flex items-center gap-1 h-[25px] rounded-[3px] pl-[19px] text-[9px] text-[#484848]">
+            <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-[#484848]">
               <img src={peopleIcon} alt="people icon" />
               <span>Clients</span>
             </a></li>
-            <li><a href="" className="flex items-center gap-1 h-[25px] rounded-[3px] pl-[19px] text-[9px] text-[#484848]">
+            <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-[#484848]">
               <img src={orderIcon} alt="order icon" />
               <span>Service Orders</span>
             </a></li>
-            <li><a href="" className="flex items-center gap-1 h-[25px] rounded-[3px] pl-[19px] text-[9px] text-[#484848]">
+            <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-[#484848]">
               <img src={signatureIcon} alt="signature icon" />
               <span>eSignature</span>
             </a></li>
-            <li><a href="" className="flex items-center gap-1 h-[25px] rounded-[3px] pl-[19px] text-[9px] text-[#484848]">
+            <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-[#484848]">
               <img src={messageIcon} alt="message icon" />
               <span>Messages</span>
             </a></li>
-            <li><a href="" className="flex items-center gap-1 h-[25px] rounded-[3px] pl-[19px] text-[9px] text-[#484848]">
+            <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-[#484848]">
               <img src={invoiceIcon} alt="invoice icon" />
               <span>Invoices & Receipts</span>
             </a></li>
           </ul>
         </div>
-        <div className="pt-[62px] px-[3px]">
+        <div className="pt-15.5 px-0.75">
           <ul>
-            <li><a href="" className="flex items-center gap-1 h-[25px] rounded-[3px] pl-[19px] text-[9px] text-[#484848]">
+            <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-[#484848]">
               <img src={helpIcon} alt="help icon" />
               <span>Help</span>
             </a></li>
-            <li><a href="" className="flex items-center gap-1 h-[25px] rounded-[3px] pl-[19px] text-[9px] text-[#484848]">
+            <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-[#484848]">
               <img src={settingsIcon} alt="settings icon" />
               <span>Settings</span>
             </a></li>
           </ul>
         </div>
       </aside>
-      <main className="flex flex-wrap flex-1 px-3 pt-[31px] gap-5 overflow-y-scroll">
+      <main className="flex flex-wrap flex-1 px-3 pt-7.75 gap-5 overflow-y-scroll">
         <div className="w-[424px] space-y-3">
           <div>
             <h2 className="font-semibold text-lg text-[#222222]">Register a new company | Private Limited - Sdn Bhd</h2>
@@ -166,8 +168,8 @@ function EditSpecialist() {
           </div>
         </div>
       </main>
-      <div className={`${isEditOpen ? 'absolute' : 'hidden'} inset-0 h-screen bg-black/15 z-50`}>
-        <div className="relative w-[273px] h-screen bg-white ml-auto px-4 py-3 z-20">
+      <div className={`${isEditOpen ? 'absolute' : 'hidden'} inset-0 h-screen bg-black/15 z-30`}>
+        <div className="relative w-68.25 h-screen bg-white ml-auto px-4 py-3 z-20">
           <div className="flex items-center justify-between">
             <h3 className="font-red-hot font-semibold text-xs">Edit Service</h3>
             <button onClick={() => setIsEditOpen(!isEditOpen)}><img src={closeIcon} alt="Close" /></button>
@@ -175,7 +177,7 @@ function EditSpecialist() {
           <form className="mt-4 space-y-3">
             <div className="flex flex-col">
               <label htmlFor="title" className="font-semibold text-[7px] text-[#454545]">Title</label>
-              <input type="text" id="title" className="border-[0.2px] border-[#888888] rounded-xs h-[19px] text-[9px] px-1.5" />
+              <input type="text" id="title" className="border-[0.2px] border-[#888888] rounded-xs h-4.75 text-[9px] px-1.5" />
             </div>
             <div className="flex flex-col">
               <label htmlFor="description" className="font-semibold text-[7px] text-[#454545]">Description</label>
@@ -185,13 +187,13 @@ function EditSpecialist() {
             </div>
             <div className="flex flex-col">
               <label htmlFor="estimatedCompletionTime" className="font-semibold text-[7px] text-[#454545]">Estimated Completion Time (Days)</label>
-              <input type="text" id="estimatedCompletionTime" className="border-[0.2px] border-[#888888] rounded-xs h-[19px] text-[9px] px-1.5" />
+              <input type="text" id="estimatedCompletionTime" className="border-[0.2px] border-[#888888] rounded-xs h-4.75 text-[9px] px-1.5" />
             </div>
             <div className="flex flex-col">
               <label htmlFor="price" className="font-semibold text-[7px] text-[#454545]">Price</label>
-              <div className="flex h-[19px]">
+              <div className="flex h-4.75">
                 <div className="flex items-center gap-0.5 px-1.5 bg-[#F5F5F5] border-[0.2px] border-r-0  rounded-l-xs">
-                  <img src={flag} alt="flag" className="w-[11px]" />
+                  <img src={flag} alt="flag" className="w-2.75" />
                   <span className="text-[7px] text-[#222222]">MYR</span>
                 </div>
                 <input type="text" id="price" className="flex-1 text-[9px] px-1.5 border-[0.2px] border-black border-l-0 rounded-r-xs" />
@@ -199,33 +201,49 @@ function EditSpecialist() {
             </div>
             <div className="flex flex-col">
               <label htmlFor="additionalOfferings" className="font-semibold text-[7px] text-[#454545]">Additional Offerings</label>
-              <input type="text" id="additionalOfferings" className="border-[0.2px] border-[#888888] rounded-xs h-[19px] text-[9px] px-1.5" />
+              <input type="text" id="additionalOfferings" className="border-[0.2px] border-[#888888] rounded-xs h-4.75 text-[9px] px-1.5" />
               <div className="flex flex-wrap mt-0.5 space-x-3 space-y-0.5">
-                <button className="flex items-center gap-1 h-[15px] bg-[#F5F5F5] rounded-xs px-1">
+                <button className="flex items-center gap-1 h-3.75 bg-[#F5F5F5] rounded-xs px-1">
                   <span className="text-[#222222] text-[5px] pl-1">Company Secretary Subscription</span>
                   <img src={closeSmIcon} alt="close icon" />
                 </button>
-                <button className="flex items-center gap-1 h-[15px] bg-[#F5F5F5] rounded-xs px-1">
+                <button className="flex items-center gap-1 h-3.75 bg-[#F5F5F5] rounded-xs px-1">
                   <span className="text-[#222222] text-[5px] pl-1">CTC Copies</span>
                   <img src={closeSmIcon} alt="close icon" />
                 </button>
-                <button className="flex items-center gap-1 h-[15px] bg-[#F5F5F5] rounded-xs px-1">
+                <button className="flex items-center gap-1 h-3.75 bg-[#F5F5F5] rounded-xs px-1">
                   <span className="text-[#222222] text-[5px] pl-1">eSignature</span>
                   <img src={closeSmIcon} alt="close icon" />
                 </button>
-                <button className="flex items-center gap-1 h-[15px] bg-[#F5F5F5] rounded-xs px-1">
+                <button className="flex items-center gap-1 h-3.75 bg-[#F5F5F5] rounded-xs px-1">
                   <span className="text-[#222222] text-[5px] pl-1">Company Secretary Subscription</span>
                   <img src={closeSmIcon} alt="close icon" />
                 </button>
               </div>
             </div>
             <div className="flex gap-1 mt-10">
-              <button type="submit" className="w-[59px] h-5 border-[0.7px] border-[#C4C4C4] rounded-[2.5px] text-[6px] text-[#C00306]">Cancel</button>
-              <button type="button" className="w-[59px] h-5 rounded-[2.5px] bg-[#002F70] text-[6px] text-white">Confirm</button>
+              <button type="submit" className="w-14.75 h-5 border-[0.7px] border-[#C4C4C4] rounded-[2.5px] text-[6px] text-[#C00306]">Cancel</button>
+              <button type="button" className="w-14.75 h-5 rounded-[2.5px] bg-[#002F70] text-[6px] text-white">Confirm</button>
             </div>
           </form>
         </div>
         <div onClick={() => setIsEditOpen(false)} className="absolute inset-0 z-10"></div>
+      </div>
+      <div className={`${isPublishOpen ? 'absolute' : 'hidden'} flex items-center justify-center inset-0 h-screen bg-black/80 z-50`}>
+        <div className="relative w-107 rounded-[5px] px-3 py-2 bg-white z-20">
+          <div>
+            <h4 className="flex items-center gap-1">
+              <img src={infoIcon} alt="" />
+              <span className="font-red-hot font-bold text-xl text-[#222222]">Publish changes</span>
+            </h4>
+            <p className="text-[10px] text-[#454545]">Do you want to publish these changes? It will appear in the marketplace listing</p>
+          </div>
+          <div className="flex items-center justify-end gap-2 mt-4">
+              <button onClick={() => setIsPublishOpen(false)} type="button" className="w-22.25 h-6 border-[0.6px] border-[#222222] rounded-[3px] font-semibold text-[8px] text-[#222222]">Continue Editing</button>
+              <button type="submit" className="w-22.25 h-6 rounded-[3px] bg-[#002F70] text-[8px] text-white">Save changes</button>
+          </div>
+        </div>
+        <div onClick={() => setIsPublishOpen(false)} className="absolute inset-0 z-10"></div>
       </div>
     </div>
   )

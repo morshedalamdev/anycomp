@@ -57,10 +57,10 @@ src: url("./assets/fonts/ProximaNova-Black.woff2") format("woff2");
 
 @layer base {
      body{
-          @apply font-display max-w-[967px] mx-auto;
+          @apply font-display max-w-241.75 mx-auto;
      }
      aside{
-          @apply w-[186px]
+          @apply w-46.5
      }
      a, button {
           @apply cursor-pointer transition-all duration-300 ease-in-out;
@@ -75,6 +75,9 @@ src: url("./assets/fonts/ProximaNova-Black.woff2") format("woff2");
 }
 @utility x-shadow-3{
      box-shadow: 0px 1px 8px 0px #002F7040;
+}
+@utility x-shadow-4{
+     box-shadow: 0px 1px 4px 0px #0000000D;
 }
 
 @utility x-checked {
