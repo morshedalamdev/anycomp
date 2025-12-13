@@ -83,6 +83,9 @@ src: url("./assets/fonts/ProximaNova-Black.woff2") format("woff2");
 @utility x-shadow-4{
      box-shadow: 0px 1px 4px 0px #0000000D;
 }
+@utility x-shadow-5{
+     box-shadow: 0px 0.2px 4px 0px #00000014;
+}
 
 @utility x-checked {
      position: relative;
@@ -102,7 +105,7 @@ src: url("./assets/fonts/ProximaNova-Black.woff2") format("woff2");
           border-radius: 2px;
      }
 
-     &&:checked::before {
+     &:checked::before {
           background-color: #002F70;
      }
 

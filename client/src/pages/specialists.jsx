@@ -1,295 +1,218 @@
 import { useState } from 'react';
-import user1 from './assets/user-1.png';
-import user2 from './assets/user-2.png';
-import tagIcon from './assets/icons/tag.svg';
-import peopleIcon from './assets/icons/people.svg';
-import orderIcon from './assets/icons/order.svg';
-import signatureIcon from './assets/icons/signature.svg';
-import messageIcon from './assets/icons/message.svg';
-import invoiceIcon from './assets/icons/invoice.svg';
-import helpIcon from './assets/icons/help.svg';
-import settingsIcon from './assets/icons/settings.svg';
+import anycompLogo from './assets/logo-2.png';
+import downArrowIcon from './assets/icons/down-arrow.svg';
+import downArrowLgIcon from './assets/icons/down-arrow-lg.svg';
+import searchIcon from './assets/icons/search.svg';
 import mailIcon from './assets/icons/mail.svg';
 import ballIcon from './assets/icons/ball.svg';
-import plusIcon from './assets/icons/plus.svg';
-import exportIcon from './assets/icons/export.svg';
-import dotsIcon from './assets/icons/dots.svg';
-import pencilIcon from './assets/icons/pencil.svg';
-import binIcon from './assets/icons/bin.svg';
-import leftArrowIcon from './assets/icons/left-arrow.svg';
-import rightArrowIcon from './assets/icons/right-arrow.svg';
+import homeIcon from './assets/icons/home.svg';
+import user4 from './assets/user-4.png';
+import product1 from './assets/product-1.png';
+import product2 from './assets/product-2.png';
+import product3 from './assets/product-3.png';
+import product4 from './assets/product-4.png';
+import product5 from './assets/product-5.png';
+import product6 from './assets/product-6.png';
+import product7 from './assets/product-7.png';
+import product8 from './assets/product-8.png';
+import product9 from './assets/product-9.png';
+import product10 from './assets/product-10.png';
+import product11 from './assets/product-11.png';
+import product12 from './assets/product-12.png';
 
 function Specialists() {
-  const [actionsOpen, setActionsOpen] = useState("");
 
   return (
-    <div className="flex h-screen">
-      <aside className="flex flex-col">
-        <div className="pt-7.75 pl-5.5">
-          <h4 className="font-bold text-[11px] text-[#222222] pb-2">Profile</h4>
-          <div className="flex flex-wrap gap-1">
-            <img src={user1} alt="user" className="w-5 h-5 rounded-full" />
-            <div>
-              <h5 className="text-[9px] font-semibold text-[#454545] -mt-0.5">Gwen Lam</h5>
-              <p className="font-semibold text-[6px] text-[#002F70]">ST Comp Holdings Sdn Bhd</p>
+    <>
+      <header className="h-11.25 x-shadow-4">
+        <div className="flex items-center justify-between w-176.25 mx-auto px-5">
+          <div className="flex items-center gap-5">
+            <a href=""><img src={anycompLogo} alt="Anycomp Logo" /></a>
+            <nav className="flex items-center gap-5 font-semibold text-[6px]">
+              <a href="">Register a company</a>
+              <a href="">Appoint a Company Secretary</a>
+              <a href="" className="flex items-center gap-0.5">Company Secretarial Services <img src={downArrowIcon} alt="down arrow" /></a>
+              <a href="">How Anycomp Works</a>
+            </nav>
+            <form className="flex items-center border-[0.3px] border-[#94969C] rounded-[1px] w-28.75 h-2.75 pl-1">
+              <input id="search" type="text" placeholder="Search for any services" className="flex-1 font-semibold text-[4px] text-[#94969C]" />
+              <label htmlFor="search" className="flex items-center justify-center bg-[#002F70] h-full w-2.75 rounded-r-[1px]">
+                <img src={searchIcon} alt="" />
+              </label>
+            </form>
+          </div>
+          <div className="flex items-center gap-1">
+            <div className="relative mr-1 h-fit">
+              <img src={mailIcon} alt="mail icon" />
             </div>
+            <div className="relative mr-1 h-fit">
+              <img src={ballIcon} alt="notification icon" />
+              <span className="absolute top-px right-px flex items-center justify-center w-[1.5px] h-[1.5px] rounded-full bg-[#DF0D0D] text-white text-[3px]"></span>
+            </div>
+            <img src={user4} alt="" className="w-3.5 h-3.5 rounded-full object-cover" />
           </div>
         </div>
-        <div className="pt-7.75">
-          <h4 className="font-bold text-[7px] text-[#888888] pl-5.5 pb-1.5">Dashboard</h4>
-          <ul className="px-0.75">
-            <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-white bg-[#002F70]">
-              <img src={tagIcon} alt="tag icon" />
-              <span>Specialists</span>
-            </a></li>
-            <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-[#484848]">
-              <img src={peopleIcon} alt="people icon" />
-              <span>Clients</span>
-            </a></li>
-            <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-[#484848]">
-              <img src={orderIcon} alt="order icon" />
-              <span>Service Orders</span>
-            </a></li>
-            <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-[#484848]">
-              <img src={signatureIcon} alt="signature icon" />
-              <span>eSignature</span>
-            </a></li>
-            <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-[#484848]">
-              <img src={messageIcon} alt="message icon" />
-              <span>Messages</span>
-            </a></li>
-            <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-[#484848]">
-              <img src={invoiceIcon} alt="invoice icon" />
-              <span>Invoices & Receipts</span>
-            </a></li>
-          </ul>
-        </div>
-        <div className="pt-15.5 px-0.75">
-          <ul>
-            <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-[#484848]">
-              <img src={helpIcon} alt="help icon" />
-              <span>Help</span>
-            </a></li>
-            <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-[#484848]">
-              <img src={settingsIcon} alt="settings icon" />
-              <span>Settings</span>
-            </a></li>
-          </ul>
-        </div>
-      </aside>
-      <main className="flex-1 bg-[#F8F7FA]">
-        <nav className="flex items-center justify-end bg-white h-7.5 mx-1.25 mt-3 pr-5 rounded-[1px] x-shadow">
-          <div className="relative mr-1 h-fit">
-            <img src={mailIcon} alt="mail icon" />
-            </div>
-          <div className="relative mr-1 h-fit">
-            <img src={ballIcon} alt="notification icon" />
-            <span className="absolute -top-px -right-px flex items-center justify-center w-1 h-1 rounded-full bg-[#DF0D0D] text-white text-[3px]">4</span>
-            </div>
-          <img src={user2} alt="" className="w-2.75 h-2.75 rounded-full object-cover" />
-        </nav>
-        <div className="px-1.25 py-3">
-          <h4 className="font-semibold text-[7px] text-[#454545]">Dashboard</h4>
-          <h3 className="font-bold text-[13px] text-[#252525]">Services</h3>
-        </div>
-        <div className="bg-white rounded-[3px] px-2">
-          <div className="pt-2 px-3">
-            <h2 className="font-bold text-[15px]">Specialists</h2>
-            <p className="font-semibold text-[7px] text-[#888888]">Create and publish your services for Client’s & Companies</p>
+      </header>
+      <div className="w-176.25 mx-auto mt-7">
+        <section>
+          <div className="flex items-center gap-2">
+            <a href=""><img src={homeIcon} alt="home icon" /></a>
+            <span className="border-r-[0.3px] border-[#454545] h-1.75 rotate-[24.78deg]"></span>
+            <a href="" className="font-semibold  text-[6px] text-[#454545]">Specialists</a>
+            <span className="border-r-[0.3px] border-[#454545] h-1.75 rotate-[24.78deg]"></span>
+            <a href="" className="font-semibold  text-[6px] text-[#454545]">Register a New Company</a>
           </div>
-          <div className="my-4 border-b-[0.5px] border-[#D2D2DA] flex flex-wrap">
-            <button className="w-12.5 text-[10px] -mb-[0.5px] text-[#002F70] border-b-[0.5px] border-[#002F70]">All</button>
-            <button className="w-12.5 text-[10px] -mb-[0.5px] text-[#222222] border-b-[0.5px] border-[#D2D2DA]">Drafts</button>
-            <button className="w-12.5 text-[10px] -mb-[0.5px] text-[#222222] border-b-[0.5px] border-[#D2D2DA]">Published</button>
-          </div>
-          <div className="flex justify-between">
-            <div>
-              <input type="text" className="bg-[#F1F1F1] rounded-xs text-[8px] font-semibold h-5 w-30.75 px-2" placeholder="Search Services" />
-            </div>
-            <div className="flex gap-1">
-              <button className="flex items-center justify-center gap-1 h-5 w-15.25 rounded-xs bg-[#002F70] text-white text-[8px]">
-                <img src={plusIcon} alt="" />
-                Create
-              </button>
-              <button className="flex items-center justify-center gap-1 h-5 w-15.25 rounded-xs bg-[#071331] text-white text-[8px]">
-                <img src={exportIcon} alt="" />
-                Export
-              </button>
-            </div>
-          </div>
-          <table className="w-full my-3 text-center">
-            <thead className="text-[#888888] text-[9px] uppercase font-bold">
-              <tr className="border-b-[0.5px] border-[#D2D2DA]">
-                <th className="px-2">
-                  <input type="checkbox" className="x-checked" />
-                </th>
-                <th className="px-2">service</th>
-                <th className="px-2">price</th>
-                <th className="px-2">purchases</th>
-                <th className="px-2">duration</th>
-                <th className="px-2">approval status</th>
-                <th className="px-2">publish status</th>
-                <th className="px-2">action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="border-b-[0.5px] border-[#D2D2DA] h-7.25">
-                <td><input type="checkbox" className="x-checked" /></td>
-                <td className="text-[10px] font-semibold text-[#454545]">Incorporation of a new company</td>
-                <td className="text-[10px] font-semibold text-[#454545]">RM 2,000</td>
-                <td className="text-[10px] font-semibold text-[#454545]">20</td>
-                <td className="text-[10px] font-semibold text-[#454545]">3 Days</td>
-                <td><button className="h-3.5 w-11 rounded-[3px] bg-[#18C96466] text-[#1AC623] font-semibold text-[6px]">Approved</button></td>
-                <td><button className="h-3.5 w-11 rounded-[3px] bg-[#18C964] text-[#FFFFFF] font-semibold text-[6px]">Published</button></td>
-                <td className="relative">
-                  <button onClick={() => actionsOpen == "key1" ? setActionsOpen("") : setActionsOpen("key1")}><img src={dotsIcon} alt="actions" /></button>
-                  <div className={`absolute top-full right-0 w-60.5 px-2 py-1 rounded-[3px] bg-white x-shadow-2 ${actionsOpen === "key1" ? 'block' : 'hidden'}`}>
-                    <button className="flex items-center w-full h-8 px-2 gap-3 border-b-[0.8px] border-[#D2D2DA]">
-                      <img src={pencilIcon} alt="edit icon" />
-                      <span className="text-xs font-semibold text-[#454545]">Edit</span>
-                    </button>
-                    <button className="flex items-center w-full h-8 px-2 gap-3">
-                      <img src={binIcon} alt="delete icon" />
-                      <span className="text-xs font-semibold text-[#454545]">Delete</span>
-                    </button>
-                  </div>
-                </td>
-              </tr>
-              <tr className="border-b-[0.5px] border-[#D2D2DA] h-7.25">
-                <td><input type="checkbox" className="x-checked" /></td>
-                <td className="text-[10px] font-semibold text-[#454545]">Incorporation of a new company</td>
-                <td className="text-[10px] font-semibold text-[#454545]">RM 2,000</td>
-                <td className="text-[10px] font-semibold text-[#454545]">20</td>
-                <td className="text-[10px] font-semibold text-[#454545]">3 Days</td>
-                <td><button className="h-3.5 w-11 rounded-[3px] bg-[#61E7DA66] text-[#00AC95] font-semibold text-[6px]">Under-Review</button></td>
-                <td><button className="h-3.5 w-11 rounded-[3px] bg-[#18C964] text-[#FFFFFF] font-semibold text-[6px]">Published</button></td>
-                <td className="relative">
-                  <button onClick={() => actionsOpen == "key1" ? setActionsOpen("") : setActionsOpen("key1")}><img src={dotsIcon} alt="actions" /></button>
-                  <div className={`absolute top-full right-0 w-60.5 px-2 py-1 rounded-[3px] bg-white x-shadow-2 ${actionsOpen === "key1" ? 'block' : 'hidden'}`}>
-                    <button className="flex items-center w-full h-8 px-2 gap-3 border-b-[0.8px] border-[#D2D2DA]">
-                      <img src={pencilIcon} alt="edit icon" />
-                      <span className="text-xs font-semibold text-[#454545]">Edit</span>
-                    </button>
-                    <button className="flex items-center w-full h-8 px-2 gap-3">
-                      <img src={binIcon} alt="delete icon" />
-                      <span className="text-xs font-semibold text-[#454545]">Delete</span>
-                    </button>
-                  </div>
-                </td>
-              </tr>
-              <tr className="border-b-[0.5px] border-[#D2D2DA] h-7.25">
-                <td><input type="checkbox" className="x-checked" /></td>
-                <td className="text-[10px] font-semibold text-[#454545]">Incorporation of a new company</td>
-                <td className="text-[10px] font-semibold text-[#454545]">RM 2,000</td>
-                <td className="text-[10px] font-semibold text-[#454545]">20</td>
-                <td className="text-[10px] font-semibold text-[#454545]">3 Days</td>
-                <td><button className="h-3.5 w-11 rounded-[3px] bg-[#18C96466] text-[#1AC623] font-semibold text-[6px]">Approved</button></td>
-                <td><button className="h-3.5 w-11 rounded-[3px] bg-[#18C964] text-[#FFFFFF] font-semibold text-[6px]">Published</button></td>
-                <td className="relative">
-                  <button onClick={() => actionsOpen == "key1" ? setActionsOpen("") : setActionsOpen("key1")}><img src={dotsIcon} alt="actions" /></button>
-                  <div className={`absolute top-full right-0 w-60.5 px-2 py-1 rounded-[3px] bg-white x-shadow-2 ${actionsOpen === "key1" ? 'block' : 'hidden'}`}>
-                    <button className="flex items-center w-full h-8 px-2 gap-3 border-b-[0.8px] border-[#D2D2DA]">
-                      <img src={pencilIcon} alt="edit icon" />
-                      <span className="text-xs font-semibold text-[#454545]">Edit</span>
-                    </button>
-                    <button className="flex items-center w-full h-8 px-2 gap-3">
-                      <img src={binIcon} alt="delete icon" />
-                      <span className="text-xs font-semibold text-[#454545]">Delete</span>
-                    </button>
-                  </div>
-                </td>
-              </tr>
-              <tr className="border-b-[0.5px] border-[#D2D2DA] h-7.25">
-                <td><input type="checkbox" className="x-checked" /></td>
-                <td className="text-[10px] font-semibold text-[#454545]">Incorporation of a new company</td>
-                <td className="text-[10px] font-semibold text-[#454545]">RM 2,000</td>
-                <td className="text-[10px] font-semibold text-[#454545]">20</td>
-                <td className="text-[10px] font-semibold text-[#454545]">3 Days</td>
-                <td><button className="h-3.5 w-11 rounded-[3px] bg-[#61E7DA66] text-[#00AC95] font-semibold text-[6px]">Under-Review</button></td>
-                <td><button className="h-3.5 w-11 rounded-[3px] bg-[#18C964] text-[#FFFFFF] font-semibold text-[6px]">Published</button></td>
-                <td className="relative">
-                  <button onClick={() => actionsOpen == "key1" ? setActionsOpen("") : setActionsOpen("key1")}><img src={dotsIcon} alt="actions" /></button>
-                  <div className={`absolute top-full right-0 w-60.5 px-2 py-1 rounded-[3px] bg-white x-shadow-2 ${actionsOpen === "key1" ? 'block' : 'hidden'}`}>
-                    <button className="flex items-center w-full h-8 px-2 gap-3 border-b-[0.8px] border-[#D2D2DA]">
-                      <img src={pencilIcon} alt="edit icon" />
-                      <span className="text-xs font-semibold text-[#454545]">Edit</span>
-                    </button>
-                    <button className="flex items-center w-full h-8 px-2 gap-3">
-                      <img src={binIcon} alt="delete icon" />
-                      <span className="text-xs font-semibold text-[#454545]">Delete</span>
-                    </button>
-                  </div>
-                </td>
-              </tr>
-              <tr className="border-b-[0.5px] border-[#D2D2DA] h-7.25">
-                <td><input type="checkbox" className="x-checked" /></td>
-                <td className="text-[10px] font-semibold text-[#454545]">Incorporation of a new company</td>
-                <td className="text-[10px] font-semibold text-[#454545]">RM 2,000</td>
-                <td className="text-[10px] font-semibold text-[#454545]">20</td>
-                <td className="text-[10px] font-semibold text-[#454545]">3 Days</td>
-                <td><button className="h-3.5 w-11 rounded-[3px] bg-[#C0030666] text-[#C00306] font-semibold text-[6px]">Rejected</button></td>
-                <td><button className="h-3.5 w-11 rounded-[3px] bg-[#C00306] text-[#FFFFFF] font-semibold text-[6px]">Not Published</button></td>
-                <td className="relative">
-                  <button onClick={() => actionsOpen == "key1" ? setActionsOpen("") : setActionsOpen("key1")}><img src={dotsIcon} alt="actions" /></button>
-                  <div className={`absolute top-full right-0 w-60.5 px-2 py-1 rounded-[3px] bg-white x-shadow-2 ${actionsOpen === "key1" ? 'block' : 'hidden'}`}>
-                    <button className="flex items-center w-full h-8 px-2 gap-3 border-b-[0.8px] border-[#D2D2DA]">
-                      <img src={pencilIcon} alt="edit icon" />
-                      <span className="text-xs font-semibold text-[#454545]">Edit</span>
-                    </button>
-                    <button className="flex items-center w-full h-8 px-2 gap-3">
-                      <img src={binIcon} alt="delete icon" />
-                      <span className="text-xs font-semibold text-[#454545]">Delete</span>
-                    </button>
-                  </div>
-                </td>
-              </tr>
-              <tr className="border-b-[0.5px] border-[#D2D2DA] h-7.25">
-                <td><input type="checkbox" className="x-checked" /></td>
-                <td className="text-[10px] font-semibold text-[#454545]">Incorporation of a new company</td>
-                <td className="text-[10px] font-semibold text-[#454545]">RM 2,000</td>
-                <td className="text-[10px] font-semibold text-[#454545]">20</td>
-                <td className="text-[10px] font-semibold text-[#454545]">3 Days</td>
-                <td><button className="h-3.5 w-11 rounded-[3px] bg-[#C0030666] text-[#C00306] font-semibold text-[6px]">Rejected</button></td>
-                <td><button className="h-3.5 w-11 rounded-[3px] bg-[#C00306] text-[#FFFFFF] font-semibold text-[6px]">Not Published</button></td>
-                <td className="relative">
-                  <button onClick={() => actionsOpen == "key1" ? setActionsOpen("") : setActionsOpen("key1")}><img src={dotsIcon} alt="actions" /></button>
-                  <div className={`absolute top-full right-0 w-60.5 px-2 py-1 rounded-[3px] bg-white x-shadow-2 ${actionsOpen === "key1" ? 'block' : 'hidden'}`}>
-                    <button className="flex items-center w-full h-8 px-2 gap-3 border-b-[0.8px] border-[#D2D2DA]">
-                      <img src={pencilIcon} alt="edit icon" />
-                      <span className="text-xs font-semibold text-[#454545]">Edit</span>
-                    </button>
-                    <button className="flex items-center w-full h-8 px-2 gap-3">
-                      <img src={binIcon} alt="delete icon" />
-                      <span className="text-xs font-semibold text-[#454545]">Delete</span>
-                    </button>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div className="flex items-center justify-center gap-5 pt-3 pb-8">
-            <button className="flex items-center gap-1.5 font-semibold text-[8px]">
-              <img src={leftArrowIcon} alt="left arrow" />
-              Previous
+          <h2 className="font-red-hot font-bold text-[15px]">Register a New Company</h2>
+          <p className="text-[7px] text-[#888888]">Get Your Company Registered with a Trusted Specialists</p>
+        </section>
+        <section className="mt-4">
+          <div className="flex gap-1">
+            <button className="flex items-center justify-center gap-0.5 border-[0.3px] border-[#C4C4C4] h-4.25 w-9.25 rounded-xs font-semibold text-[7px] text-[#222222]">
+              Price <img src={downArrowLgIcon} alt="" />
             </button>
-            <div className="flex items-center gap-1">
-              <button className="flex items-center justify-center w-2.75 h-2.75 rounded-full text-[8px]">1</button>
-              <button className="flex items-center justify-center w-2.75 h-2.75 rounded-full bg-[#002F70] text-white text-[8px]">2</button>
-              <button className="flex items-center justify-center w-2.75 h-2.75 rounded-full text-[8px]">3</button>
-              <button className="flex items-center justify-center w-2.75 h-2.75 rounded-full text-[8px]">4</button>
-              <button className="flex items-center justify-center w-2.75 h-2.75 rounded-full text-[8px]">5</button>
-              <button className="flex items-center justify-center w-2.75 h-2.75 rounded-full text-[8px]">...</button>
-              <button className="flex items-center justify-center w-2.75 h-2.75 rounded-full text-[8px]">10</button>
-            </div>
-            <button className="flex items-center gap-1.5 font-semibold text-[8px]">
-              Next
-              <img src={rightArrowIcon} alt="right arrow" />
+            <button className="flex items-center justify-center gap-0.5 border-[0.3px] border-[#C4C4C4] h-4.25 w-10.75 rounded-xs font-semibold text-[7px] text-[#222222]">
+              Sort by <img src={downArrowLgIcon} alt="" />
             </button>
           </div>
-        </div>
-      </main>
-    </div>
+          <div className="grid grid-cols-4 gap-3 mt-1.5">
+            <div>
+              <img src={product1} alt="" className="w-41 h-31 rounded-lg object-cover" />
+              <div className="px-0.5 mt-1.5">
+                <div className="flex items-center text-[#222222] text-[6px]">
+                  <img src={product1} alt="user" className="w-2.5 h-2.5 rounded-full object-cover mr-1" />
+                  <h3><span className="font-bold">Adam Low</span> - Company Secretary</h3>
+                </div>
+                <p className="text-[7px] text-[#454545] mt-1">Register your Company with the best Company Secretary in KL</p>
+                <h4 className="font-semibold text-[9px] text-[#222222]">RM 1,600</h4>
+              </div>
+            </div>
+            <div>
+              <img src={product2} alt="" className="w-41 h-31 rounded-lg object-cover" />
+              <div className="px-0.5 mt-1.5">
+                <div className="flex items-center text-[#222222] text-[6px]">
+                  <img src={product1} alt="user" className="w-2.5 h-2.5 rounded-full object-cover mr-1" />
+                  <h3><span className="font-bold">Jessica Law</span> - Company Secretary</h3>
+                </div>
+                <p className="text-[7px] text-[#454545] mt-1">Register your Company with the best Company Secretary in KL</p>
+                <h4 className="font-semibold text-[9px] text-[#222222]">RM 1,600</h4>
+              </div>
+            </div>
+            <div>
+              <img src={product3} alt="" className="w-41 h-31 rounded-lg object-cover" />
+              <div className="px-0.5 mt-1.5">
+                <div className="flex items-center text-[#222222] text-[6px]">
+                  <img src={product1} alt="user" className="w-2.5 h-2.5 rounded-full object-cover mr-1" />
+                  <h3><span className="font-bold">Stacey Lim</span> - Company Secretary</h3>
+                </div>
+                <p className="text-[7px] text-[#454545] mt-1">Register your Company with the best Company Secretary in KL</p>
+                <h4 className="font-semibold text-[9px] text-[#222222]">RM 1,600</h4>
+              </div>
+            </div>
+            <div>
+              <img src={product4} alt="" className="w-41 h-31 rounded-lg object-cover" />
+              <div className="px-0.5 mt-1.5">
+                <div className="flex items-center text-[#222222] text-[6px]">
+                  <img src={product1} alt="user" className="w-2.5 h-2.5 rounded-full object-cover mr-1" />
+                  <h3><span className="font-bold">Stacey Lim</span> - Company Secretary</h3>
+                </div>
+                <p className="text-[7px] text-[#454545] mt-1">Register your Company with the best Company Secretary in KL</p>
+                <h4 className="font-semibold text-[9px] text-[#222222]">RM 1,600</h4>
+              </div>
+            </div>
+            <div>
+              <img src={product5} alt="" className="w-41 h-31 rounded-lg object-cover" />
+              <div className="px-0.5 mt-1.5">
+                <div className="flex items-center text-[#222222] text-[6px]">
+                  <img src={product1} alt="user" className="w-2.5 h-2.5 rounded-full object-cover mr-1" />
+                  <h3><span className="font-bold">Sarah Wong</span> - Company Secretary</h3>
+                </div>
+                <p className="text-[7px] text-[#454545] mt-1">Register your Company with the best Company Secretary in KL</p>
+                <h4 className="font-semibold text-[9px] text-[#222222]">RM 1,600</h4>
+              </div>
+            </div>
+            <div>
+              <img src={product6} alt="" className="w-41 h-31 rounded-lg object-cover" />
+              <div className="px-0.5 mt-1.5">
+                <div className="flex items-center text-[#222222] text-[6px]">
+                  <img src={product1} alt="user" className="w-2.5 h-2.5 rounded-full object-cover mr-1" />
+                  <h3><span className="font-bold">Siddesh A/L</span> - Company Secretary</h3>
+                </div>
+                <p className="text-[7px] text-[#454545] mt-1">Register your Company with the best Company Secretary in KL</p>
+                <h4 className="font-semibold text-[9px] text-[#222222]">RM 1,600</h4>
+              </div>
+            </div>
+            <div>
+              <img src={product7} alt="" className="w-41 h-31 rounded-lg object-cover" />
+              <div className="px-0.5 mt-1.5">
+                <div className="flex items-center text-[#222222] text-[6px]">
+                  <img src={product1} alt="user" className="w-2.5 h-2.5 rounded-full object-cover mr-1" />
+                  <h3><span className="font-bold">Siti Hisham</span> - Company Secretary</h3>
+                </div>
+                <p className="text-[7px] text-[#454545] mt-1">Register your Company with the best Company Secretary in KL</p>
+                <h4 className="font-semibold text-[9px] text-[#222222]">RM 1,600</h4>
+              </div>
+            </div>
+            <div>
+              <img src={product8} alt="" className="w-41 h-31 rounded-lg object-cover" />
+              <div className="px-0.5 mt-1.5">
+                <div className="flex items-center text-[#222222] text-[6px]">
+                  <img src={product1} alt="user" className="w-2.5 h-2.5 rounded-full object-cover mr-1" />
+                  <h3><span className="font-bold">Alia Marissa</span> - Company Secretary</h3>
+                </div>
+                <p className="text-[7px] text-[#454545] mt-1">Register your Company with the best Company Secretary in KL</p>
+                <h4 className="font-semibold text-[9px] text-[#222222]">RM 1,600</h4>
+              </div>
+            </div>
+            <div>
+              <img src={product9} alt="" className="w-41 h-31 rounded-lg object-cover" />
+              <div className="px-0.5 mt-1.5">
+                <div className="flex items-center text-[#222222] text-[6px]">
+                  <img src={product1} alt="user" className="w-2.5 h-2.5 rounded-full object-cover mr-1" />
+                  <h3><span className="font-bold">Adam Low</span> - Company Secretary</h3>
+                </div>
+                <p className="text-[7px] text-[#454545] mt-1">Register your Company with the best Company Secretary in KL</p>
+                <h4 className="font-semibold text-[9px] text-[#222222]">RM 1,600</h4>
+              </div>
+            </div>
+            <div>
+              <img src={product10} alt="" className="w-41 h-31 rounded-lg object-cover" />
+              <div className="px-0.5 mt-1.5">
+                <div className="flex items-center text-[#222222] text-[6px]">
+                  <img src={product1} alt="user" className="w-2.5 h-2.5 rounded-full object-cover mr-1" />
+                  <h3><span className="font-bold">Adam Low</span> - Company Secretary</h3>
+                </div>
+                <p className="text-[7px] text-[#454545] mt-1">Register your Company with the best Company Secretary in KL</p>
+                <h4 className="font-semibold text-[9px] text-[#222222]">RM 1,600</h4>
+              </div>
+            </div>
+            <div>
+              <img src={product11} alt="" className="w-41 h-31 rounded-lg object-cover" />
+              <div className="px-0.5 mt-1.5">
+                <div className="flex items-center text-[#222222] text-[6px]">
+                  <img src={product1} alt="user" className="w-2.5 h-2.5 rounded-full object-cover mr-1" />
+                  <h3><span className="font-bold">Adam Low</span> - Company Secretary</h3>
+                </div>
+                <p className="text-[7px] text-[#454545] mt-1">Register your Company with the best Company Secretary in KL</p>
+                <h4 className="font-semibold text-[9px] text-[#222222]">RM 1,600</h4>
+              </div>
+            </div>
+            <div>
+              <img src={product12} alt="" className="w-41 h-31 rounded-lg object-cover" />
+              <div className="px-0.5 mt-1.5">
+                <div className="flex items-center text-[#222222] text-[6px]">
+                  <img src={product1} alt="user" className="w-2.5 h-2.5 rounded-full object-cover mr-1" />
+                  <h3><span className="font-bold">Adam Low</span> - Company Secretary</h3>
+                </div>
+                <p className="text-[7px] text-[#454545] mt-1">Register your Company with the best Company Secretary in KL</p>
+                <h4 className="font-semibold text-[9px] text-[#222222]">RM 1,600</h4>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   )
 }
 
-export default Specialists;
+export default Specialists
+
