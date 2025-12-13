@@ -56,6 +56,10 @@ src: url("./assets/fonts/ProximaNova-Black.woff2") format("woff2");
 }
 
 @layer base {
+     *{
+          @apply focus:border-0 focus:outline-0
+     }
+
      body{
           @apply font-display max-w-241.75 mx-auto;
      }
