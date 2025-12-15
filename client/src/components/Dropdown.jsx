@@ -10,7 +10,7 @@ export default function Dropdown({ id, list, label, defaultValue }) {
           setIsOpen(false);
      }
      return (
-          <div className="relative">
+          <div className="relative mb-4">
                <label htmlFor={id} className="font-semibold text-[7px] text-[#454545]">{label}</label>
                <select name={id} id={id} value={selectedOption} onChange={(e) => setSelectedOption(e.target.value)} className="hidden">
                     {list && list.map((option, index) => (

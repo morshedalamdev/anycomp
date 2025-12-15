@@ -29,7 +29,7 @@ export default function ServiceSelect() {
           setSelectedOption((prev) => prev.filter((item) => item !== option));
      }
      return (
-          <div className="relative">
+          <div className="relative mb-4">
                <label htmlFor="additionalOfferings" className="font-semibold text-[7px] text-[#454545]">Service Offerings</label>
                <input name="additionalOfferings" id="additionalOfferings" value={selectedOption} onChange={(e) => setSelectedOption(e.target.value)} className="hidden">
                </input>

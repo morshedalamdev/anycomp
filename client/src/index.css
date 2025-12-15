@@ -71,20 +71,26 @@ src: url("./assets/fonts/ProximaNova-Black.woff2") format("woff2");
      }
 }
 
-@utility x-shadow{
+@utility x-shadow {
      box-shadow: 0px 1px 1px 0px #0000001A;
 }
-@utility x-shadow-2{
+@utility x-shadow-2 {
      box-shadow: 0px 2px 4px 0px #00000026;
 }
-@utility x-shadow-3{
+@utility x-shadow-3 {
      box-shadow: 0px 1px 8px 0px #002F7040;
 }
-@utility x-shadow-4{
+@utility x-shadow-4 {
      box-shadow: 0px 1px 4px 0px #0000000D;
 }
-@utility x-shadow-5{
+@utility x-shadow-5 {
      box-shadow: 0px 0.2px 4px 0px #00000014;
+}
+@utility x-shadow-6 {
+     box-shadow: 0px 0.5px 4px 0px #00000040;
+}
+@utility x-border-dashes {
+     dashes: 2, 2;
 }
 
 @utility x-checked {

@@ -11,7 +11,6 @@ import settingsIcon from './assets/icons/settings.svg';
 import photoScanIcon from './assets/icons/photo-scan.svg';
 import verifiedIcon from './assets/icons/verified.svg';
 import closeIcon from './assets/icons/x-mark.svg';
-import closeSmIcon from './assets/icons/close.svg';
 import infoIcon from './assets/icons/info.svg';
 import flag from './assets/flag.png';
 import banner1 from './assets/banner-1.png';
@@ -22,11 +21,45 @@ import company2 from './assets/company-2.png';
 import company3 from './assets/company-3.png';
 import Dropdown from './components/Dropdown';
 import ServiceSelect from './components/ServiceSelect';
+import ImageUpload from './components/ImageUpload';
 
-function EditSpecialist() {
+function CreateSpecialist() {
   const [isEditOpen, setIsEditOpen] = useState(false);
   const [isPublishOpen, setIsPublishOpen] = useState(false);
+  const [medias, setMedias] = useState([]);
 
+
+  const handleImageUpload = (e) => {
+    const fieldId = e.target.id;
+    const file = e.target.files[0];
+    if (!file) return;
+
+    let data = {
+      fieldId,
+      name: file.name,
+      size: (file.size / (1024 * 1024)).toFixed(2),
+      mimeType: file.type,
+      mediaType: file.type.split('/')[1].toUpperCase(),
+    }
+
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      data = { ...data, base64: ev.target.result };
+      if (medias.findIndex(m => m.fieldId === data.fieldId) === -1) {
+        setMedias([...medias, data]);
+      } else {
+        const updatedMedias = medias.map(m => m.fieldId === data.fieldId ? data : m);
+        setMedias(updatedMedias);
+      }
+    }
+    reader.readAsDataURL(file);
+  }
+
+  const handleImageRemove = (id) => {
+    const updatedMedias = medias.filter(m => m.fieldId !== id);
+    setMedias(updatedMedias);
+  }
+  
   return (
     <div className="relative flex h-screen">
       <aside className="flex flex-col">
@@ -171,13 +204,13 @@ function EditSpecialist() {
         </div>
       </main>
       <div className={`${isEditOpen ? 'absolute' : 'hidden'} inset-0 h-screen bg-black/15 z-30 overh`}>
-        <div className="relative w-68.25 h-screen bg-white ml-auto px-4 py-3 z-20">
+        <div className="relative w-68.25  min-h-screen max-h-full overflow-y-scroll bg-white ml-auto px-4 py-3 z-20">
           <div className="flex items-center justify-between">
             <h3 className="font-red-hot font-semibold text-xs">Edit Service</h3>
             <button onClick={() => setIsEditOpen(!isEditOpen)}><img src={closeIcon} alt="Close" /></button>
           </div>
-          <form className="mt-4 space-y-3">
-            <div className="flex flex-col">
+          <form className="mt-4">
+            <div className="flex flex-col mb-3">
               <label htmlFor="title" className="font-semibold text-[7px] text-[#454545]">Title</label>
               <input type="text" id="title" placeholder="Enter your service title" className="border-[0.2px] border-[#888888] rounded-xs h-4.75 font-semibold text-[5px] px-1.5 text-[#181818]" />
             </div>
@@ -188,7 +221,7 @@ function EditSpecialist() {
               <span className="font-semibold text-[5px] ml-auto text-[#222222]">(500 words)</span>
             </div>
             <Dropdown id="estimatedCompletionTime" list={["1 day", "2 days", "3 days", "4 days", "5 days", "6 days"]} label="Estimated Completion Time (Days)" />
-            <div className="flex flex-col">
+            <div className="flex flex-col mb-3">
               <label htmlFor="price" className="font-semibold text-[7px] text-[#454545]">Price</label>
               <div className="flex h-4.75">
                 <div className="flex items-center gap-0.5 px-1.5 bg-[#F5F5F5] border-[0.2px] border-r-0  rounded-l-xs">
@@ -200,7 +233,10 @@ function EditSpecialist() {
             </div>
             <Dropdown list={["Incorporation of a new company", "Monthly Company Secretary subscription", "Opening of Bank Account", "Appointment of Secretary", "Appointment/Resignation of Director", "Change of Nature of Business"]} defaultValue="Incorporation of a new company" label="Service category" id="serviceCategory" />
             <ServiceSelect />
-            <div className="flex gap-1 mt-10">
+            <ImageUpload data={medias.find(m => m.fieldId === "imageUpload1")} handleUpload={handleImageUpload} handleRemove={handleImageRemove} id="imageUpload1" position="1st" />
+            {medias.length >= 1 && <ImageUpload data={medias.find(m => m.fieldId === "imageUpload2")} handleUpload={handleImageUpload} handleRemove={handleImageRemove} id="imageUpload2" position="2nd" />}
+            {medias.length >= 2 && <ImageUpload data={medias.find(m => m.fieldId === "imageUpload3")} handleUpload={handleImageUpload} handleRemove={handleImageRemove} id="imageUpload3" position="3rd" />}
+            <div className="flex gap-1 mt-6">
               <button type="submit" className="w-14.75 h-5 border-[0.7px] border-[#C4C4C4] rounded-[2.5px] text-[6px] text-[#C00306]">Cancel</button>
               <button type="button" className="w-14.75 h-5 rounded-[2.5px] bg-[#002F70] text-[6px] text-white">Confirm</button>
             </div>
@@ -218,8 +254,8 @@ function EditSpecialist() {
             <p className="text-[10px] text-[#454545]">Do you want to publish these changes? It will appear in the marketplace listing</p>
           </div>
           <div className="flex items-center justify-end gap-2 mt-4">
-              <button onClick={() => setIsPublishOpen(false)} type="button" className="w-22.25 h-6 border-[0.6px] border-[#222222] rounded-[3px] font-semibold text-[8px] text-[#222222]">Continue Editing</button>
-              <button type="submit" className="w-22.25 h-6 rounded-[3px] bg-[#002F70] text-[8px] text-white">Save changes</button>
+            <button onClick={() => setIsPublishOpen(false)} type="button" className="w-22.25 h-6 border-[0.6px] border-[#222222] rounded-[3px] font-semibold text-[8px] text-[#222222]">Continue Editing</button>
+            <button type="submit" className="w-22.25 h-6 rounded-[3px] bg-[#002F70] text-[8px] text-white">Save changes</button>
           </div>
         </div>
         <div onClick={() => setIsPublishOpen(false)} className="absolute inset-0 z-10"></div>
@@ -228,4 +264,4 @@ function EditSpecialist() {
   )
 }
 
-export default EditSpecialist
+export default CreateSpecialist
