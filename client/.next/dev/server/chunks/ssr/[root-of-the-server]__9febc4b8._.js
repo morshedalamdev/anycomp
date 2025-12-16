@@ -912,7 +912,7 @@ const ICONS = {
     trash: __TURBOPACK__imported__module__$5b$project$5d2f$assets$2f$icons$2f$trash$2e$svg$2e$mjs__$7b$__IMAGE__$3d3e$__$225b$project$5d2f$assets$2f$icons$2f$trash$2e$svg__$28$static__in__ecmascript$2c$__tag__client$2922$__$7d$__$5b$app$2d$ssr$5d$__$28$structured__image__object__with__data__url$2c$__ecmascript$29$__["default"]
 };
 }),
-"[project]/components/Dropdown.jsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"[project]/components/Dropdown.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
@@ -942,8 +942,8 @@ function Dropdown({ id, list, label, defaultValue }) {
                 className: "font-semibold text-[7px] text-[#454545]",
                 children: label
             }, void 0, false, {
-                fileName: "[project]/components/Dropdown.jsx",
-                lineNumber: 15,
+                fileName: "[project]/components/Dropdown.tsx",
+                lineNumber: 22,
                 columnNumber: 16
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -956,13 +956,13 @@ function Dropdown({ id, list, label, defaultValue }) {
                         value: option,
                         children: option
                     }, index, false, {
-                        fileName: "[project]/components/Dropdown.jsx",
-                        lineNumber: 18,
+                        fileName: "[project]/components/Dropdown.tsx",
+                        lineNumber: 25,
                         columnNumber: 26
                     }, this))
             }, void 0, false, {
-                fileName: "[project]/components/Dropdown.jsx",
-                lineNumber: 16,
+                fileName: "[project]/components/Dropdown.tsx",
+                lineNumber: 23,
                 columnNumber: 16
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -974,8 +974,8 @@ function Dropdown({ id, list, label, defaultValue }) {
                         className: "flex-1 overflow-hidden line-clamp-1",
                         children: selectedOption
                     }, void 0, false, {
-                        fileName: "[project]/components/Dropdown.jsx",
-                        lineNumber: 22,
+                        fileName: "[project]/components/Dropdown.tsx",
+                        lineNumber: 29,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -983,14 +983,14 @@ function Dropdown({ id, list, label, defaultValue }) {
                         alt: "down arrow icon",
                         className: `${isOpen ? '' : 'rotate-180'}`
                     }, void 0, false, {
-                        fileName: "[project]/components/Dropdown.jsx",
-                        lineNumber: 23,
+                        fileName: "[project]/components/Dropdown.tsx",
+                        lineNumber: 30,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
-                fileName: "[project]/components/Dropdown.jsx",
-                lineNumber: 21,
+                fileName: "[project]/components/Dropdown.tsx",
+                lineNumber: 28,
                 columnNumber: 16
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1000,24 +1000,24 @@ function Dropdown({ id, list, label, defaultValue }) {
                         className: `font-semibold text-[7px] text-[#181818] rounded-xs h-6 cursor-pointer px-1 leading-6 ${selectedOption === option ? 'bg-[#F5F5F5]' : ''}`,
                         children: option
                     }, index, false, {
-                        fileName: "[project]/components/Dropdown.jsx",
-                        lineNumber: 27,
+                        fileName: "[project]/components/Dropdown.tsx",
+                        lineNumber: 34,
                         columnNumber: 26
                     }, this))
             }, void 0, false, {
-                fileName: "[project]/components/Dropdown.jsx",
-                lineNumber: 25,
+                fileName: "[project]/components/Dropdown.tsx",
+                lineNumber: 32,
                 columnNumber: 16
             }, this)
         ]
     }, void 0, true, {
-        fileName: "[project]/components/Dropdown.jsx",
-        lineNumber: 14,
+        fileName: "[project]/components/Dropdown.tsx",
+        lineNumber: 21,
         columnNumber: 11
     }, this);
 }
 }),
-"[project]/components/ServiceSelect.jsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"[project]/components/ServiceSelect.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
@@ -1059,18 +1059,17 @@ function ServiceSelect() {
                 className: "font-semibold text-[7px] text-[#454545]",
                 children: "Service Offerings"
             }, void 0, false, {
-                fileName: "[project]/components/ServiceSelect.jsx",
+                fileName: "[project]/components/ServiceSelect.tsx",
                 lineNumber: 27,
                 columnNumber: 16
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                 name: "additionalOfferings",
                 id: "additionalOfferings",
-                value: selectedOption,
-                onChange: (e)=>setSelectedOption(e.target.value),
+                defaultValue: selectedOption.join(","),
                 className: "hidden"
             }, void 0, false, {
-                fileName: "[project]/components/ServiceSelect.jsx",
+                fileName: "[project]/components/ServiceSelect.tsx",
                 lineNumber: 28,
                 columnNumber: 16
             }, this),
@@ -1089,26 +1088,26 @@ function ServiceSelect() {
                                         onClick: ()=>handleRemoveOption(option),
                                         type: "button",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                            src: xMarkIcon,
+                                            src: __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$icons$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ICONS"].xMark,
                                             alt: "x mark icon"
                                         }, void 0, false, {
-                                            fileName: "[project]/components/ServiceSelect.jsx",
+                                            fileName: "[project]/components/ServiceSelect.tsx",
                                             lineNumber: 33,
                                             columnNumber: 191
                                         }, this)
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ServiceSelect.jsx",
+                                        fileName: "[project]/components/ServiceSelect.tsx",
                                         lineNumber: 33,
                                         columnNumber: 126
                                     }, this)
                                 ]
                             }, index, true, {
-                                fileName: "[project]/components/ServiceSelect.jsx",
+                                fileName: "[project]/components/ServiceSelect.tsx",
                                 lineNumber: 33,
                                 columnNumber: 31
                             }, this))
                     }, void 0, false, {
-                        fileName: "[project]/components/ServiceSelect.jsx",
+                        fileName: "[project]/components/ServiceSelect.tsx",
                         lineNumber: 31,
                         columnNumber: 21
                     }, this),
@@ -1117,13 +1116,13 @@ function ServiceSelect() {
                         alt: "down arrow icon",
                         className: `${isOpen ? '' : 'rotate-180'}`
                     }, void 0, false, {
-                        fileName: "[project]/components/ServiceSelect.jsx",
+                        fileName: "[project]/components/ServiceSelect.tsx",
                         lineNumber: 36,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
-                fileName: "[project]/components/ServiceSelect.jsx",
+                fileName: "[project]/components/ServiceSelect.tsx",
                 lineNumber: 30,
                 columnNumber: 16
             }, this),
@@ -1138,7 +1137,7 @@ function ServiceSelect() {
                                 src: __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$icons$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ICONS"].user,
                                 alt: "user icon"
                             }, void 0, false, {
-                                fileName: "[project]/components/ServiceSelect.jsx",
+                                fileName: "[project]/components/ServiceSelect.tsx",
                                 lineNumber: 40,
                                 columnNumber: 26
                             }, this),
@@ -1148,7 +1147,7 @@ function ServiceSelect() {
                                         className: "font-semibold text-[7px] text-[#181818]",
                                         children: "Company Secretary Subscription"
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ServiceSelect.jsx",
+                                        fileName: "[project]/components/ServiceSelect.tsx",
                                         lineNumber: 42,
                                         columnNumber: 31
                                     }, this),
@@ -1156,19 +1155,19 @@ function ServiceSelect() {
                                         className: "font-semibold text-[5.5px] text-[#888888] -mt-px",
                                         children: "Enjoy 1 month free Company Secretary Subscription"
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ServiceSelect.jsx",
+                                        fileName: "[project]/components/ServiceSelect.tsx",
                                         lineNumber: 43,
                                         columnNumber: 31
                                     }, this)
                                 ]
                             }, void 0, true, {
-                                fileName: "[project]/components/ServiceSelect.jsx",
+                                fileName: "[project]/components/ServiceSelect.tsx",
                                 lineNumber: 41,
                                 columnNumber: 26
                             }, this)
                         ]
                     }, void 0, true, {
-                        fileName: "[project]/components/ServiceSelect.jsx",
+                        fileName: "[project]/components/ServiceSelect.tsx",
                         lineNumber: 39,
                         columnNumber: 21
                     }, this),
@@ -1180,7 +1179,7 @@ function ServiceSelect() {
                                 src: __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$icons$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ICONS"].bank,
                                 alt: "user icon"
                             }, void 0, false, {
-                                fileName: "[project]/components/ServiceSelect.jsx",
+                                fileName: "[project]/components/ServiceSelect.tsx",
                                 lineNumber: 47,
                                 columnNumber: 26
                             }, this),
@@ -1190,7 +1189,7 @@ function ServiceSelect() {
                                         className: "font-semibold text-[7px] text-[#181818]",
                                         children: "Opening of a Bank Account"
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ServiceSelect.jsx",
+                                        fileName: "[project]/components/ServiceSelect.tsx",
                                         lineNumber: 49,
                                         columnNumber: 31
                                     }, this),
@@ -1198,19 +1197,19 @@ function ServiceSelect() {
                                         className: "font-semibold text-[5.5px] text-[#888888] -mt-px",
                                         children: "Complimentary Corporate Bank Account Opening"
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ServiceSelect.jsx",
+                                        fileName: "[project]/components/ServiceSelect.tsx",
                                         lineNumber: 50,
                                         columnNumber: 31
                                     }, this)
                                 ]
                             }, void 0, true, {
-                                fileName: "[project]/components/ServiceSelect.jsx",
+                                fileName: "[project]/components/ServiceSelect.tsx",
                                 lineNumber: 48,
                                 columnNumber: 26
                             }, this)
                         ]
                     }, void 0, true, {
-                        fileName: "[project]/components/ServiceSelect.jsx",
+                        fileName: "[project]/components/ServiceSelect.tsx",
                         lineNumber: 46,
                         columnNumber: 21
                     }, this),
@@ -1222,7 +1221,7 @@ function ServiceSelect() {
                                 src: __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$icons$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ICONS"].file,
                                 alt: "user icon"
                             }, void 0, false, {
-                                fileName: "[project]/components/ServiceSelect.jsx",
+                                fileName: "[project]/components/ServiceSelect.tsx",
                                 lineNumber: 54,
                                 columnNumber: 26
                             }, this),
@@ -1232,7 +1231,7 @@ function ServiceSelect() {
                                         className: "font-semibold text-[7px] text-[#181818]",
                                         children: "Access Company Records and SSM Forms"
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ServiceSelect.jsx",
+                                        fileName: "[project]/components/ServiceSelect.tsx",
                                         lineNumber: 56,
                                         columnNumber: 31
                                     }, this),
@@ -1240,19 +1239,19 @@ function ServiceSelect() {
                                         className: "font-semibold text-[5.5px] text-[#888888] -mt-px",
                                         children: "24/7 Secure Access to Statutory Company Records"
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ServiceSelect.jsx",
+                                        fileName: "[project]/components/ServiceSelect.tsx",
                                         lineNumber: 57,
                                         columnNumber: 31
                                     }, this)
                                 ]
                             }, void 0, true, {
-                                fileName: "[project]/components/ServiceSelect.jsx",
+                                fileName: "[project]/components/ServiceSelect.tsx",
                                 lineNumber: 55,
                                 columnNumber: 26
                             }, this)
                         ]
                     }, void 0, true, {
-                        fileName: "[project]/components/ServiceSelect.jsx",
+                        fileName: "[project]/components/ServiceSelect.tsx",
                         lineNumber: 53,
                         columnNumber: 21
                     }, this),
@@ -1264,7 +1263,7 @@ function ServiceSelect() {
                                 src: __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$icons$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ICONS"].light,
                                 alt: "user icon"
                             }, void 0, false, {
-                                fileName: "[project]/components/ServiceSelect.jsx",
+                                fileName: "[project]/components/ServiceSelect.tsx",
                                 lineNumber: 61,
                                 columnNumber: 26
                             }, this),
@@ -1274,7 +1273,7 @@ function ServiceSelect() {
                                         className: "font-semibold text-[7px] text-[#181818]",
                                         children: "Priority Filling"
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ServiceSelect.jsx",
+                                        fileName: "[project]/components/ServiceSelect.tsx",
                                         lineNumber: 63,
                                         columnNumber: 31
                                     }, this),
@@ -1282,19 +1281,19 @@ function ServiceSelect() {
                                         className: "font-semibold text-[5.5px] text-[#888888] -mt-px",
                                         children: "Documents are prioritized for submission and swift processing - within 24 hours"
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ServiceSelect.jsx",
+                                        fileName: "[project]/components/ServiceSelect.tsx",
                                         lineNumber: 64,
                                         columnNumber: 31
                                     }, this)
                                 ]
                             }, void 0, true, {
-                                fileName: "[project]/components/ServiceSelect.jsx",
+                                fileName: "[project]/components/ServiceSelect.tsx",
                                 lineNumber: 62,
                                 columnNumber: 26
                             }, this)
                         ]
                     }, void 0, true, {
-                        fileName: "[project]/components/ServiceSelect.jsx",
+                        fileName: "[project]/components/ServiceSelect.tsx",
                         lineNumber: 60,
                         columnNumber: 21
                     }, this),
@@ -1306,7 +1305,7 @@ function ServiceSelect() {
                                 src: __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$icons$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ICONS"].location,
                                 alt: "user icon"
                             }, void 0, false, {
-                                fileName: "[project]/components/ServiceSelect.jsx",
+                                fileName: "[project]/components/ServiceSelect.tsx",
                                 lineNumber: 68,
                                 columnNumber: 26
                             }, this),
@@ -1316,7 +1315,7 @@ function ServiceSelect() {
                                         className: "font-semibold text-[7px] text-[#181818]",
                                         children: "Registered Office Address Use"
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ServiceSelect.jsx",
+                                        fileName: "[project]/components/ServiceSelect.tsx",
                                         lineNumber: 70,
                                         columnNumber: 31
                                     }, this),
@@ -1324,19 +1323,19 @@ function ServiceSelect() {
                                         className: "font-semibold text-[5.5px] text-[#888888] -mt-px",
                                         children: "Use of SSM-Compliant Registered Office Address with Optional Mail Forwarding"
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ServiceSelect.jsx",
+                                        fileName: "[project]/components/ServiceSelect.tsx",
                                         lineNumber: 71,
                                         columnNumber: 31
                                     }, this)
                                 ]
                             }, void 0, true, {
-                                fileName: "[project]/components/ServiceSelect.jsx",
+                                fileName: "[project]/components/ServiceSelect.tsx",
                                 lineNumber: 69,
                                 columnNumber: 26
                             }, this)
                         ]
                     }, void 0, true, {
-                        fileName: "[project]/components/ServiceSelect.jsx",
+                        fileName: "[project]/components/ServiceSelect.tsx",
                         lineNumber: 67,
                         columnNumber: 21
                     }, this),
@@ -1348,7 +1347,7 @@ function ServiceSelect() {
                                 src: __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$icons$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ICONS"].calender,
                                 alt: "user icon"
                             }, void 0, false, {
-                                fileName: "[project]/components/ServiceSelect.jsx",
+                                fileName: "[project]/components/ServiceSelect.tsx",
                                 lineNumber: 75,
                                 columnNumber: 26
                             }, this),
@@ -1358,7 +1357,7 @@ function ServiceSelect() {
                                         className: "font-semibold text-[7px] text-[#181818]",
                                         children: "Compliance Calendar Setup"
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ServiceSelect.jsx",
+                                        fileName: "[project]/components/ServiceSelect.tsx",
                                         lineNumber: 77,
                                         columnNumber: 31
                                     }, this),
@@ -1366,19 +1365,19 @@ function ServiceSelect() {
                                         className: "font-semibold text-[5.5px] text-[#888888] -mt-px",
                                         children: "Get automated reminders for all statutory deadlines"
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ServiceSelect.jsx",
+                                        fileName: "[project]/components/ServiceSelect.tsx",
                                         lineNumber: 78,
                                         columnNumber: 31
                                     }, this)
                                 ]
                             }, void 0, true, {
-                                fileName: "[project]/components/ServiceSelect.jsx",
+                                fileName: "[project]/components/ServiceSelect.tsx",
                                 lineNumber: 76,
                                 columnNumber: 26
                             }, this)
                         ]
                     }, void 0, true, {
-                        fileName: "[project]/components/ServiceSelect.jsx",
+                        fileName: "[project]/components/ServiceSelect.tsx",
                         lineNumber: 74,
                         columnNumber: 21
                     }, this),
@@ -1390,7 +1389,7 @@ function ServiceSelect() {
                                 src: __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$icons$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ICONS"].certificate,
                                 alt: "user icon"
                             }, void 0, false, {
-                                fileName: "[project]/components/ServiceSelect.jsx",
+                                fileName: "[project]/components/ServiceSelect.tsx",
                                 lineNumber: 82,
                                 columnNumber: 26
                             }, this),
@@ -1400,7 +1399,7 @@ function ServiceSelect() {
                                         className: "font-semibold text-[7px] text-[#181818]",
                                         children: "First Share Certificate Issued Free"
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ServiceSelect.jsx",
+                                        fileName: "[project]/components/ServiceSelect.tsx",
                                         lineNumber: 84,
                                         columnNumber: 31
                                     }, this),
@@ -1408,19 +1407,19 @@ function ServiceSelect() {
                                         className: "font-semibold text-[5.5px] text-[#888888] -mt-px",
                                         children: "Receive your company’s first official share certificate at no cost "
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ServiceSelect.jsx",
+                                        fileName: "[project]/components/ServiceSelect.tsx",
                                         lineNumber: 85,
                                         columnNumber: 31
                                     }, this)
                                 ]
                             }, void 0, true, {
-                                fileName: "[project]/components/ServiceSelect.jsx",
+                                fileName: "[project]/components/ServiceSelect.tsx",
                                 lineNumber: 83,
                                 columnNumber: 26
                             }, this)
                         ]
                     }, void 0, true, {
-                        fileName: "[project]/components/ServiceSelect.jsx",
+                        fileName: "[project]/components/ServiceSelect.tsx",
                         lineNumber: 81,
                         columnNumber: 21
                     }, this),
@@ -1432,7 +1431,7 @@ function ServiceSelect() {
                                 src: __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$icons$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ICONS"].van,
                                 alt: "user icon"
                             }, void 0, false, {
-                                fileName: "[project]/components/ServiceSelect.jsx",
+                                fileName: "[project]/components/ServiceSelect.tsx",
                                 lineNumber: 89,
                                 columnNumber: 26
                             }, this),
@@ -1442,7 +1441,7 @@ function ServiceSelect() {
                                         className: "font-semibold text-[7px] text-[#181818]",
                                         children: "CTC Delivery & Courier Handling"
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ServiceSelect.jsx",
+                                        fileName: "[project]/components/ServiceSelect.tsx",
                                         lineNumber: 91,
                                         columnNumber: 31
                                     }, this),
@@ -1450,19 +1449,19 @@ function ServiceSelect() {
                                         className: "font-semibold text-[5.5px] text-[#888888] -mt-px",
                                         children: "Have your company documents and certified copies delivered securely to you"
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ServiceSelect.jsx",
+                                        fileName: "[project]/components/ServiceSelect.tsx",
                                         lineNumber: 92,
                                         columnNumber: 31
                                     }, this)
                                 ]
                             }, void 0, true, {
-                                fileName: "[project]/components/ServiceSelect.jsx",
+                                fileName: "[project]/components/ServiceSelect.tsx",
                                 lineNumber: 90,
                                 columnNumber: 26
                             }, this)
                         ]
                     }, void 0, true, {
-                        fileName: "[project]/components/ServiceSelect.jsx",
+                        fileName: "[project]/components/ServiceSelect.tsx",
                         lineNumber: 88,
                         columnNumber: 21
                     }, this),
@@ -1474,7 +1473,7 @@ function ServiceSelect() {
                                 src: __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$icons$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ICONS"].support,
                                 alt: "user icon"
                             }, void 0, false, {
-                                fileName: "[project]/components/ServiceSelect.jsx",
+                                fileName: "[project]/components/ServiceSelect.tsx",
                                 lineNumber: 96,
                                 columnNumber: 26
                             }, this),
@@ -1484,7 +1483,7 @@ function ServiceSelect() {
                                         className: "font-semibold text-[7px] text-[#181818]",
                                         children: "Chat Support"
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ServiceSelect.jsx",
+                                        fileName: "[project]/components/ServiceSelect.tsx",
                                         lineNumber: 98,
                                         columnNumber: 31
                                     }, this),
@@ -1492,37 +1491,37 @@ function ServiceSelect() {
                                         className: "font-semibold text-[5.5px] text-[#888888] -mt-px",
                                         children: "Always-On Chat Support for Compliance, Filing, and General Queries"
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ServiceSelect.jsx",
+                                        fileName: "[project]/components/ServiceSelect.tsx",
                                         lineNumber: 99,
                                         columnNumber: 31
                                     }, this)
                                 ]
                             }, void 0, true, {
-                                fileName: "[project]/components/ServiceSelect.jsx",
+                                fileName: "[project]/components/ServiceSelect.tsx",
                                 lineNumber: 97,
                                 columnNumber: 26
                             }, this)
                         ]
                     }, void 0, true, {
-                        fileName: "[project]/components/ServiceSelect.jsx",
+                        fileName: "[project]/components/ServiceSelect.tsx",
                         lineNumber: 95,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
-                fileName: "[project]/components/ServiceSelect.jsx",
+                fileName: "[project]/components/ServiceSelect.tsx",
                 lineNumber: 38,
                 columnNumber: 16
             }, this)
         ]
     }, void 0, true, {
-        fileName: "[project]/components/ServiceSelect.jsx",
+        fileName: "[project]/components/ServiceSelect.tsx",
         lineNumber: 26,
         columnNumber: 11
     }, this);
 }
 }),
-"[project]/components/ImageUpload.jsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"[project]/components/ImageUpload.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
@@ -1547,8 +1546,8 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                     ")"
                 ]
             }, void 0, true, {
-                fileName: "[project]/components/ImageUpload.jsx",
-                lineNumber: 9,
+                fileName: "[project]/components/ImageUpload.tsx",
+                lineNumber: 19,
                 columnNumber: 16
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1558,22 +1557,22 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                         src: __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$icons$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ICONS"].info2,
                         alt: "info icon"
                     }, void 0, false, {
-                        fileName: "[project]/components/ImageUpload.jsx",
-                        lineNumber: 11,
+                        fileName: "[project]/components/ImageUpload.tsx",
+                        lineNumber: 21,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         className: "text-[4px] text-[#888888]",
                         children: "Maximum of 1 Image"
                     }, void 0, false, {
-                        fileName: "[project]/components/ImageUpload.jsx",
-                        lineNumber: 12,
+                        fileName: "[project]/components/ImageUpload.tsx",
+                        lineNumber: 22,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
-                fileName: "[project]/components/ImageUpload.jsx",
-                lineNumber: 10,
+                fileName: "[project]/components/ImageUpload.tsx",
+                lineNumber: 20,
                 columnNumber: 16
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -1584,36 +1583,36 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                         src: __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$icons$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ICONS"].cloud,
                         alt: "cloud icon"
                     }, void 0, false, {
-                        fileName: "[project]/components/ImageUpload.jsx",
-                        lineNumber: 15,
+                        fileName: "[project]/components/ImageUpload.tsx",
+                        lineNumber: 25,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         className: "flex items-center justify-center w-7.25 h-1.75 rounded-full bg-[#002F70] text-white",
                         children: "Browse"
                     }, void 0, false, {
-                        fileName: "[project]/components/ImageUpload.jsx",
-                        lineNumber: 16,
+                        fileName: "[project]/components/ImageUpload.tsx",
+                        lineNumber: 26,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         children: "or"
                     }, void 0, false, {
-                        fileName: "[project]/components/ImageUpload.jsx",
-                        lineNumber: 17,
+                        fileName: "[project]/components/ImageUpload.tsx",
+                        lineNumber: 27,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         children: "Drag a file to upload"
                     }, void 0, false, {
-                        fileName: "[project]/components/ImageUpload.jsx",
-                        lineNumber: 18,
+                        fileName: "[project]/components/ImageUpload.tsx",
+                        lineNumber: 28,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
-                fileName: "[project]/components/ImageUpload.jsx",
-                lineNumber: 14,
+                fileName: "[project]/components/ImageUpload.tsx",
+                lineNumber: 24,
                 columnNumber: 16
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1623,22 +1622,22 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                         className: "text-[4px] text-[#888888]",
                         children: "Accepted formats: JPG, JPEG, PNG or WEBP"
                     }, void 0, false, {
-                        fileName: "[project]/components/ImageUpload.jsx",
-                        lineNumber: 21,
+                        fileName: "[project]/components/ImageUpload.tsx",
+                        lineNumber: 31,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         className: "text-[4px] text-[#888888]",
                         children: "Maximum file size: 4MB"
                     }, void 0, false, {
-                        fileName: "[project]/components/ImageUpload.jsx",
-                        lineNumber: 22,
+                        fileName: "[project]/components/ImageUpload.tsx",
+                        lineNumber: 32,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
-                fileName: "[project]/components/ImageUpload.jsx",
-                lineNumber: 20,
+                fileName: "[project]/components/ImageUpload.tsx",
+                lineNumber: 30,
                 columnNumber: 16
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1649,8 +1648,8 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                 name: id,
                 className: "hidden"
             }, void 0, false, {
-                fileName: "[project]/components/ImageUpload.jsx",
-                lineNumber: 24,
+                fileName: "[project]/components/ImageUpload.tsx",
+                lineNumber: 34,
                 columnNumber: 16
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1659,10 +1658,12 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                     data?.base64 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         src: data.base64,
                         alt: "preview",
-                        className: "w-9.25 h-6 object-cover"
+                        width: 37,
+                        height: 24,
+                        className: "object-cover"
                     }, void 0, false, {
-                        fileName: "[project]/components/ImageUpload.jsx",
-                        lineNumber: 26,
+                        fileName: "[project]/components/ImageUpload.tsx",
+                        lineNumber: 36,
                         columnNumber: 33
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1672,8 +1673,8 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                                 className: "font-semibold text-[5px] text-[#454545] mb-0.5",
                                 children: data?.name
                             }, void 0, false, {
-                                fileName: "[project]/components/ImageUpload.jsx",
-                                lineNumber: 28,
+                                fileName: "[project]/components/ImageUpload.tsx",
+                                lineNumber: 38,
                                 columnNumber: 26
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1683,8 +1684,8 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                                         className: "block w-6",
                                         children: "Size:"
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ImageUpload.jsx",
-                                        lineNumber: 30,
+                                        fileName: "[project]/components/ImageUpload.tsx",
+                                        lineNumber: 40,
                                         columnNumber: 31
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1693,14 +1694,14 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                                             " MB"
                                         ]
                                     }, void 0, true, {
-                                        fileName: "[project]/components/ImageUpload.jsx",
-                                        lineNumber: 31,
+                                        fileName: "[project]/components/ImageUpload.tsx",
+                                        lineNumber: 41,
                                         columnNumber: 31
                                     }, this)
                                 ]
                             }, void 0, true, {
-                                fileName: "[project]/components/ImageUpload.jsx",
-                                lineNumber: 29,
+                                fileName: "[project]/components/ImageUpload.tsx",
+                                lineNumber: 39,
                                 columnNumber: 26
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1710,27 +1711,27 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                                         className: "block w-6",
                                         children: "File type:"
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ImageUpload.jsx",
-                                        lineNumber: 34,
+                                        fileName: "[project]/components/ImageUpload.tsx",
+                                        lineNumber: 44,
                                         columnNumber: 31
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: data?.mediaType
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ImageUpload.jsx",
-                                        lineNumber: 35,
+                                        fileName: "[project]/components/ImageUpload.tsx",
+                                        lineNumber: 45,
                                         columnNumber: 31
                                     }, this)
                                 ]
                             }, void 0, true, {
-                                fileName: "[project]/components/ImageUpload.jsx",
-                                lineNumber: 33,
+                                fileName: "[project]/components/ImageUpload.tsx",
+                                lineNumber: 43,
                                 columnNumber: 26
                             }, this)
                         ]
                     }, void 0, true, {
-                        fileName: "[project]/components/ImageUpload.jsx",
-                        lineNumber: 27,
+                        fileName: "[project]/components/ImageUpload.tsx",
+                        lineNumber: 37,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1740,25 +1741,25 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                             src: __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$icons$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ICONS"].trash,
                             alt: "trash icon"
                         }, void 0, false, {
-                            fileName: "[project]/components/ImageUpload.jsx",
-                            lineNumber: 38,
+                            fileName: "[project]/components/ImageUpload.tsx",
+                            lineNumber: 48,
                             columnNumber: 76
                         }, this)
                     }, void 0, false, {
-                        fileName: "[project]/components/ImageUpload.jsx",
-                        lineNumber: 38,
+                        fileName: "[project]/components/ImageUpload.tsx",
+                        lineNumber: 48,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
-                fileName: "[project]/components/ImageUpload.jsx",
-                lineNumber: 25,
+                fileName: "[project]/components/ImageUpload.tsx",
+                lineNumber: 35,
                 columnNumber: 16
             }, this)
         ]
     }, void 0, true, {
-        fileName: "[project]/components/ImageUpload.jsx",
-        lineNumber: 8,
+        fileName: "[project]/components/ImageUpload.tsx",
+        lineNumber: 18,
         columnNumber: 11
     }, this);
 }
@@ -2358,9 +2359,9 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Dropdown$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/Dropdown.jsx [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ServiceSelect$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ServiceSelect.jsx [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ImageUpload$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ImageUpload.jsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Dropdown$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/Dropdown.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ServiceSelect$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ServiceSelect.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ImageUpload$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ImageUpload.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/constants/images.ts [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$icons$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/constants/icons.ts [app-ssr] (ecmascript)");
@@ -2379,36 +2380,40 @@ function CreateSpecialist() {
     const [files, setFiles] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
     const handleImageUpload = (e)=>{
         const fieldId = e.target.id;
-        const file = e.target.files[0];
+        const filesList = e.target.files;
+        if (!filesList || filesList.length === 0) return;
+        const file = filesList[0];
         if (!file) return;
         let data = {
             fieldId,
             name: file.name,
-            size: (file.size / (1024 * 1024)).toFixed(2),
+            size: Number((file.size / (1024 * 1024)).toFixed(2)),
             mimeType: file.type,
             mediaType: file.type.split('/')[1].toUpperCase()
         };
         const reader = new FileReader();
         reader.onload = (ev)=>{
-            data = {
-                ...data,
-                base64: ev.target.result
-            };
-            if (files.findIndex((m)=>m.fieldId === data.fieldId) === -1) {
-                setFiles([
-                    ...files,
-                    data
-                ]);
-            } else {
-                const updatedFiles = files.map((m)=>m.fieldId === data.fieldId ? data : m);
-                setFiles(updatedFiles);
+            if (ev.target && ev.target.result) {
+                const newData = {
+                    ...data,
+                    base64: ev.target.result
+                };
+                if (files.findIndex((m)=>m.fieldId === newData.fieldId) === -1) {
+                    setFiles([
+                        ...files,
+                        newData
+                    ]);
+                } else {
+                    const updatedFiles = files.map((m)=>m.fieldId === newData.fieldId ? newData : m);
+                    setFiles(updatedFiles);
+                }
             }
         };
         reader.readAsDataURL(file);
     };
     const handleImageRemove = (id)=>{
-        const updatedfiles = files.filter((m)=>m.fieldId !== id);
-        setFiles(updatedfiles);
+        const updatedFiles = files.filter((m)=>m.fieldId !== id);
+        setFiles(updatedFiles);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "relative flex h-screen",
@@ -2424,7 +2429,7 @@ function CreateSpecialist() {
                                 children: "Profile"
                             }, void 0, false, {
                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                lineNumber: 53,
+                                lineNumber: 59,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2436,7 +2441,7 @@ function CreateSpecialist() {
                                         className: "w-5 h-5 rounded-full"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 55,
+                                        lineNumber: 61,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2446,7 +2451,7 @@ function CreateSpecialist() {
                                                 children: "Consistant CoSec Services "
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 57,
+                                                lineNumber: 63,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2454,25 +2459,25 @@ function CreateSpecialist() {
                                                 children: "Company Secretary - Store"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 58,
+                                                lineNumber: 64,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 56,
+                                        lineNumber: 62,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                lineNumber: 54,
+                                lineNumber: 60,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                        lineNumber: 52,
+                        lineNumber: 58,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2483,7 +2488,7 @@ function CreateSpecialist() {
                                 children: "Dashboard"
                             }, void 0, false, {
                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                lineNumber: 63,
+                                lineNumber: 69,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -2499,25 +2504,25 @@ function CreateSpecialist() {
                                                     alt: "tag icon"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                    lineNumber: 66,
+                                                    lineNumber: 72,
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "Specialists"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                    lineNumber: 67,
+                                                    lineNumber: 73,
                                                     columnNumber: 15
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                            lineNumber: 65,
+                                            lineNumber: 71,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 65,
+                                        lineNumber: 71,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -2530,25 +2535,25 @@ function CreateSpecialist() {
                                                     alt: "people icon"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                    lineNumber: 70,
+                                                    lineNumber: 76,
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "Clients"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                    lineNumber: 71,
+                                                    lineNumber: 77,
                                                     columnNumber: 15
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                            lineNumber: 69,
+                                            lineNumber: 75,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 69,
+                                        lineNumber: 75,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -2561,25 +2566,25 @@ function CreateSpecialist() {
                                                     alt: "order icon"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                    lineNumber: 74,
+                                                    lineNumber: 80,
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "Service Orders"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                    lineNumber: 75,
+                                                    lineNumber: 81,
                                                     columnNumber: 15
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                            lineNumber: 73,
+                                            lineNumber: 79,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 73,
+                                        lineNumber: 79,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -2592,25 +2597,25 @@ function CreateSpecialist() {
                                                     alt: "signature icon"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                    lineNumber: 78,
+                                                    lineNumber: 84,
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "eSignature"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                    lineNumber: 79,
+                                                    lineNumber: 85,
                                                     columnNumber: 15
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                            lineNumber: 77,
+                                            lineNumber: 83,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 77,
+                                        lineNumber: 83,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -2623,25 +2628,25 @@ function CreateSpecialist() {
                                                     alt: "message icon"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                    lineNumber: 82,
+                                                    lineNumber: 88,
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "Messages"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                    lineNumber: 83,
+                                                    lineNumber: 89,
                                                     columnNumber: 15
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                            lineNumber: 81,
+                                            lineNumber: 87,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 81,
+                                        lineNumber: 87,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -2654,37 +2659,37 @@ function CreateSpecialist() {
                                                     alt: "invoice icon"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                    lineNumber: 86,
+                                                    lineNumber: 92,
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "Invoices & Receipts"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                    lineNumber: 87,
+                                                    lineNumber: 93,
                                                     columnNumber: 15
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                            lineNumber: 85,
+                                            lineNumber: 91,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 85,
+                                        lineNumber: 91,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                lineNumber: 64,
+                                lineNumber: 70,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                        lineNumber: 62,
+                        lineNumber: 68,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2701,25 +2706,25 @@ function CreateSpecialist() {
                                                 alt: "help icon"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 94,
+                                                lineNumber: 100,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 children: "Help"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 95,
+                                                lineNumber: 101,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 93,
+                                        lineNumber: 99,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                    lineNumber: 93,
+                                    lineNumber: 99,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -2732,42 +2737,42 @@ function CreateSpecialist() {
                                                 alt: "settings icon"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 98,
+                                                lineNumber: 104,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 children: "Settings"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 99,
+                                                lineNumber: 105,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 97,
+                                        lineNumber: 103,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                    lineNumber: 97,
+                                    lineNumber: 103,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                            lineNumber: 92,
+                            lineNumber: 98,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                        lineNumber: 91,
+                        lineNumber: 97,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                lineNumber: 51,
+                lineNumber: 57,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -2783,7 +2788,7 @@ function CreateSpecialist() {
                                         children: "Register a new company | Private Limited - Sdn Bhd"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 107,
+                                        lineNumber: 113,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2797,7 +2802,7 @@ function CreateSpecialist() {
                                                         alt: "photo scan icon"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                        lineNumber: 110,
+                                                        lineNumber: 116,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2805,13 +2810,13 @@ function CreateSpecialist() {
                                                         children: "Upload an image for your service listing in PNG, JPG or JPEG up to 4MB"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                        lineNumber: 111,
+                                                        lineNumber: 117,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 109,
+                                                lineNumber: 115,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2822,7 +2827,7 @@ function CreateSpecialist() {
                                                         alt: "banner 1"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                        lineNumber: 114,
+                                                        lineNumber: 120,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -2830,25 +2835,25 @@ function CreateSpecialist() {
                                                         alt: "banner 2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                        lineNumber: 115,
+                                                        lineNumber: 121,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 113,
+                                                lineNumber: 119,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 108,
+                                        lineNumber: 114,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                lineNumber: 106,
+                                lineNumber: 112,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2859,7 +2864,7 @@ function CreateSpecialist() {
                                         children: "Description"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 120,
+                                        lineNumber: 126,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2867,13 +2872,13 @@ function CreateSpecialist() {
                                         children: "Describe your service here"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 121,
+                                        lineNumber: 127,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                lineNumber: 119,
+                                lineNumber: 125,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2884,7 +2889,7 @@ function CreateSpecialist() {
                                         children: "Additional Offerings"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 124,
+                                        lineNumber: 130,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2892,13 +2897,13 @@ function CreateSpecialist() {
                                         children: "Enhance your service by adding additional offerings"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 125,
+                                        lineNumber: 131,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                lineNumber: 123,
+                                lineNumber: 129,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2909,7 +2914,7 @@ function CreateSpecialist() {
                                         children: "Company Secretary"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 128,
+                                        lineNumber: 134,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2926,7 +2931,7 @@ function CreateSpecialist() {
                                                                 className: "w-7.5 h-7.5 rounded-full"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                                lineNumber: 132,
+                                                                lineNumber: 138,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2939,7 +2944,7 @@ function CreateSpecialist() {
                                                                                 children: "Grace Lam"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                                                lineNumber: 135,
+                                                                                lineNumber: 141,
                                                                                 columnNumber: 23
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -2948,7 +2953,7 @@ function CreateSpecialist() {
                                                                                 className: "ml-1 mr-px"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                                                lineNumber: 136,
+                                                                                lineNumber: 142,
                                                                                 columnNumber: 23
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2956,13 +2961,13 @@ function CreateSpecialist() {
                                                                                 children: "Verified"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                                                lineNumber: 137,
+                                                                                lineNumber: 143,
                                                                                 columnNumber: 23
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                                        lineNumber: 134,
+                                                                        lineNumber: 140,
                                                                         columnNumber: 21
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
@@ -2970,7 +2975,7 @@ function CreateSpecialist() {
                                                                         children: "Corpsec Services Sdn Bhd"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                                        lineNumber: 139,
+                                                                        lineNumber: 145,
                                                                         columnNumber: 21
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -2979,19 +2984,19 @@ function CreateSpecialist() {
                                                                         children: "View Profile"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                                        lineNumber: 140,
+                                                                        lineNumber: 146,
                                                                         columnNumber: 21
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                                lineNumber: 133,
+                                                                lineNumber: 139,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                        lineNumber: 131,
+                                                        lineNumber: 137,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2999,13 +3004,13 @@ function CreateSpecialist() {
                                                         children: "A company secretarial service founded by Grace, who believes that every company deserves clarity, confidence, and care in their compliance journey. Inspired by the spirit of entrepreneurship, Aida treats every client’s business as if it were her own — attentive to detail, committed to deadlines, and focused on growth. Step into a partnership built on trust, transparency, and professional excellence. Whether you’re just starting out or managing a growing company, Aida is here to make your corporate governance smooth, secure, and stress-free. Your company’s peace of mind starts here"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                        lineNumber: 143,
+                                                        lineNumber: 149,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 130,
+                                                lineNumber: 136,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3015,7 +3020,7 @@ function CreateSpecialist() {
                                                         children: "Certified Company Secretary"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                        lineNumber: 146,
+                                                        lineNumber: 152,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -3028,12 +3033,12 @@ function CreateSpecialist() {
                                                                     alt: "company 1"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                                    lineNumber: 148,
+                                                                    lineNumber: 154,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                                lineNumber: 148,
+                                                                lineNumber: 154,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -3043,12 +3048,12 @@ function CreateSpecialist() {
                                                                     alt: "company 2"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                                    lineNumber: 149,
+                                                                    lineNumber: 155,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                                lineNumber: 149,
+                                                                lineNumber: 155,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -3058,42 +3063,42 @@ function CreateSpecialist() {
                                                                     alt: "company 3"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                                    lineNumber: 150,
+                                                                    lineNumber: 156,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                                lineNumber: 150,
+                                                                lineNumber: 156,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                        lineNumber: 147,
+                                                        lineNumber: 153,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 145,
+                                                lineNumber: 151,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 129,
+                                        lineNumber: 135,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                lineNumber: 127,
+                                lineNumber: 133,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                        lineNumber: 105,
+                        lineNumber: 111,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3108,7 +3113,7 @@ function CreateSpecialist() {
                                         children: "Edit"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 158,
+                                        lineNumber: 164,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3116,13 +3121,13 @@ function CreateSpecialist() {
                                         children: "Publish"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 161,
+                                        lineNumber: 167,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                lineNumber: 157,
+                                lineNumber: 163,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3133,7 +3138,7 @@ function CreateSpecialist() {
                                         children: "Professional Fee"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 166,
+                                        lineNumber: 172,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3141,7 +3146,7 @@ function CreateSpecialist() {
                                         children: "Set a rate for your service"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 167,
+                                        lineNumber: 173,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3151,12 +3156,12 @@ function CreateSpecialist() {
                                             children: "RM 1,800"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                            lineNumber: 169,
+                                            lineNumber: 175,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 168,
+                                        lineNumber: 174,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3170,7 +3175,7 @@ function CreateSpecialist() {
                                                         children: "Base price"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                        lineNumber: 173,
+                                                        lineNumber: 179,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3178,13 +3183,13 @@ function CreateSpecialist() {
                                                         children: "RM 1,800"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                        lineNumber: 174,
+                                                        lineNumber: 180,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 172,
+                                                lineNumber: 178,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3195,7 +3200,7 @@ function CreateSpecialist() {
                                                         children: "Service processing fee"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                        lineNumber: 177,
+                                                        lineNumber: 183,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3203,13 +3208,13 @@ function CreateSpecialist() {
                                                         children: "RM 540"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                        lineNumber: 178,
+                                                        lineNumber: 184,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 176,
+                                                lineNumber: 182,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3220,7 +3225,7 @@ function CreateSpecialist() {
                                                         children: "Total"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                        lineNumber: 181,
+                                                        lineNumber: 187,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3228,13 +3233,13 @@ function CreateSpecialist() {
                                                         children: "RM 2,340"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                        lineNumber: 182,
+                                                        lineNumber: 188,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 180,
+                                                lineNumber: 186,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3245,7 +3250,7 @@ function CreateSpecialist() {
                                                         children: "Your returns"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                        lineNumber: 185,
+                                                        lineNumber: 191,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3253,37 +3258,37 @@ function CreateSpecialist() {
                                                         children: "RM 1,800"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                        lineNumber: 186,
+                                                        lineNumber: 192,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 184,
+                                                lineNumber: 190,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 171,
+                                        lineNumber: 177,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                lineNumber: 165,
+                                lineNumber: 171,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                        lineNumber: 156,
+                        lineNumber: 162,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                lineNumber: 104,
+                lineNumber: 110,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3300,7 +3305,7 @@ function CreateSpecialist() {
                                         children: "Edit Service"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 195,
+                                        lineNumber: 201,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3310,18 +3315,18 @@ function CreateSpecialist() {
                                             alt: "Close"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                            lineNumber: 196,
+                                            lineNumber: 202,
                                             columnNumber: 64
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 196,
+                                        lineNumber: 202,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                lineNumber: 194,
+                                lineNumber: 200,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -3336,7 +3341,7 @@ function CreateSpecialist() {
                                                 children: "Title"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 200,
+                                                lineNumber: 206,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -3346,13 +3351,13 @@ function CreateSpecialist() {
                                                 className: "border-[0.2px] border-[#888888] rounded-xs h-4.75 font-semibold text-[5px] px-1.5 text-[#181818]"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 201,
+                                                lineNumber: 207,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 199,
+                                        lineNumber: 205,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3364,7 +3369,7 @@ function CreateSpecialist() {
                                                 children: "Description"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 204,
+                                                lineNumber: 210,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -3373,7 +3378,7 @@ function CreateSpecialist() {
                                                 className: "border-[0.2px] border-[#888888] rounded-xs h-16 font-semibold text-[5px] pt-1 px-1.5 text-[#181818]"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 205,
+                                                lineNumber: 211,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3381,16 +3386,16 @@ function CreateSpecialist() {
                                                 children: "(500 words)"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 207,
+                                                lineNumber: 213,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 203,
+                                        lineNumber: 209,
                                         columnNumber: 13
                                     }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Dropdown$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Dropdown$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         id: "estimatedCompletionTime",
                                         list: [
                                             "1 day",
@@ -3403,7 +3408,7 @@ function CreateSpecialist() {
                                         label: "Estimated Completion Time (Days)"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 209,
+                                        lineNumber: 215,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3415,7 +3420,7 @@ function CreateSpecialist() {
                                                 children: "Price"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 211,
+                                                lineNumber: 217,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3430,7 +3435,7 @@ function CreateSpecialist() {
                                                                 className: "w-2.75"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                                lineNumber: 214,
+                                                                lineNumber: 220,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3438,13 +3443,13 @@ function CreateSpecialist() {
                                                                 children: "MYR"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                                lineNumber: 215,
+                                                                lineNumber: 221,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                        lineNumber: 213,
+                                                        lineNumber: 219,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -3454,22 +3459,22 @@ function CreateSpecialist() {
                                                         className: "flex-1 text-[7px] px-1.5 border-[0.2px] border-black border-l-0 rounded-r-xs font-semibold text-[#181818]"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                        lineNumber: 217,
+                                                        lineNumber: 223,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 212,
+                                                lineNumber: 218,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 210,
+                                        lineNumber: 216,
                                         columnNumber: 13
                                     }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Dropdown$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Dropdown$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         list: [
                                             "Incorporation of a new company",
                                             "Monthly Company Secretary subscription",
@@ -3483,15 +3488,15 @@ function CreateSpecialist() {
                                         id: "serviceCategory"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 220,
+                                        lineNumber: 226,
                                         columnNumber: 13
                                     }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ServiceSelect$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ServiceSelect$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 221,
+                                        lineNumber: 227,
                                         columnNumber: 13
                                     }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ImageUpload$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ImageUpload$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         data: files.find((m)=>m.fieldId === "imageUpload1"),
                                         handleUpload: handleImageUpload,
                                         handleRemove: handleImageRemove,
@@ -3499,10 +3504,10 @@ function CreateSpecialist() {
                                         position: "1st"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 222,
+                                        lineNumber: 228,
                                         columnNumber: 13
                                     }, this),
-                                    files.length >= 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ImageUpload$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    files.length >= 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ImageUpload$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         data: files.find((m)=>m.fieldId === "imageUpload2"),
                                         handleUpload: handleImageUpload,
                                         handleRemove: handleImageRemove,
@@ -3510,10 +3515,10 @@ function CreateSpecialist() {
                                         position: "2nd"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 223,
+                                        lineNumber: 229,
                                         columnNumber: 35
                                     }, this),
-                                    files.length >= 2 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ImageUpload$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    files.length >= 2 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ImageUpload$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         data: files.find((m)=>m.fieldId === "imageUpload3"),
                                         handleUpload: handleImageUpload,
                                         handleRemove: handleImageRemove,
@@ -3521,7 +3526,7 @@ function CreateSpecialist() {
                                         position: "3rd"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 224,
+                                        lineNumber: 230,
                                         columnNumber: 35
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3533,7 +3538,7 @@ function CreateSpecialist() {
                                                 children: "Cancel"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 226,
+                                                lineNumber: 232,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3542,25 +3547,25 @@ function CreateSpecialist() {
                                                 children: "Confirm"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 227,
+                                                lineNumber: 233,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 225,
+                                        lineNumber: 231,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                lineNumber: 198,
+                                lineNumber: 204,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                        lineNumber: 193,
+                        lineNumber: 199,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3568,13 +3573,13 @@ function CreateSpecialist() {
                         className: "absolute inset-0 z-10"
                     }, void 0, false, {
                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                        lineNumber: 231,
+                        lineNumber: 237,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                lineNumber: 192,
+                lineNumber: 198,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3593,7 +3598,7 @@ function CreateSpecialist() {
                                                 alt: ""
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 237,
+                                                lineNumber: 243,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3601,13 +3606,13 @@ function CreateSpecialist() {
                                                 children: "Publish changes"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                                lineNumber: 238,
+                                                lineNumber: 244,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 236,
+                                        lineNumber: 242,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3615,13 +3620,13 @@ function CreateSpecialist() {
                                         children: "Do you want to publish these changes? It will appear in the marketplace listing"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 240,
+                                        lineNumber: 246,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                lineNumber: 235,
+                                lineNumber: 241,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3634,7 +3639,7 @@ function CreateSpecialist() {
                                         children: "Continue Editing"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 243,
+                                        lineNumber: 249,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3643,19 +3648,19 @@ function CreateSpecialist() {
                                         children: "Save changes"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                        lineNumber: 244,
+                                        lineNumber: 250,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                                lineNumber: 242,
+                                lineNumber: 248,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                        lineNumber: 234,
+                        lineNumber: 240,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3663,19 +3668,19 @@ function CreateSpecialist() {
                         className: "absolute inset-0 z-10"
                     }, void 0, false, {
                         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                        lineNumber: 247,
+                        lineNumber: 253,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-                lineNumber: 233,
+                lineNumber: 239,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/(root)/specialists/[id]/page.tsx",
-        lineNumber: 50,
+        lineNumber: 56,
         columnNumber: 5
     }, this);
 }
@@ -3683,4 +3688,4 @@ const __TURBOPACK__default__export__ = CreateSpecialist;
 }),
 ];
 
-//# sourceMappingURL=%5Broot-of-the-server%5D__f98548ce._.js.map
+//# sourceMappingURL=%5Broot-of-the-server%5D__9febc4b8._.js.map

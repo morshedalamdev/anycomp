@@ -6,10 +6,10 @@ import { ICONS } from '@/constants/icons';
 
 
 export default function ServiceSelect() {
-     const [isOpen, setIsOpen] = useState(false);
-     const [selectedOption, setSelectedOption] = useState([]);
+     const [isOpen, setIsOpen] = useState<boolean>(false);
+     const [selectedOption, setSelectedOption] = useState<string[]>([]);
 
-     const handleOptionSelect = (option) => {
+     const handleOptionSelect = (option: string) => {
           setSelectedOption((prev) => {
                if (!prev.includes(option)) {
                     return [...prev, option];
@@ -19,18 +19,18 @@ export default function ServiceSelect() {
           setIsOpen(false);
      }
 
-     const handleRemoveOption = (option) => {
+     const handleRemoveOption = (option: string) => {
           setSelectedOption((prev) => prev.filter((item) => item !== option));
      }
      return (
           <div className="relative mb-4">
                <label htmlFor="additionalOfferings" className="font-semibold text-[7px] text-[#454545]">Service Offerings</label>
-               <input name="additionalOfferings" id="additionalOfferings" value={selectedOption} onChange={(e) => setSelectedOption(e.target.value)} className="hidden">
+               <input name="additionalOfferings" id="additionalOfferings" defaultValue={selectedOption.join(",")} className="hidden">
                </input>
                <div onClick={() => setIsOpen(!isOpen)} className="flex items-center justify-between w-full min-h-4.75 border-[0.2px] border-[#888888] rounded-xs font-semibold text-left text-[7px] text-[#454545] px-1.5 py-1">
                     <div className="flex-1 flex flex-wrap gap-1">
                          {selectedOption.length > 0 && selectedOption.map((option, index) => (
-                              <p key={index} className="flex items-center gap-2 h-3.5 rounded-xs bg-[#F5F5F5] px-1">{option} <button onClick={() => handleRemoveOption(option)} type="button"><Image src={xMarkIcon} alt="x mark icon" /></button></p>
+                              <p key={index} className="flex items-center gap-2 h-3.5 rounded-xs bg-[#F5F5F5] px-1">{option} <button onClick={() => handleRemoveOption(option)} type="button"><Image src={ICONS.xMark} alt="x mark icon" /></button></p>
                          ))}
                     </div>
                     <Image src={ICONS.downArrowSm} alt="down arrow icon" className={`${isOpen ? '' : 'rotate-180'}`} />

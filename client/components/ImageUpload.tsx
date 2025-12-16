@@ -1,8 +1,18 @@
+import React from "react";
+import {FileType} from "@/lib/types";
 import { ICONS } from "@/constants/icons";
 import Image from "next/image";
 
+interface ImageUploadProps {
+  id: string;
+  position: string;
+  data: FileType | undefined;
+  handleUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleRemove: (id: string) => void;
+}
 
-export default function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
+
+export default function ImageUpload({ id, position, data, handleUpload, handleRemove }: ImageUploadProps) {
 
      return (
           <div className="mb-4">
@@ -23,7 +33,7 @@ export default function ImageUpload({ id, position, data, handleUpload, handleRe
                </p>
                <input onChange={handleUpload} accept="image/jpeg,image/png,image/webp" type="file" id={id} name={id} className="hidden" />
                <div className={`${data ? "flex" : "hidden"} items-center gap-1.5 mt-1.5 h-8.5 bg-white x-shadow-6 px-1.5`}>
-               {data?.base64 && <Image src={data.base64} alt="preview" className="w-9.25 h-6 object-cover" />}
+               {data?.base64 && <Image src={data.base64} alt="preview" width={37} height={24} className="object-cover" />}
                     <div className="flex-1">
                          <p className="font-semibold text-[5px] text-[#454545] mb-0.5">{data?.name}</p>
                          <p className="flex items-center font-semibold text-[4px] text-[#888888]">

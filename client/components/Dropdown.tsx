@@ -2,11 +2,18 @@ import { useState } from 'react';
 import { ICONS } from '@/constants/icons';
 import Image from 'next/image';
 
-export default function Dropdown({ id, list, label, defaultValue }) {
-     const [isOpen, setIsOpen] = useState(false);
-     const [selectedOption, setSelectedOption] = useState(defaultValue);
+interface DropdownProps {
+     id: string;
+     list: string[];
+     label: string;
+     defaultValue?: string;
+}
 
-     const handleOptionSelect = (option) => {
+export default function Dropdown({ id, list, label, defaultValue }: DropdownProps) {
+     const [isOpen, setIsOpen] = useState<boolean>(false);
+     const [selectedOption, setSelectedOption] = useState<string | undefined>(defaultValue);
+
+     const handleOptionSelect = (option: string) => {
           setSelectedOption(option);
           setIsOpen(false);
      }

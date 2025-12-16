@@ -7,42 +7,49 @@ import ImageUpload from '@/components/ImageUpload';
 import Image from 'next/image';
 import { IMAGES } from '@/constants/images';
 import { ICONS } from '@/constants/icons';
+import { FileType, MediaType, MimeType } from '@/lib/types';
+
+interface HandleImageUploadEvent extends React.ChangeEvent<HTMLInputElement> {}
 
 function CreateSpecialist() {
-  const [isEditOpen, setIsEditOpen] = useState(false);
-  const [isPublishOpen, setIsPublishOpen] = useState(false);
-  const [medias, setMedias] = useState([]);
+  const [isEditOpen, setIsEditOpen] = useState<boolean>(false);
+  const [isPublishOpen, setIsPublishOpen] = useState<boolean>(false);
+  const [files, setFiles] = useState<FileType[]>([]);
 
 
-  const handleImageUpload = (e) => {
+  const handleImageUpload = (e: HandleImageUploadEvent) => {
     const fieldId = e.target.id;
-    const file = e.target.files[0];
+    const filesList = e.target.files;
+    if (!filesList || filesList.length === 0) return;
+    const file = filesList[0];
     if (!file) return;
 
     let data = {
       fieldId,
       name: file.name,
-      size: (file.size / (1024 * 1024)).toFixed(2),
-      mimeType: file.type,
-      mediaType: file.type.split('/')[1].toUpperCase(),
+      size: Number(((file.size / (1024 * 1024)).toFixed(2))),
+      mimeType: file.type as MimeType,
+      mediaType: file.type.split('/')[1].toUpperCase() as MediaType,
     }
 
     const reader = new FileReader();
     reader.onload = (ev) => {
-      data = { ...data, base64: ev.target.result };
-      if (medias.findIndex(m => m.fieldId === data.fieldId) === -1) {
-        setMedias([...medias, data]);
-      } else {
-        const updatedMedias = medias.map(m => m.fieldId === data.fieldId ? data : m);
-        setMedias(updatedMedias);
+      if (ev.target && ev.target.result) {
+        const newData = { ...data, base64: ev.target.result as string } as FileType;
+        if (files.findIndex(m => m.fieldId === newData.fieldId) === -1) {
+          setFiles([...files, newData]);
+        } else {
+          const updatedFiles = files.map(m => m.fieldId === newData.fieldId ? newData : m);
+          setFiles(updatedFiles);
+        }
       }
     }
     reader.readAsDataURL(file);
   }
 
-  const handleImageRemove = (id) => {
-    const updatedMedias = medias.filter(m => m.fieldId !== id);
-    setMedias(updatedMedias);
+  const handleImageRemove = (id: string) => {
+    const updatedFiles = files.filter(m => m.fieldId !== id);
+    setFiles(updatedFiles);
   }
   
   return (
@@ -218,9 +225,9 @@ function CreateSpecialist() {
             </div>
             <Dropdown list={["Incorporation of a new company", "Monthly Company Secretary subscription", "Opening of Bank Account", "Appointment of Secretary", "Appointment/Resignation of Director", "Change of Nature of Business"]} defaultValue="Incorporation of a new company" label="Service category" id="serviceCategory" />
             <ServiceSelect />
-            <ImageUpload data={medias.find(m => m.fieldId === "imageUpload1")} handleUpload={handleImageUpload} handleRemove={handleImageRemove} id="imageUpload1" position="1st" />
-            {medias.length >= 1 && <ImageUpload data={medias.find(m => m.fieldId === "imageUpload2")} handleUpload={handleImageUpload} handleRemove={handleImageRemove} id="imageUpload2" position="2nd" />}
-            {medias.length >= 2 && <ImageUpload data={medias.find(m => m.fieldId === "imageUpload3")} handleUpload={handleImageUpload} handleRemove={handleImageRemove} id="imageUpload3" position="3rd" />}
+            <ImageUpload data={files.find(m => m.fieldId === "imageUpload1")} handleUpload={handleImageUpload} handleRemove={handleImageRemove} id="imageUpload1" position="1st" />
+            {files.length >= 1 && <ImageUpload data={files.find(m => m.fieldId === "imageUpload2")} handleUpload={handleImageUpload} handleRemove={handleImageRemove} id="imageUpload2" position="2nd" />}
+            {files.length >= 2 && <ImageUpload data={files.find(m => m.fieldId === "imageUpload3")} handleUpload={handleImageUpload} handleRemove={handleImageRemove} id="imageUpload3" position="3rd" />}
             <div className="flex gap-1 mt-6">
               <button type="submit" className="w-14.75 h-5 border-[0.7px] border-[#C4C4C4] rounded-[2.5px] text-[6px] text-[#C00306]">Cancel</button>
               <button type="button" className="w-14.75 h-5 rounded-[2.5px] bg-[#002F70] text-[6px] text-white">Confirm</button>

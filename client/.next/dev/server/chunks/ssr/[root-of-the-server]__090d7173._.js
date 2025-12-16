@@ -1522,7 +1522,7 @@ function ServiceSelect() {
     }, this);
 }
 }),
-"[project]/components/ImageUpload.jsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"[project]/components/ImageUpload.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
@@ -1547,7 +1547,7 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                     ")"
                 ]
             }, void 0, true, {
-                fileName: "[project]/components/ImageUpload.jsx",
+                fileName: "[project]/components/ImageUpload.tsx",
                 lineNumber: 9,
                 columnNumber: 16
             }, this),
@@ -1558,7 +1558,7 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                         src: __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$icons$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ICONS"].info2,
                         alt: "info icon"
                     }, void 0, false, {
-                        fileName: "[project]/components/ImageUpload.jsx",
+                        fileName: "[project]/components/ImageUpload.tsx",
                         lineNumber: 11,
                         columnNumber: 21
                     }, this),
@@ -1566,13 +1566,13 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                         className: "text-[4px] text-[#888888]",
                         children: "Maximum of 1 Image"
                     }, void 0, false, {
-                        fileName: "[project]/components/ImageUpload.jsx",
+                        fileName: "[project]/components/ImageUpload.tsx",
                         lineNumber: 12,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
-                fileName: "[project]/components/ImageUpload.jsx",
+                fileName: "[project]/components/ImageUpload.tsx",
                 lineNumber: 10,
                 columnNumber: 16
             }, this),
@@ -1584,7 +1584,7 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                         src: __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$icons$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ICONS"].cloud,
                         alt: "cloud icon"
                     }, void 0, false, {
-                        fileName: "[project]/components/ImageUpload.jsx",
+                        fileName: "[project]/components/ImageUpload.tsx",
                         lineNumber: 15,
                         columnNumber: 21
                     }, this),
@@ -1592,27 +1592,27 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                         className: "flex items-center justify-center w-7.25 h-1.75 rounded-full bg-[#002F70] text-white",
                         children: "Browse"
                     }, void 0, false, {
-                        fileName: "[project]/components/ImageUpload.jsx",
+                        fileName: "[project]/components/ImageUpload.tsx",
                         lineNumber: 16,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         children: "or"
                     }, void 0, false, {
-                        fileName: "[project]/components/ImageUpload.jsx",
+                        fileName: "[project]/components/ImageUpload.tsx",
                         lineNumber: 17,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         children: "Drag a file to upload"
                     }, void 0, false, {
-                        fileName: "[project]/components/ImageUpload.jsx",
+                        fileName: "[project]/components/ImageUpload.tsx",
                         lineNumber: 18,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
-                fileName: "[project]/components/ImageUpload.jsx",
+                fileName: "[project]/components/ImageUpload.tsx",
                 lineNumber: 14,
                 columnNumber: 16
             }, this),
@@ -1623,7 +1623,7 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                         className: "text-[4px] text-[#888888]",
                         children: "Accepted formats: JPG, JPEG, PNG or WEBP"
                     }, void 0, false, {
-                        fileName: "[project]/components/ImageUpload.jsx",
+                        fileName: "[project]/components/ImageUpload.tsx",
                         lineNumber: 21,
                         columnNumber: 21
                     }, this),
@@ -1631,13 +1631,13 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                         className: "text-[4px] text-[#888888]",
                         children: "Maximum file size: 4MB"
                     }, void 0, false, {
-                        fileName: "[project]/components/ImageUpload.jsx",
+                        fileName: "[project]/components/ImageUpload.tsx",
                         lineNumber: 22,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
-                fileName: "[project]/components/ImageUpload.jsx",
+                fileName: "[project]/components/ImageUpload.tsx",
                 lineNumber: 20,
                 columnNumber: 16
             }, this),
@@ -1649,7 +1649,7 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                 name: id,
                 className: "hidden"
             }, void 0, false, {
-                fileName: "[project]/components/ImageUpload.jsx",
+                fileName: "[project]/components/ImageUpload.tsx",
                 lineNumber: 24,
                 columnNumber: 16
             }, this),
@@ -1661,7 +1661,7 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                         alt: "preview",
                         className: "w-9.25 h-6 object-cover"
                     }, void 0, false, {
-                        fileName: "[project]/components/ImageUpload.jsx",
+                        fileName: "[project]/components/ImageUpload.tsx",
                         lineNumber: 26,
                         columnNumber: 33
                     }, this),
@@ -1672,7 +1672,7 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                                 className: "font-semibold text-[5px] text-[#454545] mb-0.5",
                                 children: data?.name
                             }, void 0, false, {
-                                fileName: "[project]/components/ImageUpload.jsx",
+                                fileName: "[project]/components/ImageUpload.tsx",
                                 lineNumber: 28,
                                 columnNumber: 26
                             }, this),
@@ -1683,7 +1683,7 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                                         className: "block w-6",
                                         children: "Size:"
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ImageUpload.jsx",
+                                        fileName: "[project]/components/ImageUpload.tsx",
                                         lineNumber: 30,
                                         columnNumber: 31
                                     }, this),
@@ -1693,13 +1693,13 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                                             " MB"
                                         ]
                                     }, void 0, true, {
-                                        fileName: "[project]/components/ImageUpload.jsx",
+                                        fileName: "[project]/components/ImageUpload.tsx",
                                         lineNumber: 31,
                                         columnNumber: 31
                                     }, this)
                                 ]
                             }, void 0, true, {
-                                fileName: "[project]/components/ImageUpload.jsx",
+                                fileName: "[project]/components/ImageUpload.tsx",
                                 lineNumber: 29,
                                 columnNumber: 26
                             }, this),
@@ -1710,26 +1710,26 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                                         className: "block w-6",
                                         children: "File type:"
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ImageUpload.jsx",
+                                        fileName: "[project]/components/ImageUpload.tsx",
                                         lineNumber: 34,
                                         columnNumber: 31
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: data?.mediaType
                                     }, void 0, false, {
-                                        fileName: "[project]/components/ImageUpload.jsx",
+                                        fileName: "[project]/components/ImageUpload.tsx",
                                         lineNumber: 35,
                                         columnNumber: 31
                                     }, this)
                                 ]
                             }, void 0, true, {
-                                fileName: "[project]/components/ImageUpload.jsx",
+                                fileName: "[project]/components/ImageUpload.tsx",
                                 lineNumber: 33,
                                 columnNumber: 26
                             }, this)
                         ]
                     }, void 0, true, {
-                        fileName: "[project]/components/ImageUpload.jsx",
+                        fileName: "[project]/components/ImageUpload.tsx",
                         lineNumber: 27,
                         columnNumber: 21
                     }, this),
@@ -1740,24 +1740,24 @@ function ImageUpload({ id, position, data, handleUpload, handleRemove }) {
                             src: __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$icons$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ICONS"].trash,
                             alt: "trash icon"
                         }, void 0, false, {
-                            fileName: "[project]/components/ImageUpload.jsx",
+                            fileName: "[project]/components/ImageUpload.tsx",
                             lineNumber: 38,
                             columnNumber: 76
                         }, this)
                     }, void 0, false, {
-                        fileName: "[project]/components/ImageUpload.jsx",
+                        fileName: "[project]/components/ImageUpload.tsx",
                         lineNumber: 38,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
-                fileName: "[project]/components/ImageUpload.jsx",
+                fileName: "[project]/components/ImageUpload.tsx",
                 lineNumber: 25,
                 columnNumber: 16
             }, this)
         ]
     }, void 0, true, {
-        fileName: "[project]/components/ImageUpload.jsx",
+        fileName: "[project]/components/ImageUpload.tsx",
         lineNumber: 8,
         columnNumber: 11
     }, this);
@@ -2360,7 +2360,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Dropdown$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/Dropdown.jsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ServiceSelect$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ServiceSelect.jsx [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ImageUpload$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ImageUpload.jsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ImageUpload$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ImageUpload.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$images$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/constants/images.ts [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$constants$2f$icons$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/constants/icons.ts [app-ssr] (ecmascript)");
@@ -3491,7 +3491,7 @@ function CreateSpecialist() {
                                         lineNumber: 221,
                                         columnNumber: 13
                                     }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ImageUpload$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ImageUpload$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         data: files.find((m)=>m.fieldId === "imageUpload1"),
                                         handleUpload: handleImageUpload,
                                         handleRemove: handleImageRemove,
@@ -3502,7 +3502,7 @@ function CreateSpecialist() {
                                         lineNumber: 222,
                                         columnNumber: 13
                                     }, this),
-                                    files.length >= 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ImageUpload$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    files.length >= 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ImageUpload$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         data: files.find((m)=>m.fieldId === "imageUpload2"),
                                         handleUpload: handleImageUpload,
                                         handleRemove: handleImageRemove,
@@ -3513,7 +3513,7 @@ function CreateSpecialist() {
                                         lineNumber: 223,
                                         columnNumber: 35
                                     }, this),
-                                    files.length >= 2 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ImageUpload$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    files.length >= 2 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ImageUpload$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         data: files.find((m)=>m.fieldId === "imageUpload3"),
                                         handleUpload: handleImageUpload,
                                         handleRemove: handleImageRemove,
@@ -3683,4 +3683,4 @@ const __TURBOPACK__default__export__ = CreateSpecialist;
 }),
 ];
 
-//# sourceMappingURL=%5Broot-of-the-server%5D__f98548ce._.js.map
+//# sourceMappingURL=%5Broot-of-the-server%5D__090d7173._.js.map
