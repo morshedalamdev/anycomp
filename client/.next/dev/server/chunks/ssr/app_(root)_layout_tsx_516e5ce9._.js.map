@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/morshedalam/Developer/REACT/anycomp/client/app/%28root%29/layout.tsx"],"sourcesContent":["import React from \"react\";\n\nexport default function Layout ({\n  children,\n}: {\n  children: React.ReactNode;\n}) {\n     return <>{children}</>;\n}"],"names":[],"mappings":";;;;;;AAEe,SAAS,OAAQ,EAC9B,QAAQ,EAGT;IACI,qBAAO;kBAAG;;AACf"}}]
+}

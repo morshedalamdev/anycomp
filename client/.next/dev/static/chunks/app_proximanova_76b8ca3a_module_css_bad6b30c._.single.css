@@ -1,0 +1,47 @@
+/* [project]/app/proximanova_76b8ca3a.module.css [app-client] (css) */
+@font-face {
+  font-family: proximaNova;
+  src: url("../media/ProximaNova_Light-s.p.04a4863b.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: proximaNova;
+  src: url("../media/ProximaNova_Regular-s.p.bb865a3b.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: proximaNova;
+  src: url("../media/ProximaNova_Semibold-s.p.8485c7ee.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: proximaNova;
+  src: url("../media/ProximaNova_Bold-s.p.f5c95d6b.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: proximaNova Fallback;
+  src: local(Arial);
+  ascent-override: 92.82%;
+  descent-override: 30.07%;
+  line-gap-override: 0.0%;
+  size-adjust: 99.12%;
+}
+
+.proximanova_76b8ca3a-module__QBJkVa__className {
+  font-family: proximaNova, proximaNova Fallback;
+}
+
+/*# sourceMappingURL=app_proximanova_76b8ca3a_module_css_bad6b30c._.single.css.map*/
