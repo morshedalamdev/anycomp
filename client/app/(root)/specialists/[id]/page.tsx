@@ -1,27 +1,12 @@
+"use client";
+
 import { useState } from 'react';
-import company from './assets/logo.png';
-import tagIcon from './assets/icons/tag.svg';
-import peopleIcon from './assets/icons/people.svg';
-import orderIcon from './assets/icons/order.svg';
-import signatureIcon from './assets/icons/signature.svg';
-import messageIcon from './assets/icons/message.svg';
-import invoiceIcon from './assets/icons/invoice.svg';
-import helpIcon from './assets/icons/help.svg';
-import settingsIcon from './assets/icons/settings.svg';
-import photoScanIcon from './assets/icons/photo-scan.svg';
-import verifiedIcon from './assets/icons/verified.svg';
-import closeIcon from './assets/icons/x-mark.svg';
-import infoIcon from './assets/icons/info.svg';
-import flag from './assets/flag.png';
-import banner1 from './assets/banner-1.png';
-import banner2 from './assets/banner-2.png';
-import user3 from './assets/user-3.png';
-import company1 from './assets/company-1.png';
-import company2 from './assets/company-2.png';
-import company3 from './assets/company-3.png';
-import Dropdown from './components/Dropdown';
-import ServiceSelect from './components/ServiceSelect';
-import ImageUpload from './components/ImageUpload';
+import Dropdown from '@/components/Dropdown';
+import ServiceSelect from '@/components/ServiceSelect';
+import ImageUpload from '@/components/ImageUpload';
+import Image from 'next/image';
+import { IMAGES } from '@/constants/images';
+import { ICONS } from '@/constants/icons';
 
 function CreateSpecialist() {
   const [isEditOpen, setIsEditOpen] = useState(false);
@@ -66,7 +51,7 @@ function CreateSpecialist() {
         <div className="pt-7.75 pl-5.5">
           <h4 className="font-bold text-[11px] text-[#222222] pb-2">Profile</h4>
           <div className="flex flex-wrap gap-1">
-            <img src={company} alt="company logo" className="w-5 h-5 rounded-full" />
+            <Image src={IMAGES.company} alt="company logo" className="w-5 h-5 rounded-full" />
             <div>
               <h5 className="text-[9px] font-semibold text-[#454545] -mt-0.5">Consistant CoSec Services </h5>
               <p className="font-semibold text-[6px] text-[#002F70]">Company Secretary - Store</p>
@@ -77,27 +62,27 @@ function CreateSpecialist() {
           <h4 className="font-bold text-[7px] text-[#888888] pl-5.5 pb-1.5">Dashboard</h4>
           <ul className="px-0.75">
             <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-white bg-[#002F70]">
-              <img src={tagIcon} alt="tag icon" />
+              <Image src={ICONS.tag} alt="tag icon" />
               <span>Specialists</span>
             </a></li>
             <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-[#484848]">
-              <img src={peopleIcon} alt="people icon" />
+              <Image src={ICONS.people} alt="people icon" />
               <span>Clients</span>
             </a></li>
             <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-[#484848]">
-              <img src={orderIcon} alt="order icon" />
+              <Image src={ICONS.order} alt="order icon" />
               <span>Service Orders</span>
             </a></li>
             <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-[#484848]">
-              <img src={signatureIcon} alt="signature icon" />
+              <Image src={ICONS.signature} alt="signature icon" />
               <span>eSignature</span>
             </a></li>
             <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-[#484848]">
-              <img src={messageIcon} alt="message icon" />
+              <Image src={ICONS.message} alt="message icon" />
               <span>Messages</span>
             </a></li>
             <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-[#484848]">
-              <img src={invoiceIcon} alt="invoice icon" />
+              <Image src={ICONS.invoice} alt="invoice icon" />
               <span>Invoices & Receipts</span>
             </a></li>
           </ul>
@@ -105,11 +90,11 @@ function CreateSpecialist() {
         <div className="pt-15.5 px-0.75">
           <ul>
             <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-[#484848]">
-              <img src={helpIcon} alt="help icon" />
+              <Image src={ICONS.help} alt="help icon" />
               <span>Help</span>
             </a></li>
             <li><a href="" className="flex items-center gap-1 h-6.25 rounded-[3px] pl-4.75 text-[9px] text-[#484848]">
-              <img src={settingsIcon} alt="settings icon" />
+              <Image src={ICONS.settings} alt="settings icon" />
               <span>Settings</span>
             </a></li>
           </ul>
@@ -121,12 +106,12 @@ function CreateSpecialist() {
             <h2 className="font-semibold text-lg text-[#222222]">Register a new company | Private Limited - Sdn Bhd</h2>
             <div className="flex flex-wrap gap-0.5">
               <div className="flex items-center justify-center flex-col w-57.25 bg-[#F5F5F5]">
-                <img src={photoScanIcon} alt="photo scan icon" />
+                <Image src={ICONS.photoScan} alt="photo scan icon" />
                 <p className="w-34.5 font-semibold text-[5px] text-[#888888]">Upload an image for your service listing in PNG, JPG or JPEG up to 4MB</p>
               </div>
               <div className="space-y-px w-48">
-                <img src={banner1} alt="banner 1" />
-                <img src={banner2} alt="banner 2" />
+                <Image src={IMAGES.banner1} alt="banner 1" />
+                <Image src={IMAGES.banner2} alt="banner 2" />
               </div>
             </div>
           </div>
@@ -143,11 +128,11 @@ function CreateSpecialist() {
             <div className="grid grid-cols-2 gap-3">
               <div>
                 <div className="flex items-center gap-1 mb-2">
-                  <img src={user3} alt="user" className="w-7.5 h-7.5 rounded-full" />
+                  <Image src={IMAGES.user3} alt="user" className="w-7.5 h-7.5 rounded-full" />
                   <div>
                     <h5 className="flex items-center">
                       <span className="font-semibold text-[6px] text-[#222222]">Grace Lam</span>
-                      <img src={verifiedIcon} alt="verified icon" className="ml-1 mr-px" />
+                      <Image src={ICONS.verified} alt="verified icon" className="ml-1 mr-px" />
                       <span className="font-semibold text-[3px] text-[#454545]">Verified</span>
                     </h5>
                     <h6 className="font-semibold text-[4.5px] text-[#454545] -mt-0.5 mb-0.5">Corpsec Services Sdn Bhd</h6>
@@ -159,9 +144,9 @@ function CreateSpecialist() {
               <div>
                 <h6 className="font-semibold text-[8px] text-[#222222]">Certified Company Secretary</h6>
                 <ul className="flex items-center gap-1">
-                  <li><img className="w-4.5" src={company1} alt="company 1" /></li>
-                  <li><img className="w-4.5" src={company2} alt="company 2" /></li>
-                  <li><img className="w-4.5" src={company3} alt="company 3" /></li>
+                  <li><Image className="w-4.5" src={IMAGES.company1} alt="company 1" /></li>
+                  <li><Image className="w-4.5" src={IMAGES.company2} alt="company 2" /></li>
+                  <li><Image className="w-4.5" src={IMAGES.company3} alt="company 3" /></li>
                 </ul>
               </div>
             </div>
@@ -207,7 +192,7 @@ function CreateSpecialist() {
         <div className="relative w-68.25  min-h-screen max-h-full overflow-y-scroll bg-white ml-auto px-4 py-3 z-20">
           <div className="flex items-center justify-between">
             <h3 className="font-red-hot font-semibold text-xs">Edit Service</h3>
-            <button onClick={() => setIsEditOpen(!isEditOpen)}><img src={closeIcon} alt="Close" /></button>
+            <button onClick={() => setIsEditOpen(!isEditOpen)}><Image src={ICONS.close} alt="Close" /></button>
           </div>
           <form className="mt-4">
             <div className="flex flex-col mb-3">
@@ -225,7 +210,7 @@ function CreateSpecialist() {
               <label htmlFor="price" className="font-semibold text-[7px] text-[#454545]">Price</label>
               <div className="flex h-4.75">
                 <div className="flex items-center gap-0.5 px-1.5 bg-[#F5F5F5] border-[0.2px] border-r-0  rounded-l-xs">
-                  <img src={flag} alt="flag" className="w-2.75" />
+                  <Image src={IMAGES.flag} alt="flag" className="w-2.75" />
                   <span className="text-[7px] text-[#222222]">MYR</span>
                 </div>
                 <input type="text" id="price" placeholder="0.00" className="flex-1 text-[7px] px-1.5 border-[0.2px] border-black border-l-0 rounded-r-xs font-semibold text-[#181818]" />
@@ -248,7 +233,7 @@ function CreateSpecialist() {
         <div className="relative w-107 rounded-[5px] px-3 py-2 bg-white z-20">
           <div>
             <h4 className="flex items-center gap-1">
-              <img src={infoIcon} alt="" />
+              <Image src={ICONS.info} alt="" />
               <span className="font-red-hot font-bold text-xl text-[#222222]">Publish changes</span>
             </h4>
             <p className="text-[10px] text-[#454545]">Do you want to publish these changes? It will appear in the marketplace listing</p>
