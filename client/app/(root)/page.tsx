@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { IMAGES } from '@/constants/images';
 import Image from 'next/image';
 import { ICONS } from '@/constants/icons';
+import Link from 'next/link';
 
 function Specialists() {
   const [actionsOpen, setActionsOpen] = useState("");
@@ -93,10 +94,10 @@ function Specialists() {
               <input type="text" className="bg-[#F1F1F1] rounded-xs text-[8px] font-semibold h-5 w-30.75 px-2" placeholder="Search Services" />
             </div>
             <div className="flex gap-1">
-              <button className="flex items-center justify-center gap-1 h-5 w-15.25 rounded-xs bg-[#002F70] text-white text-[8px]">
+              <Link href={`/specialists/create`} className="flex items-center justify-center gap-1 h-5 w-15.25 rounded-xs bg-[#002F70] text-white text-[8px]">
                 <Image src={ICONS.plus} alt="" />
                 Create
-              </button>
+              </Link>
               <button className="flex items-center justify-center gap-1 h-5 w-15.25 rounded-xs bg-[#071331] text-white text-[8px]">
                 <Image src={ICONS.exports} alt="" />
                 Export
