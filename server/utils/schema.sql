@@ -37,6 +37,7 @@ CREATE TABLE media (
      display_order INTEGER NOT NULL,
      mime_type mime_type_enum NOT NULL,
      media_type media_type_enum NOT NULL,
+     base64_img BYTEA NOT NULL,
      uploaded_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
      created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
      updated_at TIMESTAMP WITH TIME ZONE,
@@ -48,6 +49,7 @@ CREATE TYPE tier_name_enum AS ENUM ('basic', 'pro', 'enterprise');
 -- CREATE PLATFORM FEE TABLE
 CREATE TABLE platform_fee(
      id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+     specialists UUID NOT NULL REFERENCES specialists(id),
      tier_name tier_name_enum NOT NULL,
      min_value INTEGER NOT NULL,
      max_value INTEGER NOT NULL,
