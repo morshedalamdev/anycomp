@@ -7,24 +7,23 @@ import {
   remove,
   update,
 } from "../models/specialistsModel";
+import { SpecialistSchema } from "../utils/validation";
 
-interface Props {
-  req: Request;
-  res: Response;
-}
-
-export const createSpecialist = async ({ req, res }: Props) => {
+export const createSpecialist = async (req: Request, res: Response) => {
   try {
     const { data } = req.body;
 
-    if (!data) {
-      return res
-        .status(400)
-        .json({ success: false, message: "Data is required" });
+    const validation = SpecialistSchema.safeParse(data);
+    if (!validation.success) {
+      console.log('validation :>> ', validation);
+      return res.status(400).json({
+        success: false,
+        message: "Invalid data",
+        errors: validation.error.errors,
+      });
     }
 
     const result = await create(data);
-
     if (!result) {
       return res.status(500).json({
         success: false,
@@ -44,7 +43,7 @@ export const createSpecialist = async ({ req, res }: Props) => {
   }
 };
 
-export const getAllSpecialists = async ({ req, res }: Props) => {
+export const getAllSpecialists = async (req: Request, res: Response) => {
   try {
     const result = await findWithMedia();
 
@@ -67,7 +66,7 @@ export const getAllSpecialists = async ({ req, res }: Props) => {
   }
 };
 
-export const getSpecialistList = async ({ req, res }: Props) => {
+export const getSpecialistList = async (req: Request, res: Response) => {
   try {
     const result = await findList();
 
@@ -90,12 +89,12 @@ export const getSpecialistList = async ({ req, res }: Props) => {
   }
 };
 
-export const getSpecialistById = async ({ req, res }: Props) => {
+export const getSpecialistById = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
 
     const result = await findById(id);
-    
+
     if (!result) {
       return res.status(500).json({
         success: false,
@@ -115,7 +114,7 @@ export const getSpecialistById = async ({ req, res }: Props) => {
   }
 };
 
-export const updateSpecialist = async ({ req, res }: Props) => {
+export const updateSpecialist = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     const { data } = req.body;
@@ -127,7 +126,7 @@ export const updateSpecialist = async ({ req, res }: Props) => {
     }
 
     const result = await update(id, data);
-    
+
     if (!result) {
       return res.status(500).json({
         success: false,
@@ -147,12 +146,12 @@ export const updateSpecialist = async ({ req, res }: Props) => {
   }
 };
 
-export const deleteSpecialist = async ({ req, res }: Props) => {
+export const deleteSpecialist = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
 
     const result = await remove(id);
-    
+
     if (!result) {
       return res.status(500).json({
         success: false,
@@ -161,7 +160,7 @@ export const deleteSpecialist = async ({ req, res }: Props) => {
     }
 
     res.json({
-      success: true
+      success: true,
     });
   } catch (err: any) {
     console.error(err);

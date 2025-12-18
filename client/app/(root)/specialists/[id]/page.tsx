@@ -51,7 +51,7 @@ function CreateSpecialist() {
     const updatedFiles = files.filter(m => m.fieldId !== id);
     setFiles(updatedFiles);
   }
-  
+  console.log('files :>> ', files);
   return (
     <div className="relative flex h-screen">
       <aside className="flex flex-col">

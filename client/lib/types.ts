@@ -10,7 +10,7 @@ export enum MediaType {
   WEBP = "WEBP"
 }
 
-export type FileType = {
+export interface FileType {
   fieldId: string;
   name: string;
   size: number;
