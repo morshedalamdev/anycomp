@@ -1,3 +1,5 @@
+import { specialistDataConversion } from "../utils/queryDataConversion";
+
 const db = require("../config/db");
 
 export const findWithMedia = async () => {
@@ -60,41 +62,14 @@ export const create = async (data: Record<string, unknown>) => {
   try {
     await client.query("BEGIN");
     // 1. specialists table query //
-    const specialistTableColumns = [
-      "average_rating",
-      "is_draft",
-      "total_number_of_ratings",
-      "title",
-      "slug",
-      "service_category",
-      "description",
-      "base_price",
-      "platform_fee",
-      "final_price",
-      "verification_status",
-      "is_verified",
-      "duration_days",
-      "created_at",
-      "updated_at",
-      "deleted_at",
-    ];
-    const specialistKeys = Object.keys(data).filter((key) =>
-      specialistTableColumns.includes(key)
-    );
-
-    //   column and value lists for query
-    const specialistColumns = specialistKeys.join(", ");
-    const specialistValues = specialistKeys.map((key) => data[key]);
-    const specialistPlaceholders = specialistKeys
-      .map((_, index) => `$${index + 1}`)
-      .join(", ");
+    const convertedData = await specialistDataConversion(data);
 
     // insert into specialists table
     const newSpecialist = await client.query(
-      `INSERT INTO specialists(${specialistColumns})
-           VALUES(${specialistPlaceholders})
+      `INSERT INTO specialists(${convertedData.specialistColumns})
+           VALUES(${convertedData.specialistPlaceholders})
            RETURNING *`,
-      specialistValues
+      convertedData.specialistValues
     );
     if (!newSpecialist.rows[0]) {
       return null;
@@ -135,16 +110,14 @@ export const create = async (data: Record<string, unknown>) => {
     );
 
     // 4. service_offerings //
-    // convert offerings string to array
-    const offerings = (data.service_offerings as string)
-      .split(",")
-      .map((s) => s.trim());
-    for (const offering of offerings) {
-      await client.query(
-        `INSERT INTO service_offerings(specialists, service_name)
+    if (Array.isArray(data?.service_offerings)) {
+      for (const offering of data.service_offerings) {
+        await client.query(
+          `INSERT INTO service_offerings(specialists, service_name)
        VALUES($1, $2)`,
-        [specialistId, offering]
-      );
+          [specialistId, offering]
+        );
+      }
     }
 
     await client.query("COMMIT");
@@ -158,7 +131,69 @@ export const create = async (data: Record<string, unknown>) => {
 };
 
 export const update = async (id: string, data: Record<string, unknown>) => {
-  return null;
+  const client = await db.connect();
+  try {
+    await client.query("BEGIN");
+
+    // 1. specialists table update //
+    const convertedData = await specialistDataConversion(data);
+
+    await client.query(
+      `UPDATE specialists
+           SET (${convertedData.specialistColumns}, updated_at) = (${
+        convertedData.specialistPlaceholders
+      }, NOW())
+           WHERE id = $${convertedData.specialistValues.length + 1}
+           RETURNING *`,
+      [...convertedData.specialistValues, id]
+    );
+
+    // 2. medias table update //
+    if (Array.isArray(data?.medias)) {
+      for (const media of data.medias) {
+        if (media.id) {
+          // existing media - update
+          await client.query(
+            `UPDATE media
+             SET file_name = $1, file_size = $2, file_url = $3, display_order = $4, mime_type = $5, media_type = $6, updated_at = NOW()
+             WHERE id = $7 AND specialists = $8`,
+            [
+              media.file_name,
+              media.file_size,
+              media.file_url,
+              media.display_order,
+              media.mime_type,
+              media.media_type,
+              media.id,
+              id,
+            ]
+          );
+        }
+      }
+    }
+
+    // 3. service_offerings update //
+    if (Array.isArray(data?.service_offerings)) {
+      for (const offering of data.service_offerings) {
+        if (offering.id) {
+          await client.query(
+            `UPDATE service_offerings
+             SET service_name = $1, updated_at = NOW()
+             WHERE id = $2 AND specialists = $3`,
+            [offering.service_name, offering.id, id]
+          );
+        }
+      }
+    }
+
+    await client.query("COMMIT");
+    return id;
+  } catch (err) {
+    await client.query("ROLLBACK");
+    throw err;
+  } finally {
+    client.release();
+  }
 };
 
 export const remove = async (id: string) => {

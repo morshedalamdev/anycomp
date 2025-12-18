@@ -7,13 +7,16 @@ import {
   remove,
   update,
 } from "../models/specialistsModel";
-import { SpecialistSchema } from "../utils/validation";
+import {
+  SpecialistCreateSchema,
+  SpecialistUpdateSchema,
+} from "../utils/validation";
 
 export const createSpecialist = async (req: Request, res: Response) => {
   try {
     const { data } = req.body;
 
-    const validation = SpecialistSchema.safeParse(data);
+    const validation = SpecialistCreateSchema.safeParse(data);
     if (!validation.success) {
       return res.status(400).json({
         success: false,
@@ -118,14 +121,16 @@ export const updateSpecialist = async (req: Request, res: Response) => {
     const { id } = req.params;
     const { data } = req.body;
 
-    if (!data) {
-      return res
-        .status(400)
-        .json({ success: false, message: "Data is required" });
+    const validation = SpecialistUpdateSchema.safeParse(data);
+    if (!validation.success) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid data",
+        errors: validation.error.errors,
+      });
     }
 
     const result = await update(id, data);
-
     if (!result) {
       return res.status(500).json({
         success: false,
