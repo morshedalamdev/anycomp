@@ -27,11 +27,32 @@ export const findWithMedia = async () => {
 };
 
 export const findList = async () => {
-  return null;
+  const result = await db.query(
+    `SELECT *
+     FROM specialists s
+     ORDER BY s.created_at DESC;`
+  );
+
+  if (!result) {
+    return null;
+  }
+
+  return result.rows;
 };
 
 export const findById = async (id: string) => {
-  return null;
+  const result = await db.query(
+    `SELECT *
+     FROM specialists s
+     WHERE s.id = $1;`,
+    [id]
+  );
+
+  if (!result) {
+    return null;
+  }
+
+  return result.rows[0];
 };
 
 export const create = async (data: Record<string, unknown>) => {
