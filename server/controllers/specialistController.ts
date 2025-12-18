@@ -15,7 +15,6 @@ export const createSpecialist = async (req: Request, res: Response) => {
 
     const validation = SpecialistSchema.safeParse(data);
     if (!validation.success) {
-      console.log('validation :>> ', validation);
       return res.status(400).json({
         success: false,
         message: "Invalid data",

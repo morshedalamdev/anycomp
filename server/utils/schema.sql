@@ -67,3 +67,22 @@ CREATE TABLE service_offerings(
      created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
      updated_at TIMESTAMP WITH TIME ZONE 
 )
+
+-- QUERY TO FIND SPECIALISTS WITH MEDIA & SERVICE OFFERINGS
+SELECT s.*,
+-- SUBQUERY FOR MEDIA
+(
+SELECT COALESCE(
+     JSON_AGG(m.*), '[]')
+FROM media m
+WHERE m.specialists = s.id
+ ) AS medias,
+-- SUBQUERY FOR SERVICE OFFERINGS
+ (
+SELECT COALESCE(
+     JSON_AGG(so.*), '[]')
+FROM service_offerings so
+WHERE so.specialists = s.id
+) AS service_offerings
+FROM specialists s
+ORDER BY s.created_at DESC;

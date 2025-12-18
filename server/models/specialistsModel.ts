@@ -1,7 +1,29 @@
 const db = require("../config/db");
 
 export const findWithMedia = async () => {
-  return null;
+  const result = await db.query(
+    `SELECT s.*,
+    (
+    SELECT COALESCE(
+    JSON_AGG(m.*), '[]')
+    FROM media m
+    WHERE m.specialists = s.id
+    ) AS medias,
+     (
+    SELECT COALESCE(
+    JSON_AGG(so.*), '[]')
+    FROM service_offerings so
+    WHERE so.specialists = s.id
+    ) AS service_offerings
+     FROM specialists s
+     ORDER BY s.created_at DESC;`
+  );
+
+  if (!result) {
+    return null;
+  }
+
+  return result.rows;
 };
 
 export const findList = async () => {
@@ -46,7 +68,7 @@ export const create = async (data: Record<string, unknown>) => {
       .map((_, index) => `$${index + 1}`)
       .join(", ");
 
-    // inserting into specialists table
+    // insert into specialists table
     const newSpecialist = await client.query(
       `INSERT INTO specialists(${specialistColumns})
            VALUES(${specialistPlaceholders})
