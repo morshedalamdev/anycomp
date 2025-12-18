@@ -85,4 +85,5 @@ FROM service_offerings so
 WHERE so.specialists = s.id
 ) AS service_offerings
 FROM specialists s
+WHERE s.deleted_at IS NULL
 ORDER BY s.created_at DESC;

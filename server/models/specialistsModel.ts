@@ -18,6 +18,7 @@ export const findWithMedia = async () => {
     WHERE so.specialists = s.id
     ) AS service_offerings
      FROM specialists s
+     WHERE s.deleted_at IS NULL
      ORDER BY s.created_at DESC;`
   );
 
@@ -32,6 +33,7 @@ export const findList = async () => {
   const result = await db.query(
     `SELECT *
      FROM specialists s
+     WHERE s.deleted_at IS NULL
      ORDER BY s.created_at DESC;`
   );
 
@@ -76,7 +78,6 @@ export const create = async (data: Record<string, unknown>) => {
     }
 
     const specialistId = newSpecialist.rows[0].id;
-
     // 2. medias table query //
     if (Array.isArray(data?.medias)) {
       for (const media of data.medias) {
@@ -95,7 +96,6 @@ export const create = async (data: Record<string, unknown>) => {
         );
       }
     }
-
     // 3. platform_fee //
     await client.query(
       `INSERT INTO platform_fee(specialists, tier_name, min_value, max_value, platform_fee_percentage)
@@ -108,7 +108,6 @@ export const create = async (data: Record<string, unknown>) => {
         data.fee_percentage,
       ]
     );
-
     // 4. service_offerings //
     if (Array.isArray(data?.service_offerings)) {
       for (const offering of data.service_offerings) {
@@ -147,12 +146,10 @@ export const update = async (id: string, data: Record<string, unknown>) => {
            RETURNING *`,
       [...convertedData.specialistValues, id]
     );
-
     // 2. medias table update //
     if (Array.isArray(data?.medias)) {
       for (const media of data.medias) {
         if (media.id) {
-          // existing media - update
           await client.query(
             `UPDATE media
              SET file_name = $1, file_size = $2, file_url = $3, display_order = $4, mime_type = $5, media_type = $6, updated_at = NOW()
@@ -171,7 +168,6 @@ export const update = async (id: string, data: Record<string, unknown>) => {
         }
       }
     }
-
     // 3. service_offerings update //
     if (Array.isArray(data?.service_offerings)) {
       for (const offering of data.service_offerings) {
@@ -197,5 +193,43 @@ export const update = async (id: string, data: Record<string, unknown>) => {
 };
 
 export const remove = async (id: string) => {
-  return null;
+  const client = await db.connect();
+  try {
+    await client.query("BEGIN");
+    // 1. Update specialist table deleted_at field //
+    await client.query(
+      `UPDATE specialists
+       SET deleted_at = NOW()
+       WHERE id = $1`,
+      [id]
+    );
+    // 2. Update media table deleted_at field //
+    await client.query(
+      `UPDATE media
+       SET deleted_at = NOW()
+       WHERE specialists = $1`,
+      [id]
+    );
+    // 3. Update service_offerings table deleted_at field //
+    await client.query(
+      `UPDATE service_offerings
+       SET deleted_at = NOW()
+       WHERE specialists = $1`,
+      [id]
+    );
+    // 4. Update platform_fee table deleted_at field //
+    await client.query(
+      `UPDATE platform_fee
+       SET deleted_at = NOW()
+       WHERE specialists = $1`,
+      [id]
+    );
+
+    await client.query("COMMIT");
+  } catch (err) {
+    await client.query("ROLLBACK");
+    throw err;
+  } finally {
+    client.release();
+  }
 };

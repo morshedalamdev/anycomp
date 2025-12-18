@@ -48,7 +48,6 @@ export const createSpecialist = async (req: Request, res: Response) => {
 export const getAllSpecialists = async (req: Request, res: Response) => {
   try {
     const result = await findWithMedia();
-
     if (!result) {
       return res.status(500).json({
         success: false,
@@ -71,7 +70,6 @@ export const getAllSpecialists = async (req: Request, res: Response) => {
 export const getSpecialistList = async (req: Request, res: Response) => {
   try {
     const result = await findList();
-
     if (!result) {
       return res.status(500).json({
         success: false,
@@ -96,7 +94,6 @@ export const getSpecialistById = async (req: Request, res: Response) => {
     const { id } = req.params;
 
     const result = await findById(id);
-
     if (!result) {
       return res.status(500).json({
         success: false,
@@ -154,15 +151,7 @@ export const deleteSpecialist = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
 
-    const result = await remove(id);
-
-    if (!result) {
-      return res.status(500).json({
-        success: false,
-        message: "Failed to delete specialist",
-      });
-    }
-
+    await remove(id);
     res.json({
       success: true,
     });
