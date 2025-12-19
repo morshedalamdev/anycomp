@@ -1,27 +1,6 @@
 {
   "app": {
-    "[project]/app/(root)/page": [
-      "static/media/ProximaNova_Light-s.p.04a4863b.woff2",
-      "static/media/ProximaNova_Regular-s.p.bb865a3b.woff2",
-      "static/media/ProximaNova_Semibold-s.p.8485c7ee.woff2",
-      "static/media/ProximaNova_Bold-s.p.f5c95d6b.woff2",
-      "static/media/RedHatDisplay_Semibold-s.p.4586ab39.ttf"
-    ],
     "[project]/app/(root)/specialists/[id]/page": [
-      "static/media/ProximaNova_Light-s.p.04a4863b.woff2",
-      "static/media/ProximaNova_Regular-s.p.bb865a3b.woff2",
-      "static/media/ProximaNova_Semibold-s.p.8485c7ee.woff2",
-      "static/media/ProximaNova_Bold-s.p.f5c95d6b.woff2",
-      "static/media/RedHatDisplay_Semibold-s.p.4586ab39.ttf"
-    ],
-    "[project]/app/(root)/specialists/page": [
-      "static/media/ProximaNova_Light-s.p.04a4863b.woff2",
-      "static/media/ProximaNova_Regular-s.p.bb865a3b.woff2",
-      "static/media/ProximaNova_Semibold-s.p.8485c7ee.woff2",
-      "static/media/ProximaNova_Bold-s.p.f5c95d6b.woff2",
-      "static/media/RedHatDisplay_Semibold-s.p.4586ab39.ttf"
-    ],
-    "[project]/app/_not-found/page": [
       "static/media/ProximaNova_Light-s.p.04a4863b.woff2",
       "static/media/ProximaNova_Regular-s.p.bb865a3b.woff2",
       "static/media/ProximaNova_Semibold-s.p.8485c7ee.woff2",

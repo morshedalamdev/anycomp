@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/morshedalam/Developer/REACT/anycomp/client/actions/specialists.ts"],"sourcesContent":["\"use server\";\n\nimport { SpecialistCreateType } from \"@/lib/types\";\nimport { slugify } from \"zod\";\n\nexport async function createSpecialist(state: undefined, payload: SpecialistCreateType){\n     console.log(\"test\");\n     const slug = (slugify(payload.title) + \"_\" + Date.now()).toLowerCase();\n     console.log('slug :>> ', slug);\n}"],"names":[],"mappings":";;;;;AAGA;;;;AAEO,eAAe,iBAAiB,KAAgB,EAAE,OAA6B;IACjF,QAAQ,GAAG,CAAC;IACZ,MAAM,OAAO,CAAC,IAAA,yJAAO,EAAC,QAAQ,KAAK,IAAI,MAAM,KAAK,GAAG,EAAE,EAAE,WAAW;IACpE,QAAQ,GAAG,CAAC,aAAa;AAC9B;;;IAJsB;;AAAA,+OAAA"}},
+    {"offset": {"line": 27, "column": 0}, "map": {"version":3,"sources":["file:///Users/morshedalam/Developer/REACT/anycomp/client/.next-internal/server/app/%28root%29/specialists/%5Bid%5D/page/actions.js%20%28server%20actions%20loader%29"],"sourcesContent":["export {createSpecialist as '6033be1c87737ef9794fc8e48bf40b4a08a3855d89'} from 'ACTIONS_MODULE0'\n"],"names":[],"mappings":";AAAA"}}]
+}
