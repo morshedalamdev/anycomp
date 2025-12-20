@@ -46,9 +46,27 @@ export const findList = async () => {
 
 export const findById = async (id: string) => {
   const result = await db.query(
-    `SELECT *
-     FROM specialists s
-     WHERE s.id = $1;`,
+    `SELECT s.*,
+    (
+      SELECT COALESCE(
+        JSON_AGG(m.*), '[]')
+      FROM media m
+      WHERE m. specialists = s.id
+    ) AS medias,
+    (
+      SELECT COALESCE(
+        JSON_AGG(so.*), '[]')
+      FROM service_offerings so
+      WHERE so.specialists = s.id
+    ) AS service_offerings,
+    (
+    SELECT COALESCE(
+        JSON_AGG(pf.*), '[]')
+       FROM platform_fee pf
+       WHERE pf.specialists = s.id
+     ) AS platform_fees
+    FROM specialists s
+    WHERE s.id = $1;`,
     [id]
   );
 
@@ -101,23 +119,14 @@ export const create = async (data: Record<string, unknown>) => {
       await client.query(
         `INSERT INTO platform_fee(specialists, tier_name, min_value, max_value, platform_fee_percentage)
           VALUES($1, $2, $3, $3, $4)`,
-        [
-          specialistId,
-          data.tier_name,
-          data.platform_fee,
-          data.fee_percentage,
-        ]
+        [specialistId, data.tier_name, data.platform_fee, data.fee_percentage]
       );
-    }else{
+    } else {
       await client.query(
         `INSERT INTO platform_fee(specialists, min_value, max_value, platform_fee_percentage)
           VALUES($1, $2, $2, $3)`,
-        [
-          specialistId,
-          data.platform_fee,
-          data.fee_percentage,
-        ]
-      );      
+        [specialistId, data.platform_fee, data.fee_percentage]
+      );
     }
     // 4. service_offerings //
     if (Array.isArray(data?.service_offerings)) {
@@ -138,6 +147,24 @@ export const create = async (data: Record<string, unknown>) => {
   } finally {
     client.release();
   }
+};
+
+export const updateDraft = async (
+  id: string,
+  data: Record<string, unknown>
+) => {
+  const result = await db.query(
+    `UPDATE specialists
+     SET is_draft = $1, updated_at = NOW()
+     WHERE id = $2
+     RETURNING *`,
+    [data.is_draft, id]
+  );
+
+  if (!result) {
+    return null;
+  }
+  return result.rows[0];
 };
 
 export const update = async (id: string, data: Record<string, unknown>) => {
