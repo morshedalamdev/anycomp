@@ -56,7 +56,8 @@ CREATE TABLE platform_fee(
      max_value INTEGER NOT NULL,
      platform_fee_percentage NUMERIC(5,2) NOT NULL,
      created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-     updated_at TIMESTAMP WITH TIME ZONE
+     updated_at TIMESTAMP WITH TIME ZONE,
+     deleted_at TIMESTAMP WITH TIME ZONE
 )
 
 -- CREATE SERVICE OFFERINGS TABLE
@@ -65,7 +66,8 @@ CREATE TABLE service_offerings(
      specialists UUID REFERENCES specialists(id),
      service_name VARCHAR(255) NOT NULL,
      created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-     updated_at TIMESTAMP WITH TIME ZONE 
+     updated_at TIMESTAMP WITH TIME ZONE,
+     deleted_at TIMESTAMP WITH TIME ZONE
 )
 
 -- QUERY TO FIND SPECIALISTS WITH MEDIA & SERVICE OFFERINGS
@@ -87,3 +89,27 @@ WHERE so.specialists = s.id
 FROM specialists s
 WHERE s.deleted_at IS NULL
 ORDER BY s.created_at DESC;
+
+-- QUERY TO GET A SPECIALIST BY ID WITH MEDIA & SERVICE OFFERINGS & PLATFORM FEES
+`SELECT s.*,
+    (
+      SELECT COALESCE(
+        JSON_AGG(m.*), '[]')
+      FROM media m
+      WHERE m. specialists = s.id
+    ) AS medias,
+    (
+      SELECT COALESCE(
+        JSON_AGG(so.*), '[]')
+      FROM service_offerings so
+      WHERE so.specialists = s.id
+    ) AS service_offerings,
+    (
+    SELECT COALESCE(
+        JSON_AGG(pf.*), '[]')
+       FROM platform_fee pf
+       WHERE pf.specialists = s.id
+     ) AS platform_fees
+    FROM specialists s
+    WHERE s.id = $1;`,
+    [id]

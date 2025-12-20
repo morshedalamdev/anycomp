@@ -3,10 +3,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import { ICONS } from "@/constants/icons";
+import { OfferingType } from "@/lib/types";
 
 interface ServiceSelectProps {
-  selectedOption: string[];
-  setSelectedOption: React.Dispatch<React.SetStateAction<string[]>>;
+  selectedOption: OfferingType[];
+  setSelectedOption: React.Dispatch<React.SetStateAction<OfferingType[]>>;
   children?: React.ReactNode;
 }
 
@@ -17,18 +18,20 @@ export default function ServiceSelect({
 }: ServiceSelectProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const handleOptionSelect = (option: string) => {
+  const handleOptionSelect = (offer: string) => {
     setSelectedOption((prev) => {
-      if (!prev.includes(option)) {
-        return [...prev, option];
+      if (prev.find((item) => item.service_name === offer)) {
+        return prev;
       }
-      return prev;
+      return [...prev, { service_name: offer } as OfferingType];
     });
     setIsOpen(false);
   };
 
-  const handleRemoveOption = (option: string) => {
-    setSelectedOption((prev) => prev.filter((item) => item !== option));
+  const handleRemoveOption = (offer: OfferingType) => {
+    setSelectedOption((prev) =>
+      prev.filter((item) => item.service_name !== offer.service_name)
+    );
   };
   return (
     <div className="relative mb-4">
@@ -41,16 +44,13 @@ export default function ServiceSelect({
       >
         <div className="flex-1 flex flex-wrap gap-1">
           {selectedOption.length > 0 &&
-            selectedOption.map((option, index) => (
+            selectedOption.map((offer, index) => (
               <p
                 key={index}
                 className="flex items-center gap-2 h-3.5 rounded-xs bg-[#F5F5F5] px-1"
               >
-                {option}{" "}
-                <button
-                  onClick={() => handleRemoveOption(option)}
-                  type="button"
-                >
+                {offer.service_name}{" "}
+                <button onClick={() => handleRemoveOption(offer)} type="button">
                   <Image src={ICONS.xMark} alt="x mark icon" />
                 </button>
               </p>
@@ -70,7 +70,9 @@ export default function ServiceSelect({
         <li
           onClick={() => handleOptionSelect("Company Secretary Subscription")}
           className={`flex items-center gap-2 h-7.75 rounded-xs px-1.5 cursor-pointer ${
-            selectedOption.includes("Company Secretary Subscription")
+            selectedOption.find(
+              (item) => item.service_name === "Company Secretary Subscription"
+            )
               ? "bg-[#F5F5F5]"
               : ""
           }`}
@@ -88,7 +90,9 @@ export default function ServiceSelect({
         <li
           onClick={() => handleOptionSelect("Opening of a Bank Account")}
           className={`flex items-center gap-2 h-7.75 rounded-xs px-1.5 cursor-pointer ${
-            selectedOption.includes("Opening of a Bank Account")
+            selectedOption.find(
+              (item) => item.service_name === "Opening of a Bank Account"
+            )
               ? "bg-[#F5F5F5]"
               : ""
           }`}
@@ -108,7 +112,10 @@ export default function ServiceSelect({
             handleOptionSelect("Access Company Records and SSM Forms")
           }
           className={`flex items-center gap-2 h-7.75 rounded-xs px-1.5 cursor-pointer ${
-            selectedOption.includes("Access Company Records and SSM Forms")
+            selectedOption.find(
+              (item) =>
+                item.service_name === "Access Company Records and SSM Forms"
+            )
               ? "bg-[#F5F5F5]"
               : ""
           }`}
@@ -126,7 +133,11 @@ export default function ServiceSelect({
         <li
           onClick={() => handleOptionSelect("Priority Filling")}
           className={`flex items-center gap-2 h-7.75 rounded-xs px-1.5 cursor-pointer ${
-            selectedOption.includes("Priority Filling") ? "bg-[#F5F5F5]" : ""
+            selectedOption.find(
+              (item) => item.service_name === "Priority Filling"
+            )
+              ? "bg-[#F5F5F5]"
+              : ""
           }`}
         >
           <Image src={ICONS.light} alt="user icon" />
@@ -143,7 +154,9 @@ export default function ServiceSelect({
         <li
           onClick={() => handleOptionSelect("Registered Office Address Use")}
           className={`flex items-center gap-2 h-7.75 rounded-xs px-1.5 cursor-pointer ${
-            selectedOption.includes("Registered Office Address Use")
+            selectedOption.find(
+              (item) => item.service_name === "Registered Office Address Use"
+            )
               ? "bg-[#F5F5F5]"
               : ""
           }`}
@@ -162,7 +175,9 @@ export default function ServiceSelect({
         <li
           onClick={() => handleOptionSelect("Compliance Calendar Setup")}
           className={`flex items-center gap-2 h-7.75 rounded-xs px-1.5 cursor-pointer ${
-            selectedOption.includes("Compliance Calendar Setup")
+            selectedOption.find(
+              (item) => item.service_name === "Compliance Calendar Setup"
+            )
               ? "bg-[#F5F5F5]"
               : ""
           }`}
@@ -182,7 +197,10 @@ export default function ServiceSelect({
             handleOptionSelect("First Share Certificate Issued Free")
           }
           className={`flex items-center gap-2 h-7.75 rounded-xs px-1.5 cursor-pointer ${
-            selectedOption.includes("First Share Certificate Issued Free")
+            selectedOption.find(
+              (item) =>
+                item.service_name === "First Share Certificate Issued Free"
+            )
               ? "bg-[#F5F5F5]"
               : ""
           }`}
@@ -200,7 +218,9 @@ export default function ServiceSelect({
         <li
           onClick={() => handleOptionSelect("CTC Delivery & Courier Handling")}
           className={`flex items-center gap-2 h-7.75 rounded-xs px-1.5 cursor-pointer ${
-            selectedOption.includes("CTC Delivery & Courier Handling")
+            selectedOption.find(
+              (item) => item.service_name === "CTC Delivery & Courier Handling"
+            )
               ? "bg-[#F5F5F5]"
               : ""
           }`}
@@ -219,7 +239,9 @@ export default function ServiceSelect({
         <li
           onClick={() => handleOptionSelect("Chat Support")}
           className={`flex items-center gap-2 h-7.75 rounded-xs px-1.5 cursor-pointer ${
-            selectedOption.includes("Chat Support") ? "bg-[#F5F5F5]" : ""
+            selectedOption.find((item) => item.service_name === "Chat Support")
+              ? "bg-[#F5F5F5]"
+              : ""
           }`}
         >
           <Image src={ICONS.support} alt="user icon" />

@@ -757,6 +757,10 @@
     width: calc(var(--spacing) * 11);
   }
 
+  .w-12 {
+    width: calc(var(--spacing) * 12);
+  }
+
   .w-12\.5 {
     width: calc(var(--spacing) * 12.5);
   }

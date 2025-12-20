@@ -6,6 +6,7 @@ import {
   findList,
   remove,
   update,
+  updateDraft,
 } from "../models/specialistsModel";
 import {
   SpecialistCreateSchema,
@@ -103,6 +104,36 @@ export const getSpecialistById = async (req: Request, res: Response) => {
     res.json({
       success: true,
       data: result,
+    });
+  } catch (err: any) {
+    console.error(err);
+    return res
+      .status(500)
+      .json({ success: false, message: "Server error", error: err?.message });
+  }
+};
+
+export const updateDraftToPublished = async (req: Request, res: Response) => {
+  try {
+    const { id } = req.params;
+    const { data } = req.body;
+    if (data.is_draft) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid data",
+      });
+    }
+
+    const result = await updateDraft(id, data);
+    if (!result) {
+      return res.status(500).json({
+        success: false,
+        message: "Failed to publish the specialist",
+      });
+    }
+
+    res.json({
+      success: true,
     });
   } catch (err: any) {
     console.error(err);

@@ -11,7 +11,7 @@ interface ImageUploadProps {
   position: string;
   data: FileType | undefined;
   handleUpload: (e: React.ChangeEvent<HTMLInputElement>, id: number) => void;
-  handleRemove: (id: string) => void;
+  handleRemove: (id: number) => void;
   children?: React.ReactNode;
 }
 interface CheckFileSizeEvent extends React.ChangeEvent<HTMLInputElement> {}
@@ -103,7 +103,7 @@ export default function ImageUpload({
             <span className="uppercase">{data?.media_type}</span>
           </p>
         </div>
-        <button type="button" onClick={() => handleRemove(id)}>
+        <button type="button" onClick={() => handleRemove(parseInt(id))}>
           <Image src={ICONS.trash} alt="trash icon" />
         </button>
       </div>

@@ -5,6 +5,7 @@ import {
   getAllSpecialists,
   getSpecialistById,
   getSpecialistList,
+  updateDraftToPublished,
   updateSpecialist,
 } from "../controllers/specialistController";
 const router = express.Router();
@@ -17,6 +18,8 @@ router.get("/", getAllSpecialists);
 router.get("/list", getSpecialistList);
 // Get Single Specialist Data by ID
 router.get("/:id", getSpecialistById);
+//
+router.put("/:id/publish", updateDraftToPublished);
 // Update Single Specialist Data by ID
 router.put("/:id", updateSpecialist);
 // Delete Single Specialist Data by ID
