@@ -7,9 +7,17 @@ import ImageUpload from "@/components/ImageUpload";
 import Image from "next/image";
 import { IMAGES } from "@/constants/images";
 import { ICONS } from "@/constants/icons";
-import { FileType, MediaType, MimeType } from "@/lib/types";
+import {
+  FileType,
+  MediaType,
+  MethodType,
+  MimeType,
+  SpecialistCreateType,
+} from "@/lib/types";
 import { SpecialistCreateSchema } from "@/lib/validation";
-import { createSpecialist } from "@/actions/specialists";
+import fetcher from "@/lib/fetcher";
+import slug from "slug";
+import { redirect } from "next/navigation";
 
 interface HandleImageUploadEvent extends React.ChangeEvent<HTMLInputElement> {}
 
@@ -29,7 +37,7 @@ function CreateSpecialist() {
       file_size: file.size,
       file_url: URL.createObjectURL(file),
       mime_type: file.type as MimeType,
-      media_type: file.type.split("/")[1].toUpperCase() as MediaType,
+      media_type: file.type.split("/")[1] as MediaType,
     };
 
     if (files.find((m) => m.display_order === data.display_order)) {
@@ -51,7 +59,7 @@ function CreateSpecialist() {
     setIsPublishOpen(!isPublishOpen);
   };
 
-  const handlePayload = async (state: undefined, formData: FormData) => {
+  const handleAction = async (state: undefined, formData: FormData) => {
     const validatedData = SpecialistCreateSchema.safeParse({
       title: formData.get("title"),
       description: formData.get("description"),
@@ -94,22 +102,49 @@ function CreateSpecialist() {
         category: formData.get("serviceCategory"),
       };
     }
+    const { title, description, duration, price, category } =
+      validatedData.data;
 
-    const formPayload = {
-      ...validatedData.data,
-      offerings: selectedOption,
-      images: files,
+    const feePercentage = 0.1; // 10% platform fee
+    const platformFee = price * feePercentage;
+    const finalPrice = price + platformFee;
+
+    const data: SpecialistCreateType = {
+      title: title,
+      slug: slug(title),
+      description: description,
+      base_price: parseInt(price.toFixed(2)),
+      platform_fee: parseInt(platformFee.toFixed(2)),
+      final_price: parseInt(finalPrice.toFixed(2)),
+      fee_percentage: parseInt((feePercentage * 100).toFixed(2)),
+      duration_days: duration,
+      service_category: category,
+      service_offerings: selectedOption,
+      medias: files,
     };
 
-    const result = await createSpecialist(state, formPayload);
-    if (result.success) {
+    const result = await fetcher("specialists", MethodType.POST, data);
+    console.log("result :>> ", result);
+    if (!result.success) {
+      return {
+        success: false,
+        message: result.message,
+        title: formData.get("title"),
+        description: formData.get("description"),
+        duration: formData.get("estimatedCompletionTime"),
+        price: formData.get("price"),
+        category: formData.get("serviceCategory"),
+      };
+    }
+
+    if (result?.success) {
       setIsEditOpen(false);
       setSelectedOption([]);
       setFiles([]);
-      return { success: true };
+      redirect(`/specialists/${result?.data}`);
     }
   };
-  const [state, action, isPending] = useActionState(handlePayload, undefined);
+  const [state, action, isPending] = useActionState(handleAction, undefined);
   return (
     <div className="relative flex h-screen">
       <aside className="flex flex-col">
