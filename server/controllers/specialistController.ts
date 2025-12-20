@@ -15,7 +15,6 @@ import {
 export const createSpecialist = async (req: Request, res: Response) => {
   try {
     const { data } = req.body;
-
     const validation = SpecialistCreateSchema.safeParse(data);
     if (!validation.success) {
       return res.status(400).json({

@@ -1,13 +1,15 @@
 export enum MimeType {
+  JPG = "image/jpg",
   JPEG = "image/jpeg",
   PNG = "image/png",
   WEBP = "image/webp",
 }
 
 export enum MediaType {
-  JPEG = "JPEG",
-  PNG = "PNG",
-  WEBP = "WEBP",
+  JPG = "jpg",
+  JPEG = "jpeg",
+  PNG = "png",
+  WEBP = "webp",
 }
 
 export enum MethodType {
@@ -18,20 +20,24 @@ export enum MethodType {
 }
 
 export interface FileType {
-  display_order: number;
   file_name: string;
-  file_size: number;
   file_url: string;
+  file_size: number;
+  display_order: number;
   mime_type: MimeType;
   media_type: MediaType;
 }
 
 export interface SpecialistCreateType {
-  images: FileType[];
   title: string;
+  slug: string;
   description: string;
-  duration: number;
-  price: number;
-  category: string;
-  offerings: string[];
+  base_price: number;
+  platform_fee: number;
+  final_price: number;
+  fee_percentage: number;
+  duration_days: number;
+  service_category: string;
+  service_offerings: string[];
+  medias: FileType[];
 }

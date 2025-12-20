@@ -97,17 +97,28 @@ export const create = async (data: Record<string, unknown>) => {
       }
     }
     // 3. platform_fee //
-    await client.query(
-      `INSERT INTO platform_fee(specialists, tier_name, min_value, max_value, platform_fee_percentage)
-          VALUES($1, $2, $3, $4, $5)`,
-      [
-        specialistId,
-        data.tier_name,
-        data.platform_fee,
-        data.platform_fee,
-        data.fee_percentage,
-      ]
-    );
+    if (data?.tier_name) {
+      await client.query(
+        `INSERT INTO platform_fee(specialists, tier_name, min_value, max_value, platform_fee_percentage)
+          VALUES($1, $2, $3, $3, $4)`,
+        [
+          specialistId,
+          data.tier_name,
+          data.platform_fee,
+          data.fee_percentage,
+        ]
+      );
+    }else{
+      await client.query(
+        `INSERT INTO platform_fee(specialists, min_value, max_value, platform_fee_percentage)
+          VALUES($1, $2, $2, $3)`,
+        [
+          specialistId,
+          data.platform_fee,
+          data.fee_percentage,
+        ]
+      );      
+    }
     // 4. service_offerings //
     if (Array.isArray(data?.service_offerings)) {
       for (const offering of data.service_offerings) {

@@ -1,19 +1,19 @@
 {
   "node": {
-    "6033be1c87737ef9794fc8e48bf40b4a08a3855d89": {
+    "70ccae1cb63e51a827986c193b12e7d30ab38355c2": {
       "workers": {
         "app/(root)/specialists/[id]/page": {
-          "moduleId": "[project]/.next-internal/server/app/(root)/specialists/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/specialists.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "moduleId": "[project]/.next-internal/server/app/(root)/specialists/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/fetcher.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
-          "exportedName": "createSpecialist",
-          "filename": "actions/specialists.ts"
+          "exportedName": "default",
+          "filename": "lib/fetcher.ts"
         }
       },
       "layer": {
         "app/(root)/specialists/[id]/page": "action-browser"
       },
-      "filename": "actions/specialists.ts",
-      "exportedName": "createSpecialist"
+      "filename": "lib/fetcher.ts",
+      "exportedName": "default"
     }
   },
   "edge": {},

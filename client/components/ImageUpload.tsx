@@ -100,7 +100,7 @@ export default function ImageUpload({
           </p>
           <p className="flex items-center font-semibold text-[4px] text-[#888888]">
             <span className="block w-6">File type:</span>
-            <span>{data?.media_type}</span>
+            <span className="uppercase">{data?.media_type}</span>
           </p>
         </div>
         <button type="button" onClick={() => handleRemove(id)}>
