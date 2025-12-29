@@ -591,7 +591,7 @@ export default function CreateSection({
                 disabled={isPending}
                 className="w-14.75 h-5 rounded-[2.5px] bg-[#002F70] text-[6px] text-white"
               >
-                Confirm
+                {isPending ? "Confirming..." : "Confirm"}
               </button>
             </div>
           </form>
