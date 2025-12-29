@@ -1,4 +1,3 @@
-import errorHandler from "./utils/errorHandler";
 import specialistRoutes from "./routes/specialistRoutes";
 
 require("dotenv").config();
@@ -22,6 +21,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/specialists", specialistRoutes);
 
 // ERROR HANDLING MIDDLEWARE //
-app.use(errorHandler);
+app.use((error, req, res, next) => {
+  console.log(error?.stack || 'No stack trace available');
+});
 
 module.exports = app;
