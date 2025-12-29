@@ -64,7 +64,7 @@ export default function CreateSection({
     setFiles(updatedFiles);
   };
 
-  const handleAction = async (state: undefined, formData: FormData) => {
+  const handleAction = async (state: any, formData: FormData) => {
     const validatedData = SpecialistCreateSchema.safeParse({
       title: formData.get("title"),
       description: formData.get("description"),

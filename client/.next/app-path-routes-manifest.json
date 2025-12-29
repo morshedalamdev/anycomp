@@ -1,0 +1,7 @@
+{
+  "/(root)/page": "/",
+  "/(root)/specialists/[id]/page": "/specialists/[id]",
+  "/(root)/specialists/page": "/specialists",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found"
+}

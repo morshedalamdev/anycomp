@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../app/%28root%29/layout.tsx"],"sourcesContent":["import React from \"react\";\n\nexport default function Layout ({\n  children,\n}: {\n  children: React.ReactNode;\n}) {\n     return <>{children}</>;\n}"],"names":[],"mappings":"uDAEe,SAAS,EAAQ,UAC9B,CAAQ,CAGT,EACI,MAAO,CAAA,EAAA,EAAA,GAAA,EAAA,EAAA,QAAA,CAAA,UAAG,GACf"}

@@ -1,0 +1,21 @@
+{
+  "node": {
+    "70423ed35f1003abf9cfdf3b199bc193693436d384": {
+      "workers": {
+        "app/(root)/specialists/[id]/page": {
+          "moduleId": 74339,
+          "async": false,
+          "exportedName": "default",
+          "filename": "lib/fetcher.ts"
+        }
+      },
+      "layer": {
+        "app/(root)/specialists/[id]/page": "action-browser"
+      },
+      "filename": "lib/fetcher.ts",
+      "exportedName": "default"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "WEPYzeNacz1mp/v/KS9jNKf47ec3X4APOIyCHv6/Xag="
+}

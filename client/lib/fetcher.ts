@@ -7,7 +7,7 @@ export default async function fetcher(
   method: MethodType,
   data?: unknown
 ) {
-  const response = await fetch(`http://localhost:5500/api/${url}`, {
+  const response = await fetch(`https://anycomp-3je1.onrender.com/api/${url}`, {
     method: method,
     headers: {
       "Content-Type": "application/json",

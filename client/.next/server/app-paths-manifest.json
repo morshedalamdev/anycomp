@@ -1,0 +1,7 @@
+{
+  "/(root)/page": "app/(root)/page.js",
+  "/(root)/specialists/[id]/page": "app/(root)/specialists/[id]/page.js",
+  "/(root)/specialists/page": "app/(root)/specialists/page.js",
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js"
+}
