@@ -30,7 +30,7 @@ const proximaNova = localFont({
 const redHatDisplay = localFont({
   src: [
     {
-      path: "./fonts/RedHatDisplay-Semibold.ttf",
+      path: "./fonts/RedHatDisplay.ttf",
       weight: "600",
       style: "normal",
     }
