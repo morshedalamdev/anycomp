@@ -1,3 +1,4 @@
 {
+  "/(root)/page": "app/(root)/page.js",
   "/(root)/specialists/[id]/page": "app/(root)/specialists/[id]/page.js"
 }

@@ -15,6 +15,7 @@ import {
   OfferingType,
   SpecialistType,
   SpecialistResponseType,
+  TierType,
 } from "@/lib/types";
 import { SpecialistCreateSchema } from "@/lib/validation";
 import fetcher from "@/lib/fetcher";
@@ -126,9 +127,11 @@ export default function CreateSection({
       service_category: category,
       service_offerings: selectedOption,
       medias: files,
+      tier_name: TierType.BASIC,
     };
 
     const result = await fetcher("specialists", MethodType.POST, data);
+    console.log("result :>> ", result);
     if (!result.success) {
       return {
         success: false,

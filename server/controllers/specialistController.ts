@@ -9,14 +9,13 @@ import {
   updateDraft,
 } from "../models/specialistsModel";
 import {
-  SpecialistCreateSchema,
-  SpecialistUpdateSchema,
+  SpecialistSchema,
 } from "../utils/validation";
 
 export const createSpecialist = async (req: Request, res: Response) => {
   try {
     const { data } = req.body;
-    const validation = SpecialistCreateSchema.safeParse(data);
+    const validation = SpecialistSchema.safeParse(data);
     if (!validation.success) {
       return res.status(400).json({
         success: false,
@@ -148,7 +147,7 @@ export const updateSpecialist = async (req: Request, res: Response) => {
     const { id } = req.params;
     const { data } = req.body;
 
-    const validation = SpecialistUpdateSchema.safeParse(data);
+    const validation = SpecialistSchema.safeParse(data);
     if (!validation.success) {
       return res.status(400).json({
         success: false,

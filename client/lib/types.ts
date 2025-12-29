@@ -21,6 +21,11 @@ export enum MethodType {
   PUT = "PUT",
   DELETE = "DELETE",
 }
+export enum TierType{
+  BASIC = "basic",
+  PRO = "pro",
+  ENTERPRISE = "enterprise"
+}
 
 export interface FileType {
   id?: string;
@@ -70,6 +75,7 @@ export interface SpecialistType {
   service_category: string;
   service_offerings: OfferingType[];
   medias: FileType[];
+  tier_name: TierType;
 }
 
 export interface SpecialistResponseType extends SpecialistType {

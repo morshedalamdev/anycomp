@@ -134,7 +134,7 @@ export const create = async (data: Record<string, unknown>) => {
         await client.query(
           `INSERT INTO service_offerings(specialists, service_name)
        VALUES($1, $2)`,
-          [specialistId, offering]
+          [specialistId, offering?.service_name]
         );
       }
     }

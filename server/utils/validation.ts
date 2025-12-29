@@ -34,13 +34,5 @@ export const SpecialistSchema = z.object({
   average_rating: z.number().min(0).optional(),
   total_number_of_ratings: z.number().int().min(0).optional(),
   verification_status: z.enum(["pending", "approved", "rejected"]).optional(),
-});
-
-export const SpecialistUpdateSchema = SpecialistSchema.extend({
-  id: z.string().uuid(),
   service_offerings: z.array(OfferingSchema),
-});
-
-export const SpecialistCreateSchema = SpecialistSchema.extend({
-  service_offerings: z.array(z.string().min(1)),
 });

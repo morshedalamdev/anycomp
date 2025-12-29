@@ -1,0 +1,23 @@
+/* [project]/app/redhatdisplay_dd5e1c5b.module.css [app-client] (css) */
+@font-face {
+  font-family: redHatDisplay;
+  src: url("../media/RedHatDisplay-s.p.4586ab39.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: redHatDisplay Fallback;
+  src: local(Arial);
+  ascent-override: 99.32%;
+  descent-override: 29.76%;
+  line-gap-override: 0.0%;
+  size-adjust: 102.5%;
+}
+
+.redhatdisplay_dd5e1c5b-module__5lGdBG__className {
+  font-family: redHatDisplay, redHatDisplay Fallback;
+}
+
+/*# sourceMappingURL=app_redhatdisplay_dd5e1c5b_module_css_bad6b30c._.single.css.map*/

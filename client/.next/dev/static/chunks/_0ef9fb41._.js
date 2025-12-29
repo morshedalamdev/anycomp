@@ -2613,7 +2613,9 @@ __turbopack_context__.s([
     "MimeType",
     ()=>MimeType,
     "StatusType",
-    ()=>StatusType
+    ()=>StatusType,
+    "TierType",
+    ()=>TierType
 ]);
 var MimeType = /*#__PURE__*/ function(MimeType) {
     MimeType["JPG"] = "image/jpg";
@@ -2641,6 +2643,12 @@ var MethodType = /*#__PURE__*/ function(MethodType) {
     MethodType["PUT"] = "PUT";
     MethodType["DELETE"] = "DELETE";
     return MethodType;
+}({});
+var TierType = /*#__PURE__*/ function(TierType) {
+    TierType["BASIC"] = "basic";
+    TierType["PRO"] = "pro";
+    TierType["ENTERPRISE"] = "enterprise";
+    return TierType;
 }({});
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
@@ -2823,9 +2831,11 @@ function CreateSection({ specialistId }) {
             duration_days: duration,
             service_category: category,
             service_offerings: selectedOption,
-            medias: files
+            medias: files,
+            tier_name: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TierType"].BASIC
         };
         const result = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$data$3a$e8ec8a__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$text$2f$javascript$3e$__["default"])("specialists", __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$types$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["MethodType"].POST, data);
+        console.log("result :>> ", result);
         if (!result.success) {
             return {
                 success: false,
@@ -2892,7 +2902,7 @@ function CreateSection({ specialistId }) {
                                         children: fetchData?.title || ""
                                     }, void 0, false, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 193,
+                                        lineNumber: 196,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2906,7 +2916,7 @@ function CreateSection({ specialistId }) {
                                                         alt: "photo scan icon"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/createSection.tsx",
-                                                        lineNumber: 198,
+                                                        lineNumber: 201,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2914,13 +2924,13 @@ function CreateSection({ specialistId }) {
                                                         children: "Upload an image for your service listing in PNG, JPG or JPEG up to 4MB"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/createSection.tsx",
-                                                        lineNumber: 199,
+                                                        lineNumber: 202,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/createSection.tsx",
-                                                lineNumber: 197,
+                                                lineNumber: 200,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2931,7 +2941,7 @@ function CreateSection({ specialistId }) {
                                                         alt: "banner 1"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/createSection.tsx",
-                                                        lineNumber: 205,
+                                                        lineNumber: 208,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -2939,25 +2949,25 @@ function CreateSection({ specialistId }) {
                                                         alt: "banner 2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/createSection.tsx",
-                                                        lineNumber: 206,
+                                                        lineNumber: 209,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/createSection.tsx",
-                                                lineNumber: 204,
+                                                lineNumber: 207,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 196,
+                                        lineNumber: 199,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/createSection.tsx",
-                                lineNumber: 192,
+                                lineNumber: 195,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2968,7 +2978,7 @@ function CreateSection({ specialistId }) {
                                         children: "Description"
                                     }, void 0, false, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 211,
+                                        lineNumber: 214,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2976,13 +2986,13 @@ function CreateSection({ specialistId }) {
                                         children: fetchData?.description || "Describe your service here"
                                     }, void 0, false, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 214,
+                                        lineNumber: 217,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/createSection.tsx",
-                                lineNumber: 210,
+                                lineNumber: 213,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2993,7 +3003,7 @@ function CreateSection({ specialistId }) {
                                         children: "Additional Offerings"
                                     }, void 0, false, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 219,
+                                        lineNumber: 222,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3001,13 +3011,13 @@ function CreateSection({ specialistId }) {
                                         children: fetchData?.service_offerings?.map((so)=>so.service_name).join(", ") || "No additional offerings selected"
                                     }, void 0, false, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 222,
+                                        lineNumber: 225,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/createSection.tsx",
-                                lineNumber: 218,
+                                lineNumber: 221,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3018,7 +3028,7 @@ function CreateSection({ specialistId }) {
                                         children: "Company Secretary"
                                     }, void 0, false, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 229,
+                                        lineNumber: 232,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3035,7 +3045,7 @@ function CreateSection({ specialistId }) {
                                                                 className: "w-7.5 h-7.5 rounded-full"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/createSection.tsx",
-                                                                lineNumber: 235,
+                                                                lineNumber: 238,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3048,7 +3058,7 @@ function CreateSection({ specialistId }) {
                                                                                 children: "Grace Lam"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/createSection.tsx",
-                                                                                lineNumber: 242,
+                                                                                lineNumber: 245,
                                                                                 columnNumber: 23
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -3057,7 +3067,7 @@ function CreateSection({ specialistId }) {
                                                                                 className: "ml-1 mr-px"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/createSection.tsx",
-                                                                                lineNumber: 245,
+                                                                                lineNumber: 248,
                                                                                 columnNumber: 23
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3065,13 +3075,13 @@ function CreateSection({ specialistId }) {
                                                                                 children: "Verified"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/createSection.tsx",
-                                                                                lineNumber: 250,
+                                                                                lineNumber: 253,
                                                                                 columnNumber: 23
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/components/createSection.tsx",
-                                                                        lineNumber: 241,
+                                                                        lineNumber: 244,
                                                                         columnNumber: 21
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h6", {
@@ -3079,7 +3089,7 @@ function CreateSection({ specialistId }) {
                                                                         children: "Corpsec Services Sdn Bhd"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/createSection.tsx",
-                                                                        lineNumber: 254,
+                                                                        lineNumber: 257,
                                                                         columnNumber: 21
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -3088,19 +3098,19 @@ function CreateSection({ specialistId }) {
                                                                         children: "View Profile"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/createSection.tsx",
-                                                                        lineNumber: 257,
+                                                                        lineNumber: 260,
                                                                         columnNumber: 21
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/createSection.tsx",
-                                                                lineNumber: 240,
+                                                                lineNumber: 243,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/createSection.tsx",
-                                                        lineNumber: 234,
+                                                        lineNumber: 237,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3108,13 +3118,13 @@ function CreateSection({ specialistId }) {
                                                         children: "A company secretarial service founded by Grace, who believes that every company deserves clarity, confidence, and care in their compliance journey. Inspired by the spirit of entrepreneurship, Aida treats every client’s business as if it were her own — attentive to detail, committed to deadlines, and focused on growth. Step into a partnership built on trust, transparency, and professional excellence. Whether you’re just starting out or managing a growing company, Aida is here to make your corporate governance smooth, secure, and stress-free. Your company’s peace of mind starts here"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/createSection.tsx",
-                                                        lineNumber: 265,
+                                                        lineNumber: 268,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/createSection.tsx",
-                                                lineNumber: 233,
+                                                lineNumber: 236,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3124,7 +3134,7 @@ function CreateSection({ specialistId }) {
                                                         children: "Certified Company Secretary"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/createSection.tsx",
-                                                        lineNumber: 279,
+                                                        lineNumber: 282,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -3137,12 +3147,12 @@ function CreateSection({ specialistId }) {
                                                                     alt: "company 1"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/createSection.tsx",
-                                                                    lineNumber: 284,
+                                                                    lineNumber: 287,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/createSection.tsx",
-                                                                lineNumber: 283,
+                                                                lineNumber: 286,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -3152,12 +3162,12 @@ function CreateSection({ specialistId }) {
                                                                     alt: "company 2"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/createSection.tsx",
-                                                                    lineNumber: 291,
+                                                                    lineNumber: 294,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/createSection.tsx",
-                                                                lineNumber: 290,
+                                                                lineNumber: 293,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -3167,42 +3177,42 @@ function CreateSection({ specialistId }) {
                                                                     alt: "company 3"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/createSection.tsx",
-                                                                    lineNumber: 298,
+                                                                    lineNumber: 301,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/createSection.tsx",
-                                                                lineNumber: 297,
+                                                                lineNumber: 300,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/createSection.tsx",
-                                                        lineNumber: 282,
+                                                        lineNumber: 285,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/createSection.tsx",
-                                                lineNumber: 278,
+                                                lineNumber: 281,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 232,
+                                        lineNumber: 235,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/createSection.tsx",
-                                lineNumber: 228,
+                                lineNumber: 231,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/createSection.tsx",
-                        lineNumber: 191,
+                        lineNumber: 194,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3217,7 +3227,7 @@ function CreateSection({ specialistId }) {
                                         children: "Edit"
                                     }, void 0, false, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 311,
+                                        lineNumber: 314,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3226,13 +3236,13 @@ function CreateSection({ specialistId }) {
                                         children: "Publish"
                                     }, void 0, false, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 317,
+                                        lineNumber: 320,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/createSection.tsx",
-                                lineNumber: 310,
+                                lineNumber: 313,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3243,7 +3253,7 @@ function CreateSection({ specialistId }) {
                                         children: "Professional Fee"
                                     }, void 0, false, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 325,
+                                        lineNumber: 328,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3251,7 +3261,7 @@ function CreateSection({ specialistId }) {
                                         children: "Set a rate for your service"
                                     }, void 0, false, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 326,
+                                        lineNumber: 329,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3264,12 +3274,12 @@ function CreateSection({ specialistId }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/createSection.tsx",
-                                            lineNumber: 330,
+                                            lineNumber: 333,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 329,
+                                        lineNumber: 332,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3283,7 +3293,7 @@ function CreateSection({ specialistId }) {
                                                         children: "Base price"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/createSection.tsx",
-                                                        lineNumber: 336,
+                                                        lineNumber: 339,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3294,13 +3304,13 @@ function CreateSection({ specialistId }) {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/createSection.tsx",
-                                                        lineNumber: 339,
+                                                        lineNumber: 342,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/createSection.tsx",
-                                                lineNumber: 335,
+                                                lineNumber: 338,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3311,7 +3321,7 @@ function CreateSection({ specialistId }) {
                                                         children: "Service processing fee"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/createSection.tsx",
-                                                        lineNumber: 344,
+                                                        lineNumber: 347,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3322,13 +3332,13 @@ function CreateSection({ specialistId }) {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/createSection.tsx",
-                                                        lineNumber: 347,
+                                                        lineNumber: 350,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/createSection.tsx",
-                                                lineNumber: 343,
+                                                lineNumber: 346,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3339,7 +3349,7 @@ function CreateSection({ specialistId }) {
                                                         children: "Total"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/createSection.tsx",
-                                                        lineNumber: 352,
+                                                        lineNumber: 355,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3350,13 +3360,13 @@ function CreateSection({ specialistId }) {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/createSection.tsx",
-                                                        lineNumber: 355,
+                                                        lineNumber: 358,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/createSection.tsx",
-                                                lineNumber: 351,
+                                                lineNumber: 354,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3367,7 +3377,7 @@ function CreateSection({ specialistId }) {
                                                         children: "Your returns"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/createSection.tsx",
-                                                        lineNumber: 360,
+                                                        lineNumber: 363,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3378,37 +3388,37 @@ function CreateSection({ specialistId }) {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/createSection.tsx",
-                                                        lineNumber: 363,
+                                                        lineNumber: 366,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/createSection.tsx",
-                                                lineNumber: 359,
+                                                lineNumber: 362,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 334,
+                                        lineNumber: 337,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/createSection.tsx",
-                                lineNumber: 324,
+                                lineNumber: 327,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/createSection.tsx",
-                        lineNumber: 309,
+                        lineNumber: 312,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/createSection.tsx",
-                lineNumber: 190,
+                lineNumber: 193,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3425,7 +3435,7 @@ function CreateSection({ specialistId }) {
                                         children: "Edit Service"
                                     }, void 0, false, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 378,
+                                        lineNumber: 381,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3435,18 +3445,18 @@ function CreateSection({ specialistId }) {
                                             alt: "Close"
                                         }, void 0, false, {
                                             fileName: "[project]/components/createSection.tsx",
-                                            lineNumber: 380,
+                                            lineNumber: 383,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 379,
+                                        lineNumber: 382,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/createSection.tsx",
-                                lineNumber: 377,
+                                lineNumber: 380,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -3462,7 +3472,7 @@ function CreateSection({ specialistId }) {
                                                 children: "Title"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/createSection.tsx",
-                                                lineNumber: 385,
+                                                lineNumber: 388,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -3474,7 +3484,7 @@ function CreateSection({ specialistId }) {
                                                 className: "border-[0.2px] border-[#888888] rounded-xs h-4.75 font-semibold text-[5px] px-1.5 text-[#181818]"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/createSection.tsx",
-                                                lineNumber: 391,
+                                                lineNumber: 394,
                                                 columnNumber: 15
                                             }, this),
                                             state?.errors && "title" in state.errors && state.errors.title && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3482,13 +3492,13 @@ function CreateSection({ specialistId }) {
                                                 children: state.errors.title
                                             }, void 0, false, {
                                                 fileName: "[project]/components/createSection.tsx",
-                                                lineNumber: 406,
+                                                lineNumber: 409,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 384,
+                                        lineNumber: 387,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3500,7 +3510,7 @@ function CreateSection({ specialistId }) {
                                                 children: "Description"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/createSection.tsx",
-                                                lineNumber: 412,
+                                                lineNumber: 415,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -3511,7 +3521,7 @@ function CreateSection({ specialistId }) {
                                                 className: "border-[0.2px] border-[#888888] rounded-xs h-16 font-semibold text-[5px] pt-1 px-1.5 text-[#181818]"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/createSection.tsx",
-                                                lineNumber: 418,
+                                                lineNumber: 421,
                                                 columnNumber: 15
                                             }, this),
                                             state?.errors && "description" in state.errors && state.errors.description && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3519,7 +3529,7 @@ function CreateSection({ specialistId }) {
                                                 children: state.errors.description
                                             }, void 0, false, {
                                                 fileName: "[project]/components/createSection.tsx",
-                                                lineNumber: 432,
+                                                lineNumber: 435,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3527,13 +3537,13 @@ function CreateSection({ specialistId }) {
                                                 children: "(500 words)"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/createSection.tsx",
-                                                lineNumber: 436,
+                                                lineNumber: 439,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 411,
+                                        lineNumber: 414,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Dropdown$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -3561,12 +3571,12 @@ function CreateSection({ specialistId }) {
                                             children: state.errors.duration
                                         }, void 0, false, {
                                             fileName: "[project]/components/createSection.tsx",
-                                            lineNumber: 461,
+                                            lineNumber: 464,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 440,
+                                        lineNumber: 443,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3578,7 +3588,7 @@ function CreateSection({ specialistId }) {
                                                 children: "Price"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/createSection.tsx",
-                                                lineNumber: 467,
+                                                lineNumber: 470,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3593,7 +3603,7 @@ function CreateSection({ specialistId }) {
                                                                 className: "w-2.75"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/createSection.tsx",
-                                                                lineNumber: 475,
+                                                                lineNumber: 478,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3601,13 +3611,13 @@ function CreateSection({ specialistId }) {
                                                                 children: "MYR"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/createSection.tsx",
-                                                                lineNumber: 476,
+                                                                lineNumber: 479,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/createSection.tsx",
-                                                        lineNumber: 474,
+                                                        lineNumber: 477,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -3619,13 +3629,13 @@ function CreateSection({ specialistId }) {
                                                         className: "flex-1 text-[7px] px-1.5 border-[0.2px] border-black border-l-0 rounded-r-xs font-semibold text-[#181818]"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/createSection.tsx",
-                                                        lineNumber: 478,
+                                                        lineNumber: 481,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/createSection.tsx",
-                                                lineNumber: 473,
+                                                lineNumber: 476,
                                                 columnNumber: 15
                                             }, this),
                                             state?.errors && "price" in state.errors && state.errors.price && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3633,13 +3643,13 @@ function CreateSection({ specialistId }) {
                                                 children: state.errors.price
                                             }, void 0, false, {
                                                 fileName: "[project]/components/createSection.tsx",
-                                                lineNumber: 494,
+                                                lineNumber: 497,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 466,
+                                        lineNumber: 469,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Dropdown$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -3667,12 +3677,12 @@ function CreateSection({ specialistId }) {
                                             children: state.errors.category
                                         }, void 0, false, {
                                             fileName: "[project]/components/createSection.tsx",
-                                            lineNumber: 528,
+                                            lineNumber: 531,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 499,
+                                        lineNumber: 502,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ServiceSelect$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -3683,12 +3693,12 @@ function CreateSection({ specialistId }) {
                                             children: state.errors.offerings
                                         }, void 0, false, {
                                             fileName: "[project]/components/createSection.tsx",
-                                            lineNumber: 540,
+                                            lineNumber: 543,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 533,
+                                        lineNumber: 536,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ImageUpload$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -3702,12 +3712,12 @@ function CreateSection({ specialistId }) {
                                             children: state.errors.files
                                         }, void 0, false, {
                                             fileName: "[project]/components/createSection.tsx",
-                                            lineNumber: 555,
+                                            lineNumber: 558,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 545,
+                                        lineNumber: 548,
                                         columnNumber: 13
                                     }, this),
                                     files.length >= 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ImageUpload$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -3718,7 +3728,7 @@ function CreateSection({ specialistId }) {
                                         position: "2nd"
                                     }, void 0, false, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 561,
+                                        lineNumber: 564,
                                         columnNumber: 15
                                     }, this),
                                     files.length >= 2 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ImageUpload$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -3729,7 +3739,7 @@ function CreateSection({ specialistId }) {
                                         position: "3rd"
                                     }, void 0, false, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 570,
+                                        lineNumber: 573,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3742,7 +3752,7 @@ function CreateSection({ specialistId }) {
                                                 children: "Cancel"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/createSection.tsx",
-                                                lineNumber: 579,
+                                                lineNumber: 582,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3752,25 +3762,25 @@ function CreateSection({ specialistId }) {
                                                 children: "Confirm"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/createSection.tsx",
-                                                lineNumber: 586,
+                                                lineNumber: 589,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 578,
+                                        lineNumber: 581,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/createSection.tsx",
-                                lineNumber: 383,
+                                lineNumber: 386,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/createSection.tsx",
-                        lineNumber: 376,
+                        lineNumber: 379,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3778,13 +3788,13 @@ function CreateSection({ specialistId }) {
                         className: "absolute inset-0 z-10"
                     }, void 0, false, {
                         fileName: "[project]/components/createSection.tsx",
-                        lineNumber: 596,
+                        lineNumber: 599,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/createSection.tsx",
-                lineNumber: 371,
+                lineNumber: 374,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3803,7 +3813,7 @@ function CreateSection({ specialistId }) {
                                                 alt: ""
                                             }, void 0, false, {
                                                 fileName: "[project]/components/createSection.tsx",
-                                                lineNumber: 609,
+                                                lineNumber: 612,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3811,13 +3821,13 @@ function CreateSection({ specialistId }) {
                                                 children: "Publish changes"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/createSection.tsx",
-                                                lineNumber: 610,
+                                                lineNumber: 613,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 608,
+                                        lineNumber: 611,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3825,13 +3835,13 @@ function CreateSection({ specialistId }) {
                                         children: "Do you want to publish these changes? It will appear in the marketplace listing"
                                     }, void 0, false, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 614,
+                                        lineNumber: 617,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/createSection.tsx",
-                                lineNumber: 607,
+                                lineNumber: 610,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3844,7 +3854,7 @@ function CreateSection({ specialistId }) {
                                         children: "Continue Editing"
                                     }, void 0, false, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 620,
+                                        lineNumber: 623,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3853,19 +3863,19 @@ function CreateSection({ specialistId }) {
                                         children: "Save changes"
                                     }, void 0, false, {
                                         fileName: "[project]/components/createSection.tsx",
-                                        lineNumber: 627,
+                                        lineNumber: 630,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/createSection.tsx",
-                                lineNumber: 619,
+                                lineNumber: 622,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/createSection.tsx",
-                        lineNumber: 606,
+                        lineNumber: 609,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3873,19 +3883,19 @@ function CreateSection({ specialistId }) {
                         className: "absolute inset-0 z-10"
                     }, void 0, false, {
                         fileName: "[project]/components/createSection.tsx",
-                        lineNumber: 635,
+                        lineNumber: 638,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/createSection.tsx",
-                lineNumber: 601,
+                lineNumber: 604,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/createSection.tsx",
-        lineNumber: 189,
+        lineNumber: 192,
         columnNumber: 5
     }, this);
 }
