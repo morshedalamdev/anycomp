@@ -25,7 +25,7 @@ export const SpecialistSchema = z.object({
   platform_fee: z.number().nonnegative(),
   final_price: z.number().nonnegative(),
   fee_percentage: z.number().min(0).max(100),
-  tier_name: z.enum(["basic", "standard", "premium"]).optional(),
+  tier_name: z.enum(['basic', 'pro', 'enterprise']).optional(),
   duration_days: z.number().int().nonnegative(),
   service_category: z.string().min(1),
   medias: z.array(MediaSchema),
