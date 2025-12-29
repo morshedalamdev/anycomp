@@ -1,5 +1,12 @@
 import specialistRoutes from "./routes/specialistRoutes";
+import { Request, Response, NextFunction } from "express";
 
+interface errorHandlerProps {
+  err: any;
+  req: Request;
+  res: Response;
+  next: NextFunction;
+}
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
@@ -21,8 +28,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/specialists", specialistRoutes);
 
 // ERROR HANDLING MIDDLEWARE //
-app.use((error, req, res, next) => {
-  console.log(error?.stack || 'No stack trace available');
+app.use(({ err, req, res, next }: errorHandlerProps) => {
+  console.log(err?.stack || 'No stack trace available');
 });
 
 module.exports = app;
